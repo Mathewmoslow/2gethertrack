@@ -39,7 +39,7 @@ service cloud.firestore {
 
 ## Step 4 — Use The Hosted App
 
-Open the hosted URL, then create the trainer account with email/password. That same email/password works on every device and syncs the same Firestore workspace.
+Open `https://mathewmoslow.github.io/2gethertrack/`, then create the trainer account with email/password. That same email/password works on every device and syncs the same Firestore workspace.
 
 ## Backups
 
