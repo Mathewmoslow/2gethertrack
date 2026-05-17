@@ -473,7 +473,27 @@
   $('setSave').onclick = () => window._fs.setDoc(window._fs.doc(db, 'users', currentUser.uid, 'settings', 'main'), { displayName: $('setName').value, weeks: +$('setWeeks').value }, {merge:true}).then(()=>toast('Profile Updated'));
   $('ratesSave').onclick = () => { const r = $('ratesInput').value.split(',').map(x=>+x.trim()).filter(x=>!isNaN(x)); window._fs.setDoc(window._fs.doc(db, 'users', currentUser.uid, 'settings', 'main'), { rates: r }, {merge:true}).then(()=>window.closeModal('ratesModal')); };
 
-  async function loadAceData() { try { const r = await fetch('ace_questions.json'); ACE_BANK = await r.json(); updateGlobalAceProgress(); } catch(e){ console.error(e); } }
+  async function loadAceData() { 
+    try { 
+      const [qRes, sRes] = await Promise.all([
+        fetch('ace_questions.json'),
+        fetch('ace_scenarios.json')
+      ]);
+      const questions = await qRes.json();
+      const scenarios = await sRes.json();
+      
+      // Merge scenarios into the question bank chapters
+      ACE_BANK = questions.map(ch => {
+        const s = scenarios.find(x => x.chapter === ch.chapter);
+        return { ...ch, caseStudy: s ? s.scenario : null };
+      });
+
+      updateGlobalAceProgress(); 
+    } catch(e){ 
+      console.error("Failed to load ACE data", e); 
+      toast("Error loading education suite");
+    } 
+  }
   function updateGlobalAceProgress() { if(!ACE_BANK.length) return; let t=0, c=0; ACE_BANK.forEach(ch=>{ t+=ch.questions.length; c+=(USER_PROGRESS[ch.chapter]?.completed?.length||0); }); $('statAceProgress').textContent = Math.round((c/t)*100)+'%'; }
   window.renderChapters = () => { $('chapterList').innerHTML = ACE_BANK.map((ch, i) => { const p = USER_PROGRESS[ch.chapter]||{completed:[]}; return `<div class="chapter-pill" onclick="window.startQuiz(${i})"><div class="chapter-info"><h4>Ch ${ch.chapter}: ${ch.title}</h4><p>${Math.round((p.completed.length/ch.questions.length)*100)||0}% Complete</p></div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M9 18l6-6-6-6"></path></svg></div>`; }).join(''); $('chapterList').classList.remove('hide'); $('quizEngine').classList.add('hide'); };
   let curQ = null, qIdx = 0, inCaseStudy = false;

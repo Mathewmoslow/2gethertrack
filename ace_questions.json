@@ -2,7 +2,6 @@
   {
     "chapter": 1,
     "title": "Role and Scope",
-    "caseStudy": "Sarah is a newly certified ACE Personal Trainer starting her first day at a local fitness center. A potential client, Mark, approaches her with a list of medications he is taking for hypertension and type 2 diabetes, asking for a specific exercise and diet plan to manage his conditions. Sarah must navigate her role effectively, identifying which services she can provide and when she must refer Mark to other healthcare professionals to ensure his safety and adhere to professional standards.",
     "questions": [
       { "q": "Which of the following is within the scope of practice for an ACE Personal Trainer?", "options": ["Prescribing specific medications to manage hypertension", "Designing a periodized exercise program based on a client's goals", "Providing clinical nutrition counseling for eating disorders", "Diagnosing the cause of a client's chronic low-back pain"], "correct": 1, "rationale": "Personal trainers are responsible for designing safe and effective exercise programs. They do not prescribe medication, provide clinical nutrition therapy, or diagnose medical conditions." },
       { "q": "What is the primary purpose of professional certifications like the ACE Personal Trainer certification?", "options": ["To guarantee a specific salary for the trainer", "To protect the public by ensuring trainers have a baseline of competence", "To allow trainers to work in a clinical setting without supervision", "To provide legal immunity for any injuries occurring during training"], "correct": 1, "rationale": "The primary goal of professional certification is to protect the public from harm by ensuring that professionals meet a minimum level of competence." },
@@ -29,7 +28,6 @@
   {
     "chapter": 2,
     "title": "ACE IFT Model",
-    "caseStudy": "James, a 42-year-old sedentary male with a BMI of 30, has decided to start an exercise program. He has no medical limitations but hasn't exercised in 15 years. His trainer must apply the ACE Integrated Fitness Training (IFT) Model to systematically progress him through the phases of cardiorespiratory and muscular training, starting with building a foundation of stability and aerobic base before moving into more intense performance-based goals.",
     "questions": [
       { "q": "What are the two primary components of the ACE IFT Model?", "options": ["Cardiorespiratory Training and Muscular Training", "Flexibility and Nutrition", "Speed and Power", "Stability and Mobility"], "correct": 0, "rationale": "The IFT model is divided into Cardiorespiratory Training and Muscular Training." },
       { "q": "In the Muscular Training component, what is the first phase of progression?", "options": ["Load Training", "Functional Training", "Movement Training", "Performance Training"], "correct": 1, "rationale": "Functional Training (Phase 1) focuses on core and joint stability and mobility." },
@@ -56,7 +54,6 @@
   {
     "chapter": 3,
     "title": "Behavior Change",
-    "caseStudy": "Lisa is a 35-year-old mother of two who has tried 'every diet' and exercise plan with little success. She often starts strong but loses motivation after three weeks. She tells her new trainer, 'I want to change, but I'm afraid I'll fail again.' The trainer must use behavioral science to help Lisa build self-efficacy, identify barriers, and move through the stages of change to create a lasting lifestyle transformation.",
     "questions": [
       { "q": "In the Transtheoretical Model (TTM), a client who is weighing the pros and cons of changing but has not yet taken action is in which stage?", "options": ["Precontemplation", "Contemplation", "Preparation", "Action"], "correct": 1, "rationale": "Contemplation is the stage where the individual is aware of the problem and considering change but is ambivalent." },
       { "q": "Which of the following is an example of 'Self-Efficacy'?", "options": ["A client's actual ability to run a mile", "A client's belief in their ability to successfully perform an exercise", "A trainer's confidence in their own skills", "The amount of weight a client can lift"], "correct": 1, "rationale": "Self-efficacy is the subjective belief in one's own capability to perform a task." },
@@ -83,7 +80,6 @@
   {
     "chapter": 4,
     "title": "Communication & Teaching",
-    "caseStudy": "A trainer is leading a small group session with three clients: one who prefers diagrams and watching (Visual), one who likes detailed explanations (Auditory), and one who wants to 'just do it' and feel the muscles (Kinesthetic). The trainer must effectively use verbal and non-verbal communication, demonstrate exercises, and provide constructive feedback to ensure all three clients learn safely and stay engaged.",
     "questions": [
       { "q": "Which learning style benefits MOST from seeing a demonstration of an exercise?", "options": ["Auditory", "Visual", "Kinesthetic", "Olfactory"], "correct": 1, "rationale": "Visual learners process information best through seeing demonstrations, videos, or images." },
       { "q": "A client who learns best by physically performing the movement is a:", "options": ["Visual learner", "Auditory learner", "Kinesthetic learner", "Cognitive learner"], "correct": 2, "rationale": "Kinesthetic learners need to 'feel' the movement to understand it." },
@@ -110,7 +106,6 @@
   {
     "chapter": 5,
     "title": "Health Screening",
-    "caseStudy": "David is a 55-year-old executive who wants to start a high-intensity training program. He has high cholesterol and a family history of heart disease, but he currently feels fine and walks 30 minutes a day. The trainer must use the ACSM pre-participation screening algorithm to determine if David needs medical clearance before beginning more vigorous exercise.",
     "questions": [
       { "q": "The primary goal of pre-participation screening is to identify individuals at risk for:", "options": ["Muscle soreness", "Sudden cardiac death or myocardial infarction", "Weight gain", "Losing motivation"], "correct": 1, "rationale": "Screening ensures safety by identifying underlying cardiovascular or metabolic risks." },
       { "q": "According to the current ACSM algorithm, which of the following is a key factor in determining the need for medical clearance?", "options": ["Age and gender", "Current physical activity level", "BMI over 25", "Number of years they have smoked"], "correct": 1, "rationale": "The algorithm focuses on current activity, known disease, and signs/symptoms." },
@@ -137,7 +132,6 @@
   {
     "chapter": 6,
     "title": "Nutrition",
-    "caseStudy": "Kevin is a 25-year-old bodybuilder who consumes 300g of protein daily and takes several 'proprietary blend' supplements. He asks his ACE trainer for a detailed daily meal plan and advice on which anabolic supplements are most effective. The trainer must provide evidence-based nutritional guidance while staying strictly within their scope of practice, referring Kevin to a Registered Dietitian for clinical needs.",
     "questions": [
       { "q": "Which of the following is WITHIN the scope of practice for a Personal Trainer regarding nutrition?", "options": ["Prescribing a 1,200 calorie diet for weight loss", "Discussing the Dietary Guidelines for Americans", "Treating an iron deficiency with supplements", "Providing meal plans for a client with kidney disease"], "correct": 1, "rationale": "Trainers can provide general non-medical nutrition information and education." },
       { "q": "What is the recommended protein intake for a healthy, sedentary adult?", "options": ["0.5 g/kg", "0.8 g/kg", "1.5 g/kg", "2.5 g/kg"], "correct": 1, "rationale": "The RDA for protein for a sedentary adult is 0.8 grams per kilogram of body weight." },
@@ -164,7 +158,6 @@
   {
     "chapter": 7,
     "title": "Resting Assessments",
-    "caseStudy": "A 50-year-old male client, John, presents for his initial assessment. He is slightly overweight and hasn't had a physical in years. The trainer must measure his resting heart rate, blood pressure, and body composition to establish a baseline. John is nervous, which might affect his readings, so the trainer must use proper technique to ensure accuracy and determine if any results warrant a medical referral.",
     "questions": [
       { "q": "When measuring resting heart rate, how long should the client sit quietly before the measurement?", "options": ["30 seconds", "1 minute", "5 minutes", "10 minutes"], "correct": 2, "rationale": "Five minutes of quiet rest is standard to ensure the heart rate has stabilized." },
       { "q": "Which artery is most commonly used to measure blood pressure?", "options": ["Radial", "Carotid", "Brachial", "Femoral"], "correct": 2, "rationale": "The brachial artery in the antecubital space is the standard site for BP measurement." },
@@ -191,7 +184,6 @@
   {
     "chapter": 8,
     "title": "Cardiorespiratory Training",
-    "caseStudy": "Maria is a 30-year-old female who wants to run her first 10k. She currently walks for 20 minutes three times a week. Her trainer needs to assess her current cardiorespiratory fitness using the submaximal talk test for VT1 and design a program that follows the ACE IFT Model, progressing her from Base Training into Fitness Training with appropriate intervals.",
     "questions": [
       { "q": "The point at which lactate begins to accumulate in the blood faster than it can be cleared is known as:", "options": ["VT1", "VT2", "VO2 Max", "Aerobic Threshold"], "correct": 1, "rationale": "VT2 is the point where metabolic byproducts accumulate rapidly, often called the lactate threshold." },
       { "q": "What is the training focus in 'Base Training' (Phase 1)?", "options": ["Improving anaerobic power", "Increasing VO2 max", "Building an aerobic base and encouraging adherence", "Maximal interval training"], "correct": 2, "rationale": "The focus is on steady-state exercise in Zone 1 to build a foundation." },
@@ -218,7 +210,6 @@
   {
     "chapter": 9,
     "title": "Muscular Foundations",
-    "caseStudy": "Kevin is a beginner who wants to 'tone up.' He has poor posture (slumped shoulders and anterior pelvic tilt) and limited hip mobility. Before starting heavy weightlifting, his trainer must focus on Muscular Foundations, focusing on the five primary movement patterns and ensuring proper joint stability and mobility to prevent injury and create a solid base for future loading.",
     "questions": [
       { "q": "Which muscle contraction involves the muscle lengthening while under tension?", "options": ["Concentric", "Eccentric", "Isometric", "Isokinetic"], "correct": 1, "rationale": "Eccentric contractions act as a 'brake' and involve lengthening." },
       { "q": "What is an 'Agonist' muscle?", "options": ["The muscle that opposes the movement", "The muscle that is the prime mover for a specific action", "A muscle that assists the prime mover", "A muscle that stabilizes a joint"], "correct": 1, "rationale": "The agonist is primarily responsible for the movement (e.g., biceps in a curl)." },
@@ -245,7 +236,6 @@
   {
     "chapter": 10,
     "title": "Muscular Assessments",
-    "caseStudy": "During a 'Bend and Lift' assessment (squat), a trainer notices that the client's knees cave inward (valgus) and their torso leans forward excessively. The trainer also performs a 'Push-up test' to assess endurance. These assessments provide the data needed to identify muscle imbalances and determine the appropriate starting point for the client's muscular training program.",
     "questions": [
       { "q": "The 'Bend and Lift' screen primarily assesses which movement?", "options": ["Lunge", "Pushing", "Squatting", "Rotating"], "correct": 2, "rationale": "The bend and lift screen evaluates the mechanics of a squat." },
       { "q": "During a squat, if a client's knees cave inward (Valgus), which muscle is likely weak?", "options": ["Adductors", "Gluteus Medius", "Quadriceps", "Gastrocnemius"], "correct": 1, "rationale": "Weak hip abductors/external rotators (like the gluteus medius) allow the knees to cave." },
@@ -272,7 +262,6 @@
   {
     "chapter": 11,
     "title": "Integrated Programming",
-    "caseStudy": "A trainer is designing a comprehensive 12-week program for a 45-year-old client who wants to improve both their cardiorespiratory fitness and muscular strength for a Spartan race. The trainer must integrate different training modalities, manage volume and intensity, and apply the principles of periodization to ensure the client reaches peak performance while avoiding overtraining.",
     "questions": [
       { "q": "Periodization involves:", "options": ["Doing the same workout every day", "The systematic manipulation of training variables over time", "Only training for one week a year", "Training only the upper body"], "correct": 1, "rationale": "Periodization prevents plateaus and overtraining by varying intensity and volume." },
       { "q": "A 'Macrocycle' typically represents:", "options": ["A single workout", "A week of training", "An entire training year or season", "A one-month block"], "correct": 2, "rationale": "The macrocycle is the long-term overview of the training plan." },
@@ -299,7 +288,6 @@
   {
     "chapter": 12,
     "title": "Obesity Considerations",
-    "caseStudy": "Sarah has a BMI of 34 and has struggled with obesity her entire adult life. She is often intimidated by the gym and has joint pain in her knees. Her trainer must create a welcoming environment, focus on low-impact activities to protect her joints, and design a program that emphasizes consistency, calorie expenditure, and long-term behavior change over rapid, unsustainable weight loss.",
     "questions": [
       { "q": "Obesity is defined as a Body Mass Index (BMI) of:", "options": [">= 25 kg/m2", ">= 30 kg/m2", ">= 35 kg/m2", ">= 40 kg/m2"], "correct": 1, "rationale": "BMI 25-29.9 is overweight; 30+ is obese." },
       { "q": "Which type of fat distribution is most associated with cardiovascular and metabolic risk?", "options": ["Gynoid (Pear-shaped)", "Android (Apple-shaped/Visceral fat)", "Ectomorphic", "Subcutaneous fat on the legs"], "correct": 1, "rationale": "Visceral fat (around the organs) is metabolically active and inflammatory." },
@@ -326,7 +314,6 @@
   {
     "chapter": 13,
     "title": "Chronic Disease",
-    "caseStudy": "Robert is a 60-year-old with type 2 diabetes and stable coronary artery disease. He has been cleared by his cardiologist to exercise. The trainer must understand the specific considerations for his conditions, such as monitoring blood glucose levels, avoiding high-intensity activities that might trigger angina, and being aware of the effects of his medications on his heart rate and blood pressure.",
     "questions": [
       { "q": "For a client with Type 1 Diabetes, exercise should be avoided if blood glucose is:", "options": ["100 mg/dL", "150 mg/dL", "> 250 mg/dL with ketones present", "90 mg/dL"], "correct": 2, "rationale": "High glucose with ketones indicates a lack of insulin and a risk for ketoacidosis." },
       { "q": "What is the primary concern for a diabetic client taking insulin during exercise?", "options": ["Hyperglycemia", "Hypoglycemia (Low blood sugar)", "Weight gain", "Improved vision"], "correct": 1, "rationale": "Exercise increases glucose uptake, which can lead to a dangerous drop in blood sugar if not managed." },
@@ -344,7 +331,7 @@
       { "q": "What is 'Post-Exercise Hypotension'?", "options": ["High BP after a workout", "A temporary drop in BP after exercise, which can cause dizziness", "Muscle growth", "Fast heart rate"], "correct": 1, "rationale": "Clients should have a gradual cool-down to prevent blood pooling and fainting." },
       { "q": "For a client with Cancer, the primary goal of exercise during treatment is:", "options": ["To run a marathon", "To maintain functional capacity and reduce fatigue", "To cure the cancer", "To lift maximal weights"], "correct": 1, "rationale": "Exercise helps manage the side effects of treatment and improves quality of life." },
       { "q": "Which of the following is a benefit of exercise for Type 2 Diabetes?", "options": ["Increased insulin resistance", "Improved insulin sensitivity and glucose uptake", "Higher blood pressure", "Decreased circulation"], "correct": 1, "rationale": "Exercise helps the body use insulin more effectively." },
-      { "q": "What is the 'Ischemic Threshold'?", "options": ["The heart rate at which chest pain or EKG changes occur", "The maximum weight someone can lift", "The amount of water in the blood", "A type of muscle cramp"], "correct": 0, "rationale": "Trainers must keep clients with heart disease below this threshold." },
+      { "q": "What is the 'Ischemic Threshold'?", "options": ["The heart rate at which chest pain or EKG changes occur", "The maximum weight someone can lift", "The amount of water in the blood", "A type of muscle camp"], "correct": 0, "rationale": "Trainers must keep clients with heart disease below this threshold." },
       { "q": "Clients with low-back pain should avoid which of the following during an acute episode?", "options": ["Walking", "High-impact movements and heavy spinal loading", "Gentle stretching", "Core stabilization exercises"], "correct": 1, "rationale": "Protecting the spine is the priority during flare-ups." },
       { "q": "Which of the following is a 'Lifestyle Medicine' pillar?", "options": ["Physical Activity", "Smoking Cessation", "Stress Management", "All of the above"], "correct": 3, "rationale": "Chronic disease management involves multiple lifestyle factors." },
       { "q": "If a client with heart disease feels 'indigestion' or jaw pain during a session, the trainer should:", "options": ["Tell them to eat less", "Stop the session and treat it as a potential cardiac event", "Perform a push-up test", "Give them a peppermint"], "correct": 1, "rationale": "Angina can manifest as referred pain in the jaw, neck, or stomach." }
@@ -353,7 +340,6 @@
   {
     "chapter": 14,
     "title": "Lifespan Considerations",
-    "caseStudy": "A trainer is working with three different clients: a 12-year-old boy wanting to improve his soccer skills, a 30-year-old woman in her second trimester of pregnancy, and an 80-year-old man wanting to remain independent. The trainer must adapt their approach for each, focusing on proper growth and development for the youth, safety and comfort for the pregnant client, and balance and functional strength for the senior.",
     "questions": [
       { "q": "Which of the following is a benefit of resistance training for Youth?", "options": ["Stunting growth", "Increased bone mineral density and motor skill development", "Damaging growth plates", "Winning olympic medals at age 5"], "correct": 1, "rationale": "Supervised, age-appropriate lifting is safe and beneficial for children." },
       { "q": "The primary focus for youth exercise programs should be on:", "options": ["Maximal strength", "Fun, variety, and proper movement patterns", "Losing weight", "Professional scouting"], "correct": 1, "rationale": "Long-term athletic development starts with enjoyment and fundamental skills." },
@@ -380,7 +366,6 @@
   {
     "chapter": 15,
     "title": "Musculoskeletal Issues",
-    "caseStudy": "A client, Mark, is recovering from an acute lateral ankle sprain. He has been cleared for exercise by his physical therapist but still has limited range of motion. Another client, Sarah, complains of persistent low-back pain when performing squats. The trainer must design modifications for Mark's program and identify the movement errors and muscle imbalances contributing to Sarah's discomfort, ensuring both clients train safely within their limitations.",
     "questions": [
       { "q": "What is the standard acute management protocol for a soft-tissue injury?", "options": ["HEAT (Heat, Elevate, Act, Tension)", "RICE (Rest, Ice, Compression, Elevation)", "PUSH (Push, Use, Stretch, Harder)", "None of the above"], "correct": 1, "rationale": "RICE helps control inflammation and pain in the first 48-72 hours." },
       { "q": "A 'Sprain' involves injury to which tissue?", "options": ["Muscle", "Tendon", "Ligament", "Bone"], "correct": 2, "rationale": "Sprains are injuries to ligaments, which connect bone to bone." },
@@ -401,13 +386,12 @@
       { "q": "For a client with an acute injury, the trainer's first priority is to:", "options": ["Fix the injury with massage", "Modify the program to avoid the injured area and follow medical advice", "Tell the client to push through it", "Diagnose the exact grade of the tear"], "correct": 1, "rationale": "Trainers do not diagnose or treat; they modify and refer." },
       { "q": "Which type of stretching is generally safest for an injured muscle during the remodeling phase?", "options": ["Ballistic", "Static stretching within a pain-free range", "Proprioceptive Neuromuscular Facilitation (PNF) with max tension", "No stretching ever"], "correct": 1, "rationale": "Gentle static stretching helps align new fibers." },
       { "q": "IT Band Syndrome often causes pain at the:", "options": ["Groin", "Lateral knee", "Lower back", "Bottom of the foot"], "correct": 1, "rationale": "The IT band rubs against the lateral femoral epicondyle." },
-      { "q": "Which of the following describes 'Disc Herniation'?", "options": ["A broken bone in the arm", "The soft center of a spinal disc pushing through a crack in the tougher exterior", "A type of muscle cramp", "A skin condition"], "correct": 1, "rationale": "Herniation can cause nerve compression and radiating pain (sciatica)." }
+      { "q": "Which of the following describes 'Disc Herniation'?", "options": ["A broken bone in the arm", "The soft center of a spinal disc pushing through a crack in the tougher exterior", "A type of muscle camp", "A skin condition"], "correct": 1, "rationale": "Herniation can cause nerve compression and radiating pain (sciatica)." }
     ]
   },
   {
     "chapter": 16,
     "title": "Emergency Procedures",
-    "caseStudy": "A trainer is working with a client when the client suddenly stops, clutches their chest, and collapses. The client is unresponsive and not breathing. The trainer must immediately activate the facility's Emergency Action Plan (EAP), use their CPR/AED training, and ensure the safety of other clients until emergency medical services (EMS) arrive.",
     "questions": [
       { "q": "What is the first step when you find an unresponsive person?", "options": ["Start chest compressions", "Check the scene for safety", "Give two breaths", "Call their family"], "correct": 1, "rationale": "Always ensure the environment is safe for you to help." },
       { "q": "After ensuring scene safety, what is the next step for an unresponsive adult?", "options": ["Check for breathing and pulse, and activate EMS (Call 911)", "Start an IV", "Perform a squat test", "Wait for 10 minutes"], "correct": 0, "rationale": "Early activation of EMS is critical for survival." },
@@ -434,7 +418,6 @@
   {
     "chapter": 17,
     "title": "Legal Guidelines",
-    "caseStudy": "A trainer is opening their own personal training studio. They must decide on a business structure (LLC vs. Sole Proprietorship), obtain professional liability insurance, and create legal documents such as a waiver, informed consent, and a service contract. They must also ensure they are following music licensing laws and protecting client data to avoid legal and financial risks.",
     "questions": [
       { "q": "Which of the following is the most common legal claim against personal trainers?", "options": ["Libel", "Negligence", "Theft", "Arson"], "correct": 1, "rationale": "Negligence involves a failure to act as a reasonable professional would in a similar situation." },
       { "q": "What is 'Professional Liability Insurance'?", "options": ["Insurance for your car", "Insurance that protects against claims of negligence or 'malpractice'", "Health insurance for the trainer", "Life insurance"], "correct": 1, "rationale": "This is essential for protecting the trainer's assets in case of a lawsuit." },
@@ -461,7 +444,6 @@
   {
     "chapter": 18,
     "title": "Business Fundamentals",
-    "caseStudy": "A trainer, Alex, wants to grow his business from 5 clients to 20 clients. He needs to develop a marketing plan, improve his sales skills, and manage his time effectively. He is considering offering 'Hybrid' training (in-person and online) to reach a wider audience and is tracking his 'closing ratio' to see how many of his consultations turn into paying clients.",
     "questions": [
       { "q": "What is a 'Business Plan'?", "options": ["A workout schedule", "A formal document outlining a business's goals and how it will achieve them", "A list of exercises", "A bank statement"], "correct": 1, "rationale": "A business plan is a roadmap for success." },
       { "q": "In marketing, 'The Four Ps' are:", "options": ["Push-ups, Pull-ups, Planks, Power", "Product, Price, Place, Promotion", "People, Passion, Purpose, Profit", "Plan, Prepare, Perform, Persist"], "correct": 1, "rationale": "These are the core pillars of a marketing mix." },
