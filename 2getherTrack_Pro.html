@@ -305,6 +305,30 @@
     setTimeout(() => { t.style.opacity = '0'; t.style.transform = 'translateX(-50%) translateY(0)'; }, ms);
   }
 
+  // Calendar Logic
+  function getSessionsInMonth(daysObj) {
+    if (!daysObj || Object.keys(daysObj).length === 0) return 0;
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth(); // 0-indexed
+    const lastDay = new Date(year, month + 1, 0).getDate();
+    
+    let count = 0;
+    const aceToJsDay = [1, 2, 3, 4, 5, 6, 0]; // Our toggle M=0 -> JS M=1, Toggle S=6 -> JS S=0
+
+    for (let d = 1; d <= lastDay; d++) {
+      const date = new Date(year, month, d);
+      const dayOfWeek = date.getDay(); // 0=Sun, 1=Mon...
+      // Check if this JS dayOfWeek is one of the trainer's selected days
+      Object.keys(daysObj).forEach(aceIdx => {
+        if (daysObj[aceIdx] && aceToJsDay[aceIdx] === dayOfWeek) {
+          count++;
+        }
+      });
+    }
+    return count;
+  }
+
   // Routing
   window.switchView = async (viewId, navEl) => {
     document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
@@ -317,12 +341,23 @@
   // Logic & Render
   function renderAll() {
     const weeks = state.settings.weeks || 4;
-    const earn = state.clients.reduce((s, c) => s + (c.rate * c.frequency * weeks), 0);
+    const monthName = new Date().toLocaleString('default', { month: 'long' });
+    
+    // Accurate Earnings based on Calendar
+    let totalEarn = 0;
+    state.clients.forEach(c => {
+      const sessionCount = getSessionsInMonth(c.days);
+      // If no days are selected, fallback to the average frequency multiplier
+      const actualSessions = sessionCount > 0 ? sessionCount : (c.frequency * weeks);
+      totalEarn += (c.rate * actualSessions);
+    });
+
     const cost = state.expenses.reduce((s, e) => s + (e.amount || 0), 0);
     const req = cost + (state.settings.takeHome || 0);
-    const net = earn - req;
+    const net = totalEarn - req;
 
-    $('statEarnings').textContent = fmt(earn);
+    $('statEarnings').textContent = fmt(totalEarn);
+    $('statEarnings').previousElementSibling.textContent = `Earnings (${monthName})`;
     $('statRequirement').textContent = fmt(req);
     $('statNet').textContent = (net < 0 ? '-' : '') + fmt(Math.abs(net));
     $('statNetLabel').textContent = net >= 0 ? 'Surplus' : 'Deficit';
