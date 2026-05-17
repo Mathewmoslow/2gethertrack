@@ -60,7 +60,7 @@
     flex-direction: column;
     height: 100vh;
     padding-bottom: calc(75px + var(--safe-bot));
-    touch-action: manipulation; /* Disable double-tap zoom for snappier feel */
+    touch-action: manipulation; 
   }
   #app.active { display: flex; }
 
@@ -71,20 +71,18 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Orientation & Brand Specifics */
   @media (orientation: landscape) and (max-height: 500px) {
     .stat-grid { grid-template-columns: 1fr 1fr 1fr 1fr; }
     .bottom-nav { height: calc(60px + var(--safe-bot)); }
     .view-container { padding-top: 10px; }
   }
 
-  /* Specific breakpoints for popular devices */
-  @media (max-width: 380px) { /* iPhone SE / Mini */
+  @media (max-width: 380px) { 
     .splash-title { font-size: 2rem; }
     .stat-val { font-size: 1.1rem; }
   }
 
-  @media (min-width: 430px) { /* iPhone Pro Max / Pixel 7 Pro */
+  @media (min-width: 430px) { 
     .view-container { padding: 30px; }
   }
 
@@ -128,14 +126,6 @@
   .btn-primary { background: var(--sage); color: white; }
   .btn-secondary { background: var(--coral); color: white; }
   .btn-ghost { background: var(--cream-2); color: var(--dark); }
-
-  /* Edge-to-Edge specific class */
-  .edge-to-edge {
-    margin-left: -20px;
-    margin-right: -20px;
-    width: calc(100% + 40px);
-    border-radius: 0;
-  }
 
   .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
   .stat-card { background: white; padding: 16px; border-radius: var(--radius); box-shadow: var(--shadow); }
@@ -215,7 +205,7 @@
     <div id="view-clients" class="view">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
         <h2 style="font-family:'Cabinet Grotesk';">Clients</h2>
-        <button class="btn-primary" style="padding:8px 15px; border-radius:10px; font-weight:700;" onclick="openModal('clientModal')">+ Add</button>
+        <button class="btn-primary" style="padding:8px 15px; border-radius:10px; font-weight:700;">+ Add</button>
       </div>
       <div id="mobileClientsList"></div>
     </div>
@@ -225,9 +215,7 @@
       <h2 style="font-family:'Cabinet Grotesk';">ACE Certification</h2>
       <p style="opacity:0.6; margin-bottom:20px;">6th Edition Practice Questions</p>
       
-      <div id="chapterList">
-        <!-- JS Render -->
-      </div>
+      <div id="chapterList"></div>
 
       <div id="quizEngine" class="hide">
         <div class="card">
@@ -279,8 +267,7 @@
   </nav>
 </div>
 
-<!-- (Modals preserved but hidden) -->
-<div id="toast" style="position:fixed; bottom:100px; left:50%; transform:translateX(-50%); background:var(--dark); color:white; padding:10px 20px; border-radius:20px; font-size:0.8rem; z-index:3000; opacity:0; transition:0.3s;"></div>
+<div id="toast" style="position:fixed; bottom:100px; left:50%; transform:translateX(-50%); background:var(--dark); color:white; padding:10px 20px; border-radius:20px; font-size:0.8rem; z-index:3000; opacity:0; transition:0.3s; pointer-events:none;"></div>
 
 <script type="module">
   // ===== Firebase config =====
@@ -294,66 +281,20 @@
     appId: "1:1043644254458:web:05beca7ad267858a0de143"
   };
 
-  const ACE_QUESTIONS = [
-    { chapter: 1, title: "Role and Scope", questions: [
-        { q: "Which is WITHIN the scope of practice for an ACE CPT?", options: ["Diagnosing knee pain", "Prescribing meal plans", "Designing body composition programs", "Recommending supplements"], correct: 2, rationale: "Personal trainers design exercise programs for healthy individuals or those with medical clearance." },
-        { q: "A client mentions chest pain during exercise. What is the FIRST action?", options: ["Lower intensity", "Check heart rate", "Stop exercise and refer to physician", "Deep breathing"], correct: 2, rationale: "Chest pain is a red flag requiring immediate cessation and medical referral." }
-    ]},
-    { chapter: 2, title: "ACE IFT Model", questions: [
-        { q: "What is the primary focus of the 'Functional Movement' phase?", options: ["Hypertrophy", "Stability and Mobility", "Anaerobic Power", "Agility"], correct: 1, rationale: "The foundation focuses on kinetic chain integrity." },
-        { q: "A client can talk but not comfortably. Which training zone are they in?", options: ["Zone 1", "Zone 2", "Zone 3", "Zone 4"], correct: 1, rationale: "Zone 2 is between VT1 and VT2, where talking becomes challenging." }
-    ]},
-    { chapter: 3, title: "Behavior Change", questions: [
-        { q: "A client regularly exercises for 4 months. Which stage are they in?", options: ["Preparation", "Action", "Maintenance", "Contemplation"], correct: 1, rationale: "Maintenance begins after 6 months of consistent behavior." },
-        { q: "Which is a characteristic of 'Self-Efficacy'?", options: ["External motivation", "Belief in one's ability to succeed", "Fear of failure", "Social pressure"], correct: 1, rationale: "Self-efficacy is the internal belief in one's capacity to perform a behavior." }
-    ]},
-    { chapter: 4, title: "Communication & Teaching", questions: [
-        { q: "Which is the BEST example of a process goal?", options: ["Lose 10 lbs", "Bench press 200 lbs", "Attend gym 3x per week", "Reduce body fat by 5%"], correct: 2, rationale: "Process goals focus on the actions required to achieve an outcome." }
-    ]},
-    { chapter: 5, title: "Health Screening", questions: [
-        { q: "Which form identifies individuals at risk for a cardiac event?", options: ["Informed Consent", "Liability Waiver", "PAR-Q+", "Lifestyle Questionnaire"], correct: 2, rationale: "The PAR-Q+ is the standard tool for identifying exercise risks." }
-    ]},
-    { chapter: 6, title: "Nutrition", questions: [
-        { q: "Which resource is appropriate for a trainer to provide dietary advice?", options: ["Fitness blog", "ChooseMyPlate.gov", "Supplement brochure", "Celebrity diet book"], correct: 1, rationale: "Trainers should use evidence-based government resources within their scope." }
-    ]},
-    { chapter: 7, title: "Resting Assessments", questions: [
-        { q: "A resting heart rate (RHR) of <60 bpm is known as:", options: ["Tachycardia", "Sinus bradycardia", "Hypertension", "Hypotension"], correct: 1, rationale: "Bradycardia is a slow heart rate, often found in well-conditioned athletes." }
-    ]},
-    { chapter: 8, title: "Cardiorespiratory Training", questions: [
-        { q: "If a client can speak comfortably, they are in which zone?", options: ["Zone 1", "Zone 2", "Zone 3", "Zone 4"], correct: 0, rationale: "Zone 1 is below VT1, where the talk test is easy." }
-    ]},
-    { chapter: 9, title: "Muscular Foundations", questions: [
-        { q: "What is the primary purpose of a tendon?", options: ["Connect bone to bone", "Connect muscle to bone", "Joint cushioning", "Red blood cell production"], correct: 1, rationale: "Tendons transmit force from muscle to bone to create movement." }
-    ]},
-    { chapter: 10, title: "Muscular Assessments", questions: [
-        { q: "Which assessment evaluates stability during lower-body movement?", options: ["Push-up test", "Bend-and-lift screen", "Thomas test", "McGill's battery"], correct: 1, rationale: "The bend-and-lift screen observes the squat pattern and kinetic chain stability." }
-    ]},
-    { chapter: 11, title: "Integrated Programming", questions: [
-        { q: "When should a client progress to the 'Fitness' phase of cardio?", options: ["After 2 weeks", "Can complete 20m steady-state below VT1", "Can run a 5K", "Loses 5% weight"], correct: 1, rationale: "Consistent base endurance is required before adding intensity." }
-    ]},
-    { chapter: 12, title: "Obesity Considerations", questions: [
-        { q: "Initial aerobic duration for a client with obesity should be:", options: ["60m daily", "30-60m 5x/wk", "10m bouts progressing to 30-60m", "20m HIIT"], correct: 2, rationale: "Intermittent bouts improve adherence and reduce joint stress." }
-    ]},
-    { chapter: 13, title: "Chronic Disease", questions: [
-        { q: "Primary precaution for Type 1 diabetes is:", options: ["Avoiding sugar", "Monitoring for hypoglycemia", "Only morning exercise", "Avoiding cardio"], correct: 1, rationale: "Exercise increases insulin sensitivity and can drop blood sugar dangerously." }
-    ]},
-    { chapter: 14, title: "Lifespan Considerations", questions: [
-        { q: "Which position should a pregnant woman avoid after the 1st trimester?", options: ["Standing", "Seated", "Supine", "Prone"], correct: 2, rationale: "Supine positions can compress the vena cava, reducing blood flow." }
-    ]},
-    { chapter: 15, title: "Musculoskeletal Issues", questions: [
-        { q: "Most common sports-related injury of the knee?", options: ["MCL sprain", "Meniscus tear", "ACL injury", "Patellar tendonitis"], correct: 2, rationale: "ACL tears are frequent in sports involving pivoting and deceleration." }
-    ]},
-    { chapter: 16, title: "Emergency Procedures", questions: [
-        { q: "First step when finding a collapsed person?", options: ["Chest compressions", "Check responsiveness and call 911", "Rescue breaths", "Check for medical bracelet"], correct: 1, rationale: "Early activation of EMS is critical for survival." }
-    ]},
-    { chapter: 17, title: "Legal Guidelines", questions: [
-        { q: "Which business structure is a separate legal entity?", options: ["Sole Proprietorship", "General Partnership", "Corporation", "Independent Contractor"], correct: 2, rationale: "Corporations provide limited liability protection to owners." }
-    ]},
-    { chapter: 18, title: "Business Fundamentals", questions: [
-        { q: "A 'closing ratio' is defined as:", options: ["Sessions completed", "Prospects who become clients", "Revenue/Expenses", "Renewal percentage"], correct: 1, rationale: "The closing ratio measures sales effectiveness." }
-    ]}
-  ];
+  // ===== Education & Quiz State =====
+  let ACE_BANK = [];
+  let USER_PROGRESS = {}; 
 
+  async function loadAceData() {
+    try {
+      const response = await fetch('ace_questions.json');
+      ACE_BANK = await response.json();
+      updateGlobalAceProgress();
+    } catch (e) {
+      console.error("Failed to load ACE questions", e);
+      toast("Error loading question bank");
+    }
+  }
 
   // UI Helpers
   const $ = (id) => document.getElementById(id);
@@ -367,14 +308,17 @@
   }
 
   // Routing
-  window.switchView = (viewId, navEl) => {
+  window.switchView = async (viewId, navEl) => {
     document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
     document.getElementById('view-' + viewId).classList.add('active');
     if (navEl) {
       document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
       navEl.classList.add('active');
     }
-    if (viewId === 'ace') renderChapters();
+    if (viewId === 'ace') {
+      if (ACE_BANK.length === 0) await loadAceData();
+      renderChapters();
+    }
   };
 
   // ACE Quiz Logic
@@ -383,21 +327,32 @@
 
   window.renderChapters = () => {
     const list = $('chapterList');
-    list.innerHTML = ACE_QUESTIONS.map((ch, i) => `
-      <div class="chapter-pill" onclick="startQuiz(${i})">
-        <div class="chapter-info">
-          <h4>Chapter ${ch.chapter}: ${ch.title}</h4>
-          <p>${ch.questions.length} Practice Questions</p>
+    if (ACE_BANK.length === 0) {
+      list.innerHTML = '<div class="card">Loading study guide...</div>';
+      return;
+    }
+    list.innerHTML = ACE_BANK.map((ch, i) => {
+      const prog = USER_PROGRESS[ch.chapter] || { correct: 0, completed: [] };
+      const percent = Math.round((prog.completed.length / ch.questions.length) * 100) || 0;
+      return `
+        <div class="chapter-pill" onclick="startQuiz(${i})">
+          <div class="chapter-info">
+            <h4>Chapter ${ch.chapter}: ${ch.title}</h4>
+            <p>${percent}% Complete (${prog.completed.length}/${ch.questions.length})</p>
+          </div>
+          <div style="text-align:right;">
+             <div style="font-size:0.7rem; font-weight:800; color:var(--sage-dark);">${prog.correct}/${prog.completed.length} Correct</div>
+             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="margin-top:5px;"><path d="M9 18l6-6-6-6"></path></svg>
+          </div>
         </div>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M9 18l6-6-6-6"></path></svg>
-      </div>
-    `).join('');
+      `;
+    }).join('');
     list.classList.remove('hide');
     $('quizEngine').classList.add('hide');
   };
 
   window.startQuiz = (index) => {
-    currentQuiz = ACE_QUESTIONS[index];
+    currentQuiz = ACE_BANK[index];
     qIndex = 0;
     $('chapterList').classList.add('hide');
     $('quizEngine').classList.remove('hide');
@@ -413,16 +368,19 @@
     $('quizQuestion').textContent = q.q;
     $('quizFeedback').classList.add('hide');
     $('btnNextQuestion').classList.add('hide');
+    
     $('quizOptions').innerHTML = q.options.map((opt, i) => `
       <button class="quiz-option" onclick="checkAnswer(${i})">${opt}</button>
     `).join('');
   }
 
-  window.checkAnswer = (idx) => {
+  window.checkAnswer = async (idx) => {
     const q = currentQuiz.questions[qIndex];
     const btns = document.querySelectorAll('.quiz-option');
     btns.forEach(b => b.disabled = true);
-    if (idx === q.correct) {
+    
+    const isCorrect = (idx === q.correct);
+    if (isCorrect) {
       btns[idx].classList.add('correct');
       showFeedback("Correct! " + q.rationale, true);
     } else {
@@ -430,8 +388,45 @@
       btns[q.correct].classList.add('correct');
       showFeedback("Incorrect. " + q.rationale, false);
     }
+    
+    await saveProgress(currentQuiz.chapter, qIndex, isCorrect);
     $('btnNextQuestion').classList.remove('hide');
   };
+
+  async function saveProgress(chapterId, questionIdx, isCorrect) {
+    if (!currentUser) return;
+    const { doc, setDoc, serverTimestamp } = window._fs;
+    
+    if (!USER_PROGRESS[chapterId]) USER_PROGRESS[chapterId] = { correct: 0, completed: [] };
+    if (!USER_PROGRESS[chapterId].completed.includes(questionIdx)) {
+       USER_PROGRESS[chapterId].completed.push(questionIdx);
+       if (isCorrect) USER_PROGRESS[chapterId].correct++;
+    }
+
+    const progRef = doc(db, 'users', currentUser.uid, 'education', `ch_${chapterId}`);
+    await setDoc(progRef, {
+      chapter: chapterId,
+      correct: USER_PROGRESS[chapterId].correct,
+      completed: USER_PROGRESS[chapterId].completed,
+      updatedAt: serverTimestamp()
+    }, { merge: true });
+    
+    updateGlobalAceProgress();
+  }
+
+  function updateGlobalAceProgress() {
+    if (ACE_BANK.length === 0) return;
+    let totalQ = 0;
+    let completedQ = 0;
+    ACE_BANK.forEach(ch => {
+      totalQ += ch.questions.length;
+      if (USER_PROGRESS[ch.chapter]) {
+        completedQ += USER_PROGRESS[ch.chapter].completed.length;
+      }
+    });
+    const overall = Math.round((completedQ / totalQ) * 100) || 0;
+    $('statAceProgress').textContent = overall + '%';
+  }
 
   function showFeedback(text, isCorrect) {
     const fb = $('quizFeedback');
@@ -454,11 +449,13 @@
   try {
     const { initializeApp } = await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js');
     const { getAuth, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } = await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js');
-    const { getFirestore, collection, doc, onSnapshot, query, orderBy } = await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js');
+    const { getFirestore, collection, doc, onSnapshot, setDoc, updateDoc, deleteDoc, addDoc, serverTimestamp, query, orderBy } = await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js');
 
     app = initializeApp(firebaseConfig);
     auth = getAuth(app);
     db = getFirestore(app);
+    
+    window._fs = { doc, setDoc, updateDoc, deleteDoc, addDoc, serverTimestamp, query, orderBy, collection };
 
     onAuthStateChanged(auth, async (user) => {
       if (user) {
@@ -466,7 +463,6 @@
         $('splash').style.display = 'none';
         $('app').classList.add('active');
         
-        // Listeners
         const uid = user.uid;
         onSnapshot(collection(db, 'users', uid, 'clients'), (snap) => {
           state.clients = snap.docs.map(d => ({ id: d.id, ...d.data() }));
@@ -484,6 +480,18 @@
           }
           renderAll();
         });
+        
+        onSnapshot(collection(db, 'users', uid, 'education'), (snap) => {
+           snap.docs.forEach(d => {
+             const data = d.data();
+             USER_PROGRESS[data.chapter] = data;
+           });
+           updateGlobalAceProgress();
+           if ($('view-ace').classList.contains('active')) renderChapters();
+        });
+
+        if (ACE_BANK.length === 0) loadAceData();
+        
       } else {
         $('app').classList.remove('active');
         $('splash').style.display = 'flex';
@@ -503,16 +511,14 @@
     const earn = state.clients.reduce((s, c) => s + (c.rate * c.frequency * (state.settings.weeks || 4)), 0);
     $('statEarnings').textContent = fmt(earn);
     
-    // Render Schedule
-    const today = new Date().getDay(); // 0=Sun, 1=Mon...
-    const aceDayMap = [6, 0, 1, 2, 3, 4, 5]; // Map JS day to our day-toggle index (M=0)
+    const today = new Date().getDay(); 
+    const aceDayMap = [6, 0, 1, 2, 3, 4, 5]; 
     const activeToday = state.clients.filter(c => c.days && c.days[aceDayMap[today]]);
     
     $('todaySchedule').innerHTML = activeToday.length 
       ? activeToday.map(c => `• ${c.name} (${fmt(c.rate)})`).join('<br>')
       : "No sessions scheduled for today.";
 
-    // Render Client List
     $('mobileClientsList').innerHTML = state.clients.map(c => `
       <div class="card" style="display:flex; justify-content:space-between; align-items:center;">
         <div>
