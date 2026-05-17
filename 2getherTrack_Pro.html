@@ -426,7 +426,12 @@
           $('inpTakeHome').value = state.settings.takeHome; $('setName').value = state.settings.displayName; $('setWeeks').value = state.settings.weeks; }
           renderAll(); 
         });
-        onSnapshot(collection(db, 'users', uid, 'education'), (s) => { s.docs.forEach(d => USER_PROGRESS[d.data().chapter] = d.data()); updateGlobalAceProgress(); if($('view-ace').classList.contains('active')) renderChapters(); });
+        onSnapshot(collection(db, 'users', uid, 'education'), (s) => { 
+           s.docs.forEach(d => USER_PROGRESS[d.data().chapter] = d.data()); 
+           updateGlobalAceProgress(); 
+           // Only re-render list if we aren't currently taking a quiz
+           if($('view-ace').classList.contains('active') && !curQ) renderChapters(); 
+        });
         loadAceData();
       } else { $('app').classList.remove('active'); $('splash').style.display='flex'; }
     });
@@ -471,10 +476,35 @@
   async function loadAceData() { try { const r = await fetch('ace_questions.json'); ACE_BANK = await r.json(); updateGlobalAceProgress(); } catch(e){ console.error(e); } }
   function updateGlobalAceProgress() { if(!ACE_BANK.length) return; let t=0, c=0; ACE_BANK.forEach(ch=>{ t+=ch.questions.length; c+=(USER_PROGRESS[ch.chapter]?.completed?.length||0); }); $('statAceProgress').textContent = Math.round((c/t)*100)+'%'; }
   window.renderChapters = () => { $('chapterList').innerHTML = ACE_BANK.map((ch, i) => { const p = USER_PROGRESS[ch.chapter]||{completed:[]}; return `<div class="chapter-pill" onclick="window.startQuiz(${i})"><div class="chapter-info"><h4>Ch ${ch.chapter}: ${ch.title}</h4><p>${Math.round((p.completed.length/ch.questions.length)*100)||0}% Complete</p></div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M9 18l6-6-6-6"></path></svg></div>`; }).join(''); $('chapterList').classList.remove('hide'); $('quizEngine').classList.add('hide'); };
-  let curQ = null, qIdx = 0;
-  window.startQuiz = (i) => { curQ = ACE_BANK[i]; qIdx=0; $('chapterList').classList.add('hide'); $('quizEngine').classList.remove('hide'); showQ(); };
-  window.exitQuiz = () => { curQ=null; window.renderChapters(); };
-  function showQ() { const q = curQ.questions[qIdx]; $('quizChapterName').textContent='CH '+curQ.chapter; $('quizProgress').textContent=`Q ${qIdx+1}/${curQ.questions.length}`; $('quizQuestion').textContent=q.q; $('quizFeedback').classList.add('hide'); $('btnNextQuestion').classList.add('hide'); $('quizOptions').innerHTML = q.options.map((o,i)=>`<button class="quiz-option" onclick="window.checkA(${i})">${o}</button>`).join(''); }
+  let curQ = null, qIdx = 0, inCaseStudy = false;
+  window.startQuiz = (i) => { 
+    curQ = ACE_BANK[i]; 
+    qIdx=0; 
+    inCaseStudy = !!curQ.caseStudy;
+    $('chapterList').classList.add('hide'); 
+    $('quizEngine').classList.remove('hide'); 
+    showQ(); 
+  };
+  window.exitQuiz = () => { curQ=null; inCaseStudy=false; window.renderChapters(); };
+
+  function showQ() {
+    const q = curQ.questions[qIdx];
+    $('quizChapterName').textContent='CH '+curQ.chapter;
+    $('quizProgress').textContent=`Q ${qIdx+1}/${curQ.questions.length}`;
+    $('quizFeedback').classList.add('hide');
+    $('btnNextQuestion').classList.add('hide');
+
+    let html = '';
+    if (inCaseStudy && curQ.caseStudy) {
+       html = `<div class="card" style="background:var(--cream); border-left:6px solid var(--orange); margin-bottom:20px;">
+          <h4 style="font-size:0.7rem; text-transform:uppercase; margin-bottom:10px;">Scenario</h4>
+          <p style="font-size:0.9rem; font-style:italic;">${curQ.caseStudy}</p>
+       </div>`;
+    }
+    
+    $('quizQuestion').innerHTML = html + `<p>${q.q}</p>`;
+    $('quizOptions').innerHTML = q.options.map((o,i)=>`<button class="quiz-option" onclick="window.checkA(${i})">${o}</button>`).join('');
+  }
   window.checkA = async (idx) => { 
     const q = curQ.questions[qIdx]; const btns = document.querySelectorAll('.quiz-option'); btns.forEach(b=>b.disabled=true); const correct = (idx===q.correct);
     btns[idx].classList.add(correct?'correct':'wrong'); if(!correct) btns[q.correct].classList.add('correct');
