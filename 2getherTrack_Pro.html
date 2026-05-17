@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#88A78B" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>2getherTrack PRO — Together Fitness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@500;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --orange:    #F9A350;
+    --dark:      #4C554F;
+    --cream:     #F9E9CF;
+    --cream-2:   #FDF5E3;
+    --sage:      #88A78B;
+    --sage-dark: #6B8B6E;
+    --coral:     #F4A693;
+    --coral-dk:  #E58A75;
+    --line:      rgba(76,85,79,0.12);
+    --shadow:    0 4px 20px rgba(76,85,79,0.08);
+    --radius:    20px;
+    --safe-top:  env(safe-area-inset-top, 0px);
+    --safe-bot:  env(safe-area-inset-bottom, 0px);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+  html, body { background: var(--cream-2); height: 100%; overflow: hidden; }
+  body { font-family: 'Outfit', system-ui, sans-serif; color: var(--dark); line-height: 1.4; -webkit-font-smoothing: antialiased; }
+
+  /* ========== SHELL ========== */
+  #splash { position: fixed; inset: 0; background: radial-gradient(circle at 30% 20%, var(--cream) 0%, var(--cream-2) 60%); display: flex; align-items: center; justify-content: center; padding: 20px; z-index: 2000; }
+  .splash-card { background: white; border-radius: 24px; padding: 40px 30px; width: 100%; max-width: 400px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+  .splash-title { font-family: 'Cabinet Grotesk'; font-size: 2.5rem; margin-bottom: 5px; }
+  .splash-title span { color: var(--coral-dk); }
+  #app { display: none; flex-direction: column; height: 100vh; padding-bottom: calc(75px + var(--safe-bot)); touch-action: manipulation; }
+  #app.active { display: flex; }
+  .view-container { flex: 1; overflow-y: auto; padding: calc(20px + var(--safe-top)) 20px 40px; -webkit-overflow-scrolling: touch; }
+  .view { display: none; width: 100%; }
+  .view.active { display: block; animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+  @keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+
+  /* ========== NAV ========== */
+  .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; height: calc(75px + var(--safe-bot)); background: white; border-top: 1px solid var(--line); display: flex; justify-content: space-around; align-items: center; padding-bottom: var(--safe-bot); z-index: 1000; box-shadow: 0 -4px 20px rgba(0,0,0,0.05); }
+  .nav-item { display: flex; flex-direction: column; align-items: center; gap: 4px; color: var(--dark); opacity: 0.35; font-size: 0.65rem; font-weight: 700; flex: 1; padding: 12px 0; text-decoration: none; transition: 0.2s; }
+  .nav-item.active { opacity: 1; color: var(--sage-dark); transform: translateY(-2px); }
+  .nav-item svg { width: 26px; height: 26px; }
+
+  /* ========== UI ========== */
+  .card { background: white; border-radius: var(--radius); padding: 20px; margin-bottom: 15px; box-shadow: var(--shadow); border: 1px solid var(--line); }
+  .btn-full { width: 100%; padding: 18px; border-radius: 18px; border: none; font-size: 1rem; font-weight: 700; cursor: pointer; transition: 0.2s; display: flex; align-items: center; justify-content: center; gap: 10px; }
+  .btn-primary { background: var(--sage); color: white; }
+  .btn-secondary { background: var(--coral); color: white; }
+  .btn-ghost { background: var(--cream-2); color: var(--dark); }
+  .btn-danger { background: transparent; color: #b94e3a; font-weight: 600; padding: 10px; }
+
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+  .stat-card { background: white; padding: 16px; border-radius: var(--radius); box-shadow: var(--shadow); border-top: 4px solid var(--sage); }
+  .stat-card.coral { border-top-color: var(--coral); }
+  .stat-card.orange { border-top-color: var(--orange); }
+  .stat-label { font-size: 0.6rem; text-transform: uppercase; opacity: 0.5; font-weight: 800; letter-spacing: 0.05em; }
+  .stat-val { font-size: 1.3rem; font-weight: 800; font-family: 'Cabinet Grotesk'; color: var(--dark); }
+
+  /* ========== MATRIX TABLE ========== */
+  .matrix-wrap { overflow-x: auto; margin-top: 10px; border-radius: 12px; border: 1px solid var(--line); }
+  .matrix { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  .matrix th, .matrix td { padding: 12px 10px; text-align: center; border: 1px solid var(--line); }
+  .matrix th { background: var(--cream-2); font-weight: 800; font-size: 0.7rem; text-transform: uppercase; }
+  .matrix td.need { color: var(--coral-dk); font-weight: 800; }
+  .matrix td.zero { color: var(--sage-dark); opacity: 0.4; }
+
+  /* ========== FORMS & MODALS ========== */
+  .modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; padding: 20px; z-index: 3000; }
+  .modal-backdrop.active { display: flex; }
+  .modal { background: white; border-radius: 24px; padding: 25px; width: 100%; max-width: 440px; max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.2); }
+  .field { margin-bottom: 15px; }
+  .field label { display: block; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; opacity: 0.5; margin-bottom: 5px; }
+  .field input, .field select, .field textarea { width: 100%; padding: 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--cream-2); font-family: inherit; font-size: 1rem; }
+  .day-toggles { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 5px; }
+  .day-toggle { width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--line); background: var(--cream-2); font-weight: 800; cursor: pointer; }
+  .day-toggle.on { background: var(--sage); color: white; border-color: var(--sage); }
+
+  /* ========== ACE MODULE ========== */
+  .chapter-pill { padding: 15px; background: white; border-radius: 16px; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; box-shadow: var(--shadow); border-left: 6px solid var(--sage); }
+  .quiz-option { display: block; width: 100%; text-align: left; padding: 18px; background: var(--cream-2); border-radius: 14px; margin-bottom: 10px; border: 2px solid transparent; font-size: 0.95rem; font-weight: 500; }
+  .quiz-option.correct { background: #E8F5E9; border-color: #4CAF50; color: #1B5E20; }
+  .quiz-option.wrong { background: #FFEBEE; border-color: #F44336; color: #B71C1C; }
+
+  .hide { display: none !important; }
+  @media (min-width: 600px) { #app, #splash, .modal-backdrop { max-width: 480px; margin: 0 auto; border-left: 1px solid var(--line); border-right: 1px solid var(--line); } }
+</style>
+</head>
+
+<body>
+
+<div id="splash">
+  <div class="splash-card">
+    <h1 class="splash-title">2gether<span>Track</span> PRO</h1>
+    <p style="opacity:0.6; margin-bottom:30px;">Business Ledger & ACE Study Guide</p>
+    <div style="display:grid; gap:10px;">
+      <input type="email" id="authEmail" placeholder="Email" />
+      <input type="password" id="authPassword" placeholder="Password" />
+      <button class="btn-full btn-primary" id="btnEmailSignIn">Sign In</button>
+      <button class="btn-full btn-ghost" id="btnEmailCreate">Create Account</button>
+    </div>
+    <div id="cfgStatus" style="margin-top:20px; font-size:0.7rem; opacity:0.5;">Connecting...</div>
+  </div>
+</div>
+
+<div id="app">
+  <div class="view-container">
+    
+    <!-- DASHBOARD -->
+    <div id="view-dash" class="view active">
+      <h2 style="font-family:'Cabinet Grotesk'; font-size:1.8rem;">Hey <span id="firstName">Trainer</span>!</h2>
+      <p style="opacity:0.6; margin-bottom:20px;">Here is your business pulse.</p>
+      
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-label">Earnings / Mo</div>
+          <div class="stat-val" id="statEarnings">$0</div>
+        </div>
+        <div class="stat-card coral">
+          <div class="stat-label" id="statNetLabel">Surplus</div>
+          <div class="stat-val" id="statNet">$0</div>
+        </div>
+        <div class="stat-card orange">
+          <div class="stat-label">Goal / Mo</div>
+          <div class="stat-val" id="statRequirement">$0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">ACE Prep</div>
+          <div class="stat-val" id="statAceProgress">0%</div>
+        </div>
+      </div>
+
+      <div class="card" style="border-left: 6px solid var(--orange);">
+        <h3 style="font-size:0.8rem; text-transform:uppercase; margin-bottom:10px; opacity:0.6;">Today's Clients</h3>
+        <div id="todaySchedule" style="font-weight:700;">Loading...</div>
+      </div>
+
+      <div class="card">
+        <h3 style="font-size:0.9rem; margin-bottom:15px;">Revenue Matrix</h3>
+        <p style="font-size:0.75rem; opacity:0.6; margin-bottom:10px;">New clients needed to hit your goal:</p>
+        <div class="matrix-wrap">
+          <table class="matrix">
+            <thead><tr id="matrixHeader"><th>Sess/Wk</th></tr></thead>
+            <tbody id="matrixBody"></tbody>
+          </table>
+        </div>
+        <button class="btn-ghost" style="width:100%; margin-top:15px; padding:10px; border-radius:10px; font-size:0.8rem;" onclick="openModal('ratesModal')">Edit Matrix Rates</button>
+      </div>
+    </div>
+
+    <!-- CLIENTS -->
+    <div id="view-clients" class="view">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+        <h2 style="font-family:'Cabinet Grotesk';">Clients</h2>
+        <button class="btn-primary" style="padding:10px 18px; border-radius:12px; font-weight:800;" onclick="showAddClient()">+ ADD</button>
+      </div>
+      <div id="mobileClientsList"></div>
+    </div>
+
+    <!-- BUSINESS / EXPENSES -->
+    <div id="view-biz" class="view">
+      <h2 style="font-family:'Cabinet Grotesk';">Business</h2>
+      <p style="opacity:0.6; margin-bottom:20px;">Manage expenses and targets.</p>
+      
+      <div class="card">
+        <div class="field">
+          <label>Minimum Take-Home / Mo</label>
+          <input type="number" id="inpTakeHome" step="100" />
+          <p style="font-size:0.7rem; opacity:0.5; margin-top:5px;">Target income after all expenses are paid.</p>
+        </div>
+      </div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
+        <h3 style="font-size:1rem;">Monthly Expenses</h3>
+        <button class="btn-primary" style="padding:8px 14px; border-radius:10px; font-size:0.8rem;" onclick="showAddExpense()">+ EXPENSE</button>
+      </div>
+      <div id="mobileExpensesList"></div>
+    </div>
+
+    <!-- ACE SUITE -->
+    <div id="view-ace" class="view">
+      <h2 style="font-family:'Cabinet Grotesk';">ACE Prep</h2>
+      <div id="chapterList" style="margin-top:20px;"></div>
+      <div id="quizEngine" class="hide">
+        <div class="card">
+          <div style="display:flex; justify-content:space-between; font-size:0.75rem; margin-bottom:15px; font-weight:800; color:var(--sage-dark);">
+            <span id="quizProgress">Question 1</span>
+            <span id="quizChapterName">Chapter 1</span>
+          </div>
+          <p id="quizQuestion" style="font-size:1.1rem; font-weight:700; margin-bottom:20px;"></p>
+          <div id="quizOptions"></div>
+          <div id="quizFeedback" class="hide" style="padding:15px; border-radius:12px; font-size:0.85rem; margin-top:15px;"></div>
+          <button id="btnNextQuestion" class="btn-full btn-primary hide" style="margin-top:20px;">Next Question</button>
+          <button class="btn-ghost" style="width:100%; margin-top:10px; padding:12px; border-radius:12px;" onclick="exitQuiz()">Exit Quiz</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SETTINGS -->
+    <div id="view-settings" class="view">
+      <h2 style="font-family:'Cabinet Grotesk';">Settings</h2>
+      <div class="card" style="margin-top:20px;">
+        <div class="field"><label>Trainer Name</label><input type="text" id="setName" /></div>
+        <div class="field"><label>Weeks per Month</label><input type="number" id="setWeeks" step="0.1" value="4" /></div>
+        <button class="btn-full btn-primary" id="setSave">Save Profile</button>
+      </div>
+      <button class="btn-full btn-ghost" style="margin-top:20px;" id="btnSignOut">Sign Out</button>
+    </div>
+
+  </div>
+
+  <nav class="bottom-nav">
+    <a href="javascript:void(0)" class="nav-item active" onclick="switchView('dash', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Home</a>
+    <a href="javascript:void(0)" class="nav-item" onclick="switchView('clients', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>Clients</a>
+    <a href="javascript:void(0)" class="nav-item" onclick="switchView('biz', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>Business</a>
+    <a href="javascript:void(0)" class="nav-item" onclick="switchView('ace', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>ACE</a>
+    <a href="javascript:void(0)" class="nav-item" onclick="switchView('settings', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>Settings</a>
+  </nav>
+</div>
+
+<!-- MODALS -->
+<div class="modal-backdrop" id="clientModal">
+  <div class="modal">
+    <h3 id="cliModalTitle">Add Client</h3>
+    <div class="field"><label>Name</label><input type="text" id="cliName" /></div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+      <div class="field"><label>Rate ($)</label><input type="number" id="cliRate" /></div>
+      <div class="field"><label>Sess/Wk</label><select id="cliFreq"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div>
+    </div>
+    <div class="field"><label>Days</label><div class="day-toggles" id="cliDays">
+      <button class="day-toggle" data-day="0">M</button><button class="day-toggle" data-day="1">T</button><button class="day-toggle" data-day="2">W</button><button class="day-toggle" data-day="3">T</button><button class="day-toggle" data-day="4">F</button><button class="day-toggle" data-day="5">S</button><button class="day-toggle" data-day="6">S</button>
+    </div></div>
+    <div class="field"><label>Notes</label><textarea id="cliNotes"></textarea></div>
+    <div style="display:flex; gap:10px;">
+      <button class="btn-full btn-primary" id="cliSave">Save</button>
+      <button class="btn-danger hide" id="cliDelete">Delete</button>
+      <button class="btn-ghost" onclick="closeModal('clientModal')">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="expenseModal">
+  <div class="modal">
+    <h3 id="expModalTitle">Add Expense</h3>
+    <div class="field"><label>Label</label><input type="text" id="expLabel" /></div>
+    <div class="field"><label>Amount ($/mo)</label><input type="number" id="expAmount" /></div>
+    <div style="display:flex; gap:10px;">
+      <button class="btn-full btn-primary" id="expSave">Save</button>
+      <button class="btn-danger hide" id="expDelete">Delete</button>
+      <button class="btn-ghost" onclick="closeModal('expenseModal')">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="ratesModal">
+  <div class="modal">
+    <h3>Matrix Rates</h3>
+    <p style="font-size:0.75rem; opacity:0.6; margin-bottom:15px;">Enter session rates to show in matrix (comma separated).</p>
+    <input type="text" id="ratesInput" style="width:100%; padding:14px; border-radius:12px; border:1px solid var(--line); margin-bottom:15px;" />
+    <button class="btn-full btn-primary" id="ratesSave">Save Rates</button>
+  </div>
+</div>
+
+<div id="toast" style="position:fixed; bottom:100px; left:50%; transform:translateX(-50%); background:var(--dark); color:white; padding:10px 20px; border-radius:20px; font-size:0.8rem; z-index:3000; opacity:0; transition:0.3s; pointer-events:none;"></div>
+
+<script type="module">
+  const DEFAULT_SETTINGS = { takeHome: 0, rates: [35,45,55,65,75], weeks: 4, displayName: '' };
+  const firebaseConfig = {
+    apiKey: "AIzaSyDr-jdIQErXPgaeW4k0u28OdhrthVbPfjs",
+    authDomain: "togethertrack-8d603.firebaseapp.com",
+    projectId: "togethertrack-8d603",
+    storageBucket: "togethertrack-8d603.firebasestorage.app",
+    messagingSenderId: "1043644254458",
+    appId: "1:1043644254458:web:05beca7ad267858a0de143"
+  };
+
+  // State
+  let ACE_BANK = [];
+  let USER_PROGRESS = {};
+  let state = { clients: [], expenses: [], settings: { ...DEFAULT_SETTINGS } };
+  let currentUser = null;
+  let editingClientId = null;
+  let editingExpId = null;
+
+  // Helpers
+  const $ = (id) => document.getElementById(id);
+  const fmt = (n) => '$' + Math.round(n).toLocaleString();
+  const openModal = (id) => $(id).classList.add('active');
+  const closeModal = (id) => $(id).classList.remove('active');
+  function toast(msg, ms=2200) {
+    const t = $('toast'); t.textContent = msg; t.style.opacity = '1'; t.style.transform = 'translateX(-50%) translateY(-20px)';
+    setTimeout(() => { t.style.opacity = '0'; t.style.transform = 'translateX(-50%) translateY(0)'; }, ms);
+  }
+
+  // Routing
+  window.switchView = async (viewId, navEl) => {
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    $( 'view-' + viewId ).classList.add('active');
+    if (navEl) { document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active')); navEl.classList.add('active'); }
+    if (viewId === 'ace' && ACE_BANK.length === 0) await loadAceData();
+    if (viewId === 'ace') renderChapters();
+  };
+
+  // Logic & Render
+  function renderAll() {
+    const weeks = state.settings.weeks || 4;
+    const earn = state.clients.reduce((s, c) => s + (c.rate * c.frequency * weeks), 0);
+    const cost = state.expenses.reduce((s, e) => s + (e.amount || 0), 0);
+    const req = cost + (state.settings.takeHome || 0);
+    const net = earn - req;
+
+    $('statEarnings').textContent = fmt(earn);
+    $('statRequirement').textContent = fmt(req);
+    $('statNet').textContent = (net < 0 ? '-' : '') + fmt(Math.abs(net));
+    $('statNetLabel').textContent = net >= 0 ? 'Surplus' : 'Deficit';
+    $('statNetLabel').parentElement.style.borderTopColor = net >= 0 ? 'var(--sage)' : 'var(--coral)';
+
+    // Schedule
+    const dayMap = [6,0,1,2,3,4,5]; // M=0
+    const activeToday = state.clients.filter(c => c.days && c.days[dayMap[new Date().getDay()]]);
+    $('todaySchedule').innerHTML = activeToday.length ? activeToday.map(c => c.name).join(', ') : "No sessions today.";
+
+    // Clients
+    $('mobileClientsList').innerHTML = state.clients.length ? state.clients.map(c => `
+      <div class="card" onclick="showEditClient('${c.id}')">
+        <div style="display:flex; justify-content:space-between; align-items:baseline;">
+           <div style="font-weight:800; font-size:1.1rem;">${c.name}</div>
+           <div style="font-weight:800; color:var(--sage-dark);">${fmt(c.rate * c.frequency * weeks)}/mo</div>
+        </div>
+        <div style="font-size:0.75rem; opacity:0.6; margin-top:5px;">${c.frequency}×/wk @ ${fmt(c.rate)}/sess</div>
+      </div>
+    `).join('') : '<div class="card" style="opacity:0.5; text-align:center;">No clients added.</div>';
+
+    // Expenses
+    $('mobileExpensesList').innerHTML = state.expenses.length ? state.expenses.map(e => `
+      <div class="card" onclick="showEditExpense('${e.id}')" style="display:flex; justify-content:space-between;">
+        <div style="font-weight:700;">${e.label}</div>
+        <div style="font-weight:800; color:var(--coral-dk);">${fmt(e.amount)}</div>
+      </div>
+    `).join('') : '<div class="card" style="opacity:0.5; text-align:center;">No expenses added.</div>';
+
+    renderMatrix(earn, req, weeks);
+  }
+
+  function renderMatrix(earn, req, weeks) {
+    const gap = Math.max(0, req - earn);
+    const rates = (state.settings.rates || [35,45,55,65,75]).sort((a,b)=>a-b);
+    $('matrixHeader').innerHTML = '<th>Sess/Wk</th>' + rates.map(r => `<th>${fmt(r)}</th>`).join('');
+    let body = '';
+    for(let f=1; f<=5; f++){
+      body += `<tr><th>${f}×</th>` + rates.map(r => {
+        const val = Math.ceil(gap / (r * f * weeks)) || 0;
+        return `<td class="${val ? 'need' : 'zero'}">${val}</td>`;
+      }).join('') + '</tr>';
+    }
+    $('matrixBody').innerHTML = body;
+  }
+
+  // --- Auth & Data ---
+  let db;
+  try {
+    const { initializeApp } = await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js');
+    const { getAuth, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } = await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js');
+    const { getFirestore, collection, doc, onSnapshot, setDoc, deleteDoc, addDoc, serverTimestamp } = await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js');
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    db = getFirestore(app);
+    window._fs = { doc, setDoc, deleteDoc, addDoc, serverTimestamp };
+
+    onAuthStateChanged(auth, (user) => {
+      if(user){
+        currentUser = user; $('splash').style.display='none'; $('app').classList.add('active');
+        const uid = user.uid;
+        onSnapshot(collection(db, 'users', uid, 'clients'), (s) => { state.clients = s.docs.map(d=>({id:d.id, ...d.data()})); renderAll(); });
+        onSnapshot(collection(db, 'users', uid, 'expenses'), (s) => { state.expenses = s.docs.map(d=>({id:d.id, ...d.data()})); renderAll(); });
+        onSnapshot(doc(db, 'users', uid, 'settings', 'main'), (s) => { 
+          if(s.exists()){ state.settings = { ...DEFAULT_SETTINGS, ...s.data() }; 
+          $('inpTakeHome').value = state.settings.takeHome; $('setName').value = state.settings.displayName; $('setWeeks').value = state.settings.weeks; }
+          renderAll(); 
+        });
+        onSnapshot(collection(db, 'users', uid, 'education'), (s) => { s.docs.forEach(d => USER_PROGRESS[d.data().chapter] = d.data()); updateGlobalAceProgress(); if($('view-ace').classList.contains('active')) renderChapters(); });
+        loadAceData();
+      } else { $('app').classList.remove('active'); $('splash').style.display='flex'; }
+    });
+
+    $('btnEmailSignIn').onclick = () => signInWithEmailAndPassword(auth, $('authEmail').value, $('authPassword').value).catch(e=>toast(e.message));
+    $('btnEmailCreate').onclick = () => createUserWithEmailAndPassword(auth, $('authEmail').value, $('authPassword').value).catch(e=>toast(e.message));
+    $('btnSignOut').onclick = () => signOut(auth);
+  } catch(e){ console.error(e); }
+
+  // --- Client Actions ---
+  window.showAddClient = () => { editingClientId=null; $('cliModalTitle').textContent='Add Client'; $('cliName').value=''; $('cliRate').value=55; $('cliFreq').value=1; $('cliNotes').value=''; document.querySelectorAll('.day-toggle').forEach(b=>b.classList.remove('on')); $('cliDelete').classList.add('hide'); openModal('clientModal'); };
+  window.showEditClient = (id) => { const c = state.clients.find(x=>x.id===id); editingClientId=id; $('cliModalTitle').textContent='Edit Client'; $('cliName').value=c.name; $('cliRate').value=c.rate; $('cliFreq').value=c.frequency; $('cliNotes').value=c.notes||''; document.querySelectorAll('.day-toggle').forEach((b,i)=>b.classList.toggle('on', !!(c.days&&c.days[i]))); $('cliDelete').classList.remove('hide'); openModal('clientModal'); };
+  document.querySelectorAll('.day-toggle').forEach(b => b.onclick = () => b.classList.toggle('on'));
+  $('cliSave').onclick = async () => {
+    const days = {}; document.querySelectorAll('#cliDays .day-toggle').forEach((b,i) => { if(b.classList.contains('on')) days[i]=true; });
+    const data = { name: $('cliName').value, rate: +$('cliRate').value, frequency: +$('cliFreq').value, days, notes: $('cliNotes').value };
+    if(editingClientId) await window._fs.setDoc(window._fs.doc(db, 'users', currentUser.uid, 'clients', editingClientId), data, {merge:true});
+    else await window._fs.addDoc(collection(db, 'users', currentUser.uid, 'clients'), data);
+    closeModal('clientModal'); toast('Saved');
+  };
+  $('cliDelete').onclick = async () => { if(confirm('Delete client?')) await window._fs.deleteDoc(window._fs.doc(db, 'users', currentUser.uid, 'clients', editingClientId)); closeModal('clientModal'); };
+
+  // --- Expense Actions ---
+  window.showAddExpense = () => { editingExpId=null; $('expModalTitle').textContent='Add Expense'; $('expLabel').value=''; $('expAmount').value=0; $('expDelete').classList.add('hide'); openModal('expenseModal'); };
+  window.showEditExpense = (id) => { const e = state.expenses.find(x=>x.id===id); editingExpId=id; $('expModalTitle').textContent='Edit Expense'; $('expLabel').value=e.label; $('expAmount').value=e.amount; $('expDelete').classList.remove('hide'); openModal('expenseModal'); };
+  $('expSave').onclick = async () => {
+    const data = { label: $('expLabel').value, amount: +$('expAmount').value };
+    if(editingExpId) await window._fs.setDoc(window._fs.doc(db, 'users', currentUser.uid, 'expenses', editingExpId), data, {merge:true});
+    else await window._fs.addDoc(collection(db, 'users', currentUser.uid, 'expenses'), data);
+    closeModal('expenseModal'); toast('Saved');
+  };
+  $('expDelete').onclick = async () => { if(confirm('Delete expense?')) await window._fs.deleteDoc(window._fs.doc(db, 'users', currentUser.uid, 'expenses', editingExpId)); closeModal('expenseModal'); };
+
+  // --- Settings & ACE ---
+  $('inpTakeHome').onchange = () => window._fs.setDoc(window._fs.doc(db, 'users', currentUser.uid, 'settings', 'main'), { takeHome: +$('inpTakeHome').value }, {merge:true});
+  $('setSave').onclick = () => window._fs.setDoc(window._fs.doc(db, 'users', currentUser.uid, 'settings', 'main'), { displayName: $('setName').value, weeks: +$('setWeeks').value }, {merge:true}).then(()=>toast('Profile Updated'));
+  $('ratesSave').onclick = () => { const r = $('ratesInput').value.split(',').map(x=>+x.trim()).filter(x=>!isNaN(x)); window._fs.setDoc(window._fs.doc(db, 'users', currentUser.uid, 'settings', 'main'), { rates: r }, {merge:true}).then(()=>closeModal('ratesModal')); };
+
+  async function loadAceData() { try { const r = await fetch('ace_questions.json'); ACE_BANK = await r.json(); updateGlobalAceProgress(); } catch(e){ console.error(e); } }
+  function updateGlobalAceProgress() { if(!ACE_BANK.length) return; let t=0, c=0; ACE_BANK.forEach(ch=>{ t+=ch.questions.length; c+=(USER_PROGRESS[ch.chapter]?.completed?.length||0); }); $('statAceProgress').textContent = Math.round((c/t)*100)+'%'; }
+  window.renderChapters = () => { $('chapterList').innerHTML = ACE_BANK.map((ch, i) => { const p = USER_PROGRESS[ch.chapter]||{completed:[]}; return `<div class="chapter-pill" onclick="startQuiz(${i})"><div class="chapter-info"><h4>Ch ${ch.chapter}: ${ch.title}</h4><p>${Math.round((p.completed.length/ch.questions.length)*100)||0}% Complete</p></div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M9 18l6-6-6-6"></path></svg></div>`; }).join(''); $('chapterList').classList.remove('hide'); $('quizEngine').classList.add('hide'); };
+  let curQ = null, qIdx = 0;
+  window.startQuiz = (i) => { curQ = ACE_BANK[i]; qIdx=0; $('chapterList').classList.add('hide'); $('quizEngine').classList.remove('hide'); showQ(); };
+  window.exitQuiz = () => { curQ=null; renderChapters(); };
+  function showQ() { const q = curQ.questions[qIdx]; $('quizChapterName').textContent='CH '+curQ.chapter; $('quizProgress').textContent=`Q ${qIdx+1}/${curQ.questions.length}`; $('quizQuestion').textContent=q.q; $('quizFeedback').classList.add('hide'); $('btnNextQuestion').classList.add('hide'); $('quizOptions').innerHTML = q.options.map((o,i)=>`<button class="quiz-option" onclick="checkA(${i})">${o}</button>`).join(''); }
+  window.checkA = async (idx) => { 
+    const q = curQ.questions[qIdx]; const btns = document.querySelectorAll('.quiz-option'); btns.forEach(b=>b.disabled=true); const correct = (idx===q.correct);
+    btns[idx].classList.add(correct?'correct':'wrong'); if(!correct) btns[q.correct].classList.add('correct');
+    $('quizFeedback').textContent=(correct?'Correct! ':'Incorrect. ')+q.rationale; $('quizFeedback').style.background=correct?'#E8F5E9':'#FFEBEE'; $('quizFeedback').classList.remove('hide');
+    if(!USER_PROGRESS[curQ.chapter]) USER_PROGRESS[curQ.chapter] = {chapter:curQ.chapter, correct:0, completed:[]};
+    if(!USER_PROGRESS[curQ.chapter].completed.includes(qIdx)){ USER_PROGRESS[curQ.chapter].completed.push(qIdx); if(correct) USER_PROGRESS[curQ.chapter].correct++; }
+    await window._fs.setDoc(window._fs.doc(db, 'users', currentUser.uid, 'education', `ch_${curQ.chapter}`), USER_PROGRESS[curQ.chapter], {merge:true});
+    $('btnNextQuestion').classList.remove('hide');
+  };
+  $('btnNextQuestion').onclick = () => { qIdx++; if(qIdx < curQ.questions.length) showQ(); else exitQuiz(); };
+</script>
+</body>
+</html>
