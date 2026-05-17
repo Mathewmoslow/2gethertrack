@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <meta name="theme-color" content="#88A78B" />
-<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>2getherTrack PRO — Together Fitness</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -101,12 +101,12 @@
   <div class="splash-card">
     <h1 class="splash-title">2gether<span>Track</span> PRO</h1>
     <p style="opacity:0.6; margin-bottom:30px;">Business Ledger & ACE Study Guide</p>
-    <div style="display:grid; gap:10px;">
-      <input type="email" id="authEmail" placeholder="Email" />
-      <input type="password" id="authPassword" placeholder="Password" />
-      <button class="btn-full btn-primary" id="btnEmailSignIn">Sign In</button>
-      <button class="btn-full btn-ghost" id="btnEmailCreate">Create Account</button>
-    </div>
+    <form id="authForm" style="display:grid; gap:10px;">
+      <input type="email" id="authEmail" placeholder="Email" required autocomplete="username" />
+      <input type="password" id="authPassword" placeholder="Password" required autocomplete="current-password" />
+      <button type="submit" class="btn-full btn-primary" id="btnEmailSignIn">Sign In</button>
+      <button type="button" class="btn-full btn-ghost" id="btnEmailCreate">Create Account</button>
+    </form>
     <div id="cfgStatus" style="margin-top:20px; font-size:0.7rem; opacity:0.5;">Connecting...</div>
   </div>
 </div>
@@ -152,7 +152,7 @@
             <tbody id="matrixBody"></tbody>
           </table>
         </div>
-        <button class="btn-ghost" style="width:100%; margin-top:15px; padding:10px; border-radius:10px; font-size:0.8rem;" onclick="openModal('ratesModal')">Edit Matrix Rates</button>
+        <button class="btn-ghost" style="width:100%; margin-top:15px; padding:10px; border-radius:10px; font-size:0.8rem;" onclick="window.openModal('ratesModal')">Edit Matrix Rates</button>
       </div>
     </div>
 
@@ -160,7 +160,7 @@
     <div id="view-clients" class="view">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
         <h2 style="font-family:'Cabinet Grotesk';">Clients</h2>
-        <button class="btn-primary" style="padding:10px 18px; border-radius:12px; font-weight:800;" onclick="showAddClient()">+ ADD</button>
+        <button class="btn-primary" style="padding:10px 18px; border-radius:12px; font-weight:800;" onclick="window.showAddClient()">+ ADD</button>
       </div>
       <div id="mobileClientsList"></div>
     </div>
@@ -180,7 +180,7 @@
 
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
         <h3 style="font-size:1rem;">Monthly Expenses</h3>
-        <button class="btn-primary" style="padding:8px 14px; border-radius:10px; font-size:0.8rem;" onclick="showAddExpense()">+ EXPENSE</button>
+        <button class="btn-primary" style="padding:8px 14px; border-radius:10px; font-size:0.8rem;" onclick="window.showAddExpense()">+ EXPENSE</button>
       </div>
       <div id="mobileExpensesList"></div>
     </div>
@@ -199,7 +199,7 @@
           <div id="quizOptions"></div>
           <div id="quizFeedback" class="hide" style="padding:15px; border-radius:12px; font-size:0.85rem; margin-top:15px;"></div>
           <button id="btnNextQuestion" class="btn-full btn-primary hide" style="margin-top:20px;">Next Question</button>
-          <button class="btn-ghost" style="width:100%; margin-top:10px; padding:12px; border-radius:12px;" onclick="exitQuiz()">Exit Quiz</button>
+          <button class="btn-ghost" style="width:100%; margin-top:10px; padding:12px; border-radius:12px;" onclick="window.exitQuiz()">Exit Quiz</button>
         </div>
       </div>
     </div>
@@ -218,15 +218,15 @@
   </div>
 
   <nav class="bottom-nav">
-    <a href="javascript:void(0)" class="nav-item active" onclick="switchView('dash', this)">
+    <a href="javascript:void(0)" class="nav-item active" onclick="window.switchView('dash', this)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Home</a>
-    <a href="javascript:void(0)" class="nav-item" onclick="switchView('clients', this)">
+    <a href="javascript:void(0)" class="nav-item" onclick="window.switchView('clients', this)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>Clients</a>
-    <a href="javascript:void(0)" class="nav-item" onclick="switchView('biz', this)">
+    <a href="javascript:void(0)" class="nav-item" onclick="window.switchView('biz', this)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>Business</a>
-    <a href="javascript:void(0)" class="nav-item" onclick="switchView('ace', this)">
+    <a href="javascript:void(0)" class="nav-item" onclick="window.switchView('ace', this)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>ACE</a>
-    <a href="javascript:void(0)" class="nav-item" onclick="switchView('settings', this)">
+    <a href="javascript:void(0)" class="nav-item" onclick="window.switchView('settings', this)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>Settings</a>
   </nav>
 </div>
@@ -247,7 +247,7 @@
     <div style="display:flex; gap:10px;">
       <button class="btn-full btn-primary" id="cliSave">Save</button>
       <button class="btn-danger hide" id="cliDelete">Delete</button>
-      <button class="btn-ghost" onclick="closeModal('clientModal')">Cancel</button>
+      <button class="btn-ghost" onclick="window.closeModal('clientModal')">Cancel</button>
     </div>
   </div>
 </div>
@@ -260,7 +260,7 @@
     <div style="display:flex; gap:10px;">
       <button class="btn-full btn-primary" id="expSave">Save</button>
       <button class="btn-danger hide" id="expDelete">Delete</button>
-      <button class="btn-ghost" onclick="closeModal('expenseModal')">Cancel</button>
+      <button class="btn-ghost" onclick="window.closeModal('expenseModal')">Cancel</button>
     </div>
   </div>
 </div>
@@ -298,8 +298,8 @@
   // Helpers
   const $ = (id) => document.getElementById(id);
   const fmt = (n) => '$' + Math.round(n).toLocaleString();
-  const openModal = (id) => $(id).classList.add('active');
-  const closeModal = (id) => $(id).classList.remove('active');
+  window.openModal = (id) => $(id).classList.add('active');
+  window.closeModal = (id) => $(id).classList.remove('active');
   function toast(msg, ms=2200) {
     const t = $('toast'); t.textContent = msg; t.style.opacity = '1'; t.style.transform = 'translateX(-50%) translateY(-20px)';
     setTimeout(() => { t.style.opacity = '0'; t.style.transform = 'translateX(-50%) translateY(0)'; }, ms);
@@ -370,7 +370,7 @@
 
     // Clients
     $('mobileClientsList').innerHTML = state.clients.length ? state.clients.map(c => `
-      <div class="card" onclick="showEditClient('${c.id}')">
+      <div class="card" onclick="window.showEditClient('${c.id}')">
         <div style="display:flex; justify-content:space-between; align-items:baseline;">
            <div style="font-weight:800; font-size:1.1rem;">${c.name}</div>
            <div style="font-weight:800; color:var(--sage-dark);">${fmt(c.rate * c.frequency * weeks)}/mo</div>
@@ -381,7 +381,7 @@
 
     // Expenses
     $('mobileExpensesList').innerHTML = state.expenses.length ? state.expenses.map(e => `
-      <div class="card" onclick="showEditExpense('${e.id}')" style="display:flex; justify-content:space-between;">
+      <div class="card" onclick="window.showEditExpense('${e.id}')" style="display:flex; justify-content:space-between;">
         <div style="font-weight:700;">${e.label}</div>
         <div style="font-weight:800; color:var(--coral-dk);">${fmt(e.amount)}</div>
       </div>
@@ -431,47 +431,50 @@
       } else { $('app').classList.remove('active'); $('splash').style.display='flex'; }
     });
 
-    $('btnEmailSignIn').onclick = () => signInWithEmailAndPassword(auth, $('authEmail').value, $('authPassword').value).catch(e=>toast(e.message));
+    $('authForm').onsubmit = (e) => {
+      e.preventDefault();
+      signInWithEmailAndPassword(auth, $('authEmail').value, $('authPassword').value).catch(e=>toast(e.message));
+    };
     $('btnEmailCreate').onclick = () => createUserWithEmailAndPassword(auth, $('authEmail').value, $('authPassword').value).catch(e=>toast(e.message));
     $('btnSignOut').onclick = () => signOut(auth);
   } catch(e){ console.error(e); }
 
   // --- Client Actions ---
-  window.showAddClient = () => { editingClientId=null; $('cliModalTitle').textContent='Add Client'; $('cliName').value=''; $('cliRate').value=55; $('cliFreq').value=1; $('cliNotes').value=''; document.querySelectorAll('.day-toggle').forEach(b=>b.classList.remove('on')); $('cliDelete').classList.add('hide'); openModal('clientModal'); };
-  window.showEditClient = (id) => { const c = state.clients.find(x=>x.id===id); editingClientId=id; $('cliModalTitle').textContent='Edit Client'; $('cliName').value=c.name; $('cliRate').value=c.rate; $('cliFreq').value=c.frequency; $('cliNotes').value=c.notes||''; document.querySelectorAll('.day-toggle').forEach((b,i)=>b.classList.toggle('on', !!(c.days&&c.days[i]))); $('cliDelete').classList.remove('hide'); openModal('clientModal'); };
+  window.showAddClient = () => { editingClientId=null; $('cliModalTitle').textContent='Add Client'; $('cliName').value=''; $('cliRate').value=55; $('cliFreq').value=1; $('cliNotes').value=''; document.querySelectorAll('.day-toggle').forEach(b=>b.classList.remove('on')); $('cliDelete').classList.add('hide'); window.openModal('clientModal'); };
+  window.showEditClient = (id) => { const c = state.clients.find(x=>x.id===id); editingClientId=id; $('cliModalTitle').textContent='Edit Client'; $('cliName').value=c.name; $('cliRate').value=c.rate; $('cliFreq').value=c.frequency; $('cliNotes').value=c.notes||''; document.querySelectorAll('.day-toggle').forEach((b,i)=>b.classList.toggle('on', !!(c.days&&c.days[i]))); $('cliDelete').classList.remove('hide'); window.openModal('clientModal'); };
   document.querySelectorAll('.day-toggle').forEach(b => b.onclick = () => b.classList.toggle('on'));
   $('cliSave').onclick = async () => {
     const days = {}; document.querySelectorAll('#cliDays .day-toggle').forEach((b,i) => { if(b.classList.contains('on')) days[i]=true; });
     const data = { name: $('cliName').value, rate: +$('cliRate').value, frequency: +$('cliFreq').value, days, notes: $('cliNotes').value };
     if(editingClientId) await window._fs.setDoc(window._fs.doc(db, 'users', currentUser.uid, 'clients', editingClientId), data, {merge:true});
     else await window._fs.addDoc(collection(db, 'users', currentUser.uid, 'clients'), data);
-    closeModal('clientModal'); toast('Saved');
+    window.closeModal('clientModal'); toast('Saved');
   };
-  $('cliDelete').onclick = async () => { if(confirm('Delete client?')) await window._fs.deleteDoc(window._fs.doc(db, 'users', currentUser.uid, 'clients', editingClientId)); closeModal('clientModal'); };
+  $('cliDelete').onclick = async () => { if(confirm('Delete client?')) await window._fs.deleteDoc(window._fs.doc(db, 'users', currentUser.uid, 'clients', editingClientId)); window.closeModal('clientModal'); };
 
   // --- Expense Actions ---
-  window.showAddExpense = () => { editingExpId=null; $('expModalTitle').textContent='Add Expense'; $('expLabel').value=''; $('expAmount').value=0; $('expDelete').classList.add('hide'); openModal('expenseModal'); };
-  window.showEditExpense = (id) => { const e = state.expenses.find(x=>x.id===id); editingExpId=id; $('expModalTitle').textContent='Edit Expense'; $('expLabel').value=e.label; $('expAmount').value=e.amount; $('expDelete').classList.remove('hide'); openModal('expenseModal'); };
+  window.showAddExpense = () => { editingExpId=null; $('expModalTitle').textContent='Add Expense'; $('expLabel').value=''; $('expAmount').value=0; $('expDelete').classList.add('hide'); window.openModal('expenseModal'); };
+  window.showEditExpense = (id) => { const e = state.expenses.find(x=>x.id===id); editingExpId=id; $('expModalTitle').textContent='Edit Expense'; $('expLabel').value=e.label; $('expAmount').value=e.amount; $('expDelete').classList.remove('hide'); window.openModal('expenseModal'); };
   $('expSave').onclick = async () => {
     const data = { label: $('expLabel').value, amount: +$('expAmount').value };
     if(editingExpId) await window._fs.setDoc(window._fs.doc(db, 'users', currentUser.uid, 'expenses', editingExpId), data, {merge:true});
     else await window._fs.addDoc(collection(db, 'users', currentUser.uid, 'expenses'), data);
-    closeModal('expenseModal'); toast('Saved');
+    window.closeModal('expenseModal'); toast('Saved');
   };
-  $('expDelete').onclick = async () => { if(confirm('Delete expense?')) await window._fs.deleteDoc(window._fs.doc(db, 'users', currentUser.uid, 'expenses', editingExpId)); closeModal('expenseModal'); };
+  $('expDelete').onclick = async () => { if(confirm('Delete expense?')) await window._fs.deleteDoc(window._fs.doc(db, 'users', currentUser.uid, 'expenses', editingExpId)); window.closeModal('expenseModal'); };
 
   // --- Settings & ACE ---
   $('inpTakeHome').onchange = () => window._fs.setDoc(window._fs.doc(db, 'users', currentUser.uid, 'settings', 'main'), { takeHome: +$('inpTakeHome').value }, {merge:true});
   $('setSave').onclick = () => window._fs.setDoc(window._fs.doc(db, 'users', currentUser.uid, 'settings', 'main'), { displayName: $('setName').value, weeks: +$('setWeeks').value }, {merge:true}).then(()=>toast('Profile Updated'));
-  $('ratesSave').onclick = () => { const r = $('ratesInput').value.split(',').map(x=>+x.trim()).filter(x=>!isNaN(x)); window._fs.setDoc(window._fs.doc(db, 'users', currentUser.uid, 'settings', 'main'), { rates: r }, {merge:true}).then(()=>closeModal('ratesModal')); };
+  $('ratesSave').onclick = () => { const r = $('ratesInput').value.split(',').map(x=>+x.trim()).filter(x=>!isNaN(x)); window._fs.setDoc(window._fs.doc(db, 'users', currentUser.uid, 'settings', 'main'), { rates: r }, {merge:true}).then(()=>window.closeModal('ratesModal')); };
 
   async function loadAceData() { try { const r = await fetch('ace_questions.json'); ACE_BANK = await r.json(); updateGlobalAceProgress(); } catch(e){ console.error(e); } }
   function updateGlobalAceProgress() { if(!ACE_BANK.length) return; let t=0, c=0; ACE_BANK.forEach(ch=>{ t+=ch.questions.length; c+=(USER_PROGRESS[ch.chapter]?.completed?.length||0); }); $('statAceProgress').textContent = Math.round((c/t)*100)+'%'; }
-  window.renderChapters = () => { $('chapterList').innerHTML = ACE_BANK.map((ch, i) => { const p = USER_PROGRESS[ch.chapter]||{completed:[]}; return `<div class="chapter-pill" onclick="startQuiz(${i})"><div class="chapter-info"><h4>Ch ${ch.chapter}: ${ch.title}</h4><p>${Math.round((p.completed.length/ch.questions.length)*100)||0}% Complete</p></div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M9 18l6-6-6-6"></path></svg></div>`; }).join(''); $('chapterList').classList.remove('hide'); $('quizEngine').classList.add('hide'); };
+  window.renderChapters = () => { $('chapterList').innerHTML = ACE_BANK.map((ch, i) => { const p = USER_PROGRESS[ch.chapter]||{completed:[]}; return `<div class="chapter-pill" onclick="window.startQuiz(${i})"><div class="chapter-info"><h4>Ch ${ch.chapter}: ${ch.title}</h4><p>${Math.round((p.completed.length/ch.questions.length)*100)||0}% Complete</p></div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M9 18l6-6-6-6"></path></svg></div>`; }).join(''); $('chapterList').classList.remove('hide'); $('quizEngine').classList.add('hide'); };
   let curQ = null, qIdx = 0;
   window.startQuiz = (i) => { curQ = ACE_BANK[i]; qIdx=0; $('chapterList').classList.add('hide'); $('quizEngine').classList.remove('hide'); showQ(); };
-  window.exitQuiz = () => { curQ=null; renderChapters(); };
-  function showQ() { const q = curQ.questions[qIdx]; $('quizChapterName').textContent='CH '+curQ.chapter; $('quizProgress').textContent=`Q ${qIdx+1}/${curQ.questions.length}`; $('quizQuestion').textContent=q.q; $('quizFeedback').classList.add('hide'); $('btnNextQuestion').classList.add('hide'); $('quizOptions').innerHTML = q.options.map((o,i)=>`<button class="quiz-option" onclick="checkA(${i})">${o}</button>`).join(''); }
+  window.exitQuiz = () => { curQ=null; window.renderChapters(); };
+  function showQ() { const q = curQ.questions[qIdx]; $('quizChapterName').textContent='CH '+curQ.chapter; $('quizProgress').textContent=`Q ${qIdx+1}/${curQ.questions.length}`; $('quizQuestion').textContent=q.q; $('quizFeedback').classList.add('hide'); $('btnNextQuestion').classList.add('hide'); $('quizOptions').innerHTML = q.options.map((o,i)=>`<button class="quiz-option" onclick="window.checkA(${i})">${o}</button>`).join(''); }
   window.checkA = async (idx) => { 
     const q = curQ.questions[qIdx]; const btns = document.querySelectorAll('.quiz-option'); btns.forEach(b=>b.disabled=true); const correct = (idx===q.correct);
     btns[idx].classList.add(correct?'correct':'wrong'); if(!correct) btns[q.correct].classList.add('correct');
@@ -481,7 +484,7 @@
     await window._fs.setDoc(window._fs.doc(db, 'users', currentUser.uid, 'education', `ch_${curQ.chapter}`), USER_PROGRESS[curQ.chapter], {merge:true});
     $('btnNextQuestion').classList.remove('hide');
   };
-  $('btnNextQuestion').onclick = () => { qIdx++; if(qIdx < curQ.questions.length) showQ(); else exitQuiz(); };
+  $('btnNextQuestion').onclick = () => { qIdx++; if(qIdx < curQ.questions.length) showQ(); else window.exitQuiz(); };
 </script>
 </body>
 </html>
