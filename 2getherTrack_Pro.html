@@ -73,6 +73,18 @@
   .matrix td.need { color: var(--coral-dk); font-weight: 800; }
   .matrix td.zero { color: var(--sage-dark); opacity: 0.4; }
 
+  /* ========== HEATMAP ========== */
+  .matrix td.heat { cursor: pointer; transition: all 0.3s; position: relative; color: transparent !important; }
+  .matrix td.heat.show { color: white !important; font-weight: 800; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+  
+  /* Coral Gradient for Heatmap */
+  .heat-1 { background-color: #FDE8E4 !important; }
+  .heat-2 { background-color: #FAD1CC !important; }
+  .heat-3 { background-color: #F7B9B3 !important; }
+  .heat-4 { background-color: #F4A29A !important; }
+  .heat-5 { background-color: #F18B81 !important; } /* Heavy */
+  .heat-max { background-color: var(--coral-dk) !important; } /* 6+ */
+
   /* ========== FORMS & MODALS ========== */
   .modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; padding: 20px; z-index: 3000; }
   .modal-backdrop.active { display: flex; }
@@ -144,8 +156,8 @@
       </div>
 
       <div class="card">
-        <h3 style="font-size:0.9rem; margin-bottom:15px;">Revenue Matrix</h3>
-        <p style="font-size:0.75rem; opacity:0.6; margin-bottom:10px;">New clients needed to hit your goal:</p>
+        <h3 style="font-size:0.9rem; margin-bottom:5px;">Revenue Matrix</h3>
+        <p style="font-size:0.75rem; opacity:0.6; margin-bottom:10px;">Gap Coverage Heatmap. Tap a cell to reveal client count.</p>
         <div class="matrix-wrap">
           <table class="matrix">
             <thead><tr id="matrixHeader"><th>Sess/Wk</th></tr></thead>
@@ -398,7 +410,9 @@
     for(let f=1; f<=5; f++){
       body += `<tr><th>${f}×</th>` + rates.map(r => {
         const val = Math.ceil(gap / (r * f * weeks)) || 0;
-        return `<td class="${val ? 'need' : 'zero'}">${val}</td>`;
+        if (val === 0) return `<td class="zero">0</td>`;
+        const heatClass = val >= 6 ? 'heat-max' : `heat-${val}`;
+        return `<td class="heat ${heatClass}" onclick="this.classList.toggle('show')">${val}</td>`;
       }).join('') + '</tr>';
     }
     $('matrixBody').innerHTML = body;
