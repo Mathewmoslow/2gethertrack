@@ -413,7 +413,7 @@
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     db = getFirestore(app);
-    window._fs = { doc, setDoc, deleteDoc, addDoc, serverTimestamp };
+    window._fs = { doc, setDoc, deleteDoc, addDoc, serverTimestamp, collection };
 
     onAuthStateChanged(auth, (user) => {
       if(user){
