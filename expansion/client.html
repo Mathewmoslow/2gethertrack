@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2getherTrack — My Workouts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@500;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Specific Client View Overrides */
+        .client-nav { background: #1a1a1a; border-top: 1px solid var(--line); }
+        .workout-card { border-left: 6px solid var(--accent-orange); margin-bottom: 1.5rem; cursor: pointer; }
+        .log-row { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 10px; margin-top: 10px; padding: 10px; background: #2a2a2a; border-radius: 8px; align-items: center; }
+        .log-row input { background: #1a1a1a; border: 1px solid var(--line); color: white; padding: 5px; border-radius: 4px; width: 100%; text-align: center; }
+        .status-badge { font-size: 0.7rem; text-transform: uppercase; padding: 4px 8px; border-radius: 99px; background: var(--line); color: var(--text-secondary); }
+        .status-badge.active { background: rgba(77, 138, 255, 0.2); color: var(--accent-blue); }
+    </style>
+</head>
+<body class="dark-theme">
+    <div id="splash" class="client-splash">
+        <div class="splash-card">
+            <h1 class="splash-title">My<span>Workouts</span></h1>
+            <p class="splash-sub">Log in to see your programs and track progress</p>
+
+            <!-- Existing user sign-in -->
+            <div class="splash-actions" id="signinPane">
+                <input type="email" id="cliAuthEmail" placeholder="Email" autocomplete="username" />
+                <input type="password" id="cliAuthPassword" placeholder="Password" autocomplete="current-password" minlength="6" />
+                <div class="auth-buttons">
+                    <button class="btn btn-primary" id="btnClientSignIn">Sign In</button>
+                </div>
+                <button class="btn btn-ghost" id="btnShowInvite" style="margin-top:1rem;">First time? I have an invite code</button>
+            </div>
+
+            <!-- Invite code signup -->
+            <div class="splash-actions hide" id="invitePane">
+                <input type="text" id="cliInviteCode" placeholder="Invite code (6 letters/numbers)" maxlength="6" autocapitalize="characters" style="text-align:center; letter-spacing:0.3rem; font-weight:700;" />
+                <input type="text" id="cliSignupName" placeholder="Your name" autocomplete="name" />
+                <input type="email" id="cliSignupEmail" placeholder="Email" autocomplete="username" />
+                <input type="password" id="cliSignupPassword" placeholder="Choose a password (6+ chars)" autocomplete="new-password" minlength="6" />
+                <div class="auth-buttons">
+                    <button class="btn btn-primary" id="btnClaimInvite">Create Account</button>
+                </div>
+                <button class="btn btn-ghost" id="btnBackToSignIn" style="margin-top:1rem;">Already have an account? Sign in</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="app" class="hide">
+        <main class="content-area">
+            <header class="content-header">
+                <div class="header-left">
+                    <h2 id="clientViewTitle">My Dashboard</h2>
+                    <p id="clientGreeting">Ready for your session?</p>
+                </div>
+                <div class="header-right">
+                    <button class="btn btn-ghost" id="btnVacationTool">✈️ Vacation Tool</button>
+                </div>
+            </header>
+
+            <div id="view-container">
+                <!-- Dashboard: Active Assignments -->
+                <section id="view-my-dash" class="view active">
+                    <div id="assignedWorkouts">
+                        <!-- JS Generated List of Workouts -->
+                        <div class="workout-card card">
+                            <h3>Loading your programs...</h3>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Tracker: Interactive Logging -->
+                <section id="view-tracker" class="view">
+                    <div class="card active-workout-card">
+                        <div style="display:flex; justify-content:space-between; margin-bottom:1.5rem;">
+                            <h2 id="trackingWorkoutName">Leg Day A</h2>
+                            <button class="btn btn-ghost" id="btnFinishWorkout">Finish & Save</button>
+                        </div>
+                        <div id="exerciseLogs">
+                            <!-- JS Generated Exercise Input Rows -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Logs: History -->
+                <section id="view-logs" class="view">
+                    <div id="historyList">
+                        <!-- JS Generated Workout History -->
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <nav class="sidebar client-nav">
+            <div class="sidebar-nav">
+                <button class="nav-item active" data-view="my-dash" title="Home">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+                </button>
+                <button class="nav-item" data-view="logs" title="History">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </button>
+                <button class="nav-item" data-view="settings" title="Profile">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script type="module" src="client.js"></script>
+</body>
+</html>

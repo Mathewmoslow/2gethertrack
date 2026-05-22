@@ -1,0 +1,227 @@
+{
+  "chapter": 1,
+  "title": "Role and Scope",
+  "caseStudy": "Sarah is a newly certified ACE Personal Trainer starting her first day at a local fitness center. A potential client, Mark, approaches her with a list of medications he is taking for hypertension and type 2 diabetes, asking for a specific exercise and diet plan to manage his conditions. Sarah must navigate her role effectively, identifying which services she can provide and when she must refer Mark to other healthcare professionals to ensure his safety and adhere to professional standards.",
+  "questions": [
+    {
+      "q": "Which of the following is within the scope of practice for an ACE Personal Trainer?",
+      "options": [
+        "Prescribing specific medications to manage hypertension",
+        "Designing a periodized exercise program based on a client's goals",
+        "Providing clinical nutrition counseling for eating disorders",
+        "Diagnosing the cause of a client's chronic low-back pain"
+      ],
+      "correct": 1,
+      "rationale": "Personal trainers are responsible for designing safe and effective exercise programs. They do not prescribe medication, provide clinical nutrition therapy, or diagnose medical conditions."
+    },
+    {
+      "q": "What is the primary purpose of professional certifications like the ACE Personal Trainer certification?",
+      "options": [
+        "To guarantee a specific salary for the trainer",
+        "To protect the public by ensuring trainers have a baseline of competence",
+        "To allow trainers to work in a clinical setting without supervision",
+        "To provide legal immunity for any injuries occurring during training"
+      ],
+      "correct": 1,
+      "rationale": "The primary goal of professional certification is to protect the public from harm by ensuring that professionals meet a minimum level of competence."
+    },
+    {
+      "q": "Which of the following scenarios would require a personal trainer to refer a client to a healthcare professional?",
+      "options": [
+        "A client wanting to improve their 5k run time",
+        "A client reporting sudden, sharp chest pain during exercise",
+        "A client asking for general healthy eating tips",
+        "A client seeking to increase their muscular hypertrophy"
+      ],
+      "correct": 1,
+      "rationale": "Chest pain (angina) is a major sign/symptom of cardiovascular disease and requires immediate medical referral."
+    },
+    {
+      "q": "According to the ACE Code of Ethics, what should a trainer do if they encounter a client's personal information?",
+      "options": [
+        "Share it with other trainers for educational purposes",
+        "Keep it confidential and secure according to privacy laws",
+        "Post success stories on social media without consent",
+        "Report all personal habits to the gym management"
+      ],
+      "correct": 1,
+      "rationale": "Maintaining client confidentiality is a core ethical and legal responsibility for health and fitness professionals."
+    },
+    {
+      "q": "Which of the following is a RECOGNIZED credentialing organization for fitness certifications?",
+      "options": [
+        "The Better Business Bureau (BBB)",
+        "The National Commission for Certifying Agencies (NCCA)",
+        "The International Monetary Fund (IMF)",
+        "The Food and Drug Administration (FDA)"
+      ],
+      "correct": 1,
+      "rationale": "The NCCA is the gold standard for accrediting professional certifications in the fitness industry."
+    },
+    {
+      "q": "When a client asks for a detailed meal plan to treat their diabetes, what is the MOST appropriate response?",
+      "options": [
+        "Provide a 1,500 calorie low-carb meal plan",
+        "Refer the client to a Registered Dietitian (RD) or physician",
+        "Suggest they follow a popular ketogenic diet",
+        "Tell them to stop eating processed sugars entirely"
+      ],
+      "correct": 1,
+      "rationale": "Medical Nutrition Therapy (MNT) for chronic diseases is outside the scope of a CPT and must be handled by an RD or doctor."
+    },
+    {
+      "q": "In the 'Allied Healthcare Continuum,' where does a Personal Trainer typically fit?",
+      "options": [
+        "Gatekeeper (Physicians/Nurses)",
+        "Secondary referral (Physical Therapists)",
+        "Nutritional support (Registered Dietitians)",
+        "Prevention and fitness/wellness support"
+      ],
+      "correct": 3,
+      "rationale": "Personal trainers focus on health promotion, wellness, and fitness, acting as a link between clinical care and lifestyle change."
+    },
+    {
+      "q": "What is the recommended response if a client asks for a supplement recommendation?",
+      "options": [
+        "Recommend a specific brand and dosage",
+        "Sell them a supplement you have in your bag",
+        "Provide evidence-based information and refer to a doctor",
+        "Tell them supplements are dangerous and they should never take them"
+      ],
+      "correct": 2,
+      "rationale": "Trainers can provide general education about supplements but should not prescribe them and should refer to a medical professional."
+    },
+    {
+      "q": "Which of the following is an example of 'diagnosing' (which is outside a trainer's scope)?",
+      "options": [
+        "Observing a client's knee valgus during a squat",
+        "Telling a client they have 'Patellofemoral Pain Syndrome'",
+        "Conducting a push-up test to assess muscular endurance",
+        "Recording a client's resting heart rate"
+      ],
+      "correct": 1,
+      "rationale": "Identifying a specific medical condition (like PFPS) is a diagnosis, which is the role of a doctor or physical therapist."
+    },
+    {
+      "q": "To maintain ACE certification, a trainer must earn how many Continuing Education Credits (CECs) every two years?",
+      "options": [
+        "1.0 (10 hours)",
+        "2.0 (20 hours)",
+        "5.0 (50 hours)",
+        "10.0 (100 hours)"
+      ],
+      "correct": 1,
+      "rationale": "ACE requires 2.0 CECs (equivalent to 20 hours of education) and a valid CPR/AED certification every 2 years."
+    },
+    {
+      "q": "What should a trainer do if a client presents with a known orthopedic injury but has been cleared for exercise?",
+      "options": [
+        "Ignore the injury and follow a standard program",
+        "Modify exercises to avoid pain and follow the doctor's recommendations",
+        "Provide physical therapy exercises to fix the injury",
+        "Perform deep-tissue massage on the injured area"
+      ],
+      "correct": 1,
+      "rationale": "Trainers should modify programs to stay within safety guidelines provided by medical professionals for known injuries."
+    },
+    {
+      "q": "Which of the following is a 'professional boundary' for a personal trainer?",
+      "options": [
+        "Developing a close romantic relationship with a client",
+        "Maintaining a business-only relationship focused on fitness goals",
+        "Borrowing money from a client to expand your business",
+        "Giving a client legal advice regarding their divorce"
+      ],
+      "correct": 1,
+      "rationale": "Professional boundaries ensure a safe, objective, and effective environment for the client."
+    },
+    {
+      "q": "What is the primary reason for a trainer to maintain a CPR/AED certification?",
+      "options": [
+        "It is required by the gym's insurance only",
+        "To be prepared for life-threatening emergencies during exercise",
+        "To allow the trainer to perform minor surgeries",
+        "To qualify for higher pay in clinical settings"
+      ],
+      "correct": 1,
+      "rationale": "Cardiovascular events can occur during exercise; trainers must be able to respond until EMS arrives."
+    },
+    {
+      "q": "Which of the following is an example of an appropriate educational resource for a client?",
+      "options": [
+        "A blog post from an unverified influencer",
+        "The Dietary Guidelines for Americans (USDA/HHS)",
+        "A peer-reviewed study on a drug the trainer is not licensed to discuss",
+        "The trainer's personal opinion on spiritual healing"
+      ],
+      "correct": 1,
+      "rationale": "Trainers should provide info from reputable, evidence-based government and professional organizations."
+    },
+    {
+      "q": "If a trainer is also a licensed massage therapist, can they provide massage to their personal training clients?",
+      "options": [
+        "No, that is a conflict of interest",
+        "Yes, as long as it is done under the LMT license and not the CPT scope",
+        "Only if the client pays in cash",
+        "Yes, because all CPTs can perform massage"
+      ],
+      "correct": 1,
+      "rationale": "A professional with multiple licenses must act within the specific scope of the license they are currently utilizing, or clearly delineate the roles."
+    },
+    {
+      "q": "A client tells you they are taking a new supplement that 'burns 1000 calories a day.' What is the BEST response?",
+      "options": [
+        "Tell them it sounds like a scam and to throw it away",
+        "Help them research the ingredients using credible sources like the NIH Office of Supplements",
+        "Ask for a sample so you can try it yourself",
+        "Congratulate them on finding a shortcut to weight loss"
+      ],
+      "correct": 1,
+      "rationale": "Empowering the client with evidence-based resources allows them to make informed decisions without the trainer 'prescribing' or 'prohibiting'."
+    },
+    {
+      "q": "Which task is MOST appropriate for a Personal Trainer during a session with a client with controlled asthma?",
+      "options": [
+        "Telling the client to stop taking their inhaler to build 'lung strength'",
+        "Ensuring the client has their rescue inhaler present and monitoring for symptoms",
+        "Auscultating the client's lungs for wheezing using a stethoscope",
+        "Changing the client's asthma medication dosage"
+      ],
+      "correct": 1,
+      "rationale": "Monitoring for safety and ensuring emergency equipment is available is within scope; managing medication or clinical assessment is not."
+    },
+    {
+      "q": "What does 'HIPAA' stand for in the context of client privacy?",
+      "options": [
+        "Health Information Privacy and Accountability Act",
+        "Health Insurance Portability and Accountability Act",
+        "Health Interest Policy for Athletes and Adults",
+        "High Intensity Physical Activity Association"
+      ],
+      "correct": 1,
+      "rationale": "HIPAA sets national standards for protecting sensitive patient/client health information."
+    },
+    {
+      "q": "A client is struggling with depression and mentions they are 'hopeless.' What should the trainer do?",
+      "options": [
+        "Try to provide psychological counseling during the set",
+        "Recommend they increase their workout intensity to 'feel better'",
+        "Refer the client to a mental health professional",
+        "Tell them to just 'think positive'"
+      ],
+      "correct": 2,
+      "rationale": "Mental health issues are outside the scope of a CPT and require referral to a licensed therapist or psychiatrist."
+    },
+    {
+      "q": "Which of the following is a key component of 'Professionalism' for a CPT?",
+      "options": [
+        "Showing up on time and dressing appropriately",
+        "Charging the highest rates in the city",
+        "Guaranteeing six-pack abs in 2 weeks",
+        "Sharing personal secrets with clients to build trust"
+      ],
+      "correct": 0,
+      "rationale": "Reliability, appropriate appearance, and adherence to ethical standards are hallmarks of professionalism."
+    }
+  ]
+}

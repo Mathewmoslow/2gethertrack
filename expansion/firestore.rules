@@ -1,0 +1,48 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Trainer private workspace (roster, expenses, settings)
+    match /users/{trainerUid}/{collection}/{docId} {
+      allow read, write: if request.auth.uid == trainerUid;
+    }
+
+    // Client claiming an invite writes their UID onto the roster entry
+    match /users/{trainerUid}/clients/{rosterId} {
+      allow update: if request.auth != null
+                    && resource.data.clientUid == null
+                    && request.resource.data.clientUid == request.auth.uid
+                    && request.resource.data.inviteCode == resource.data.inviteCode;
+    }
+
+    // Invite codes (top-level)
+    match /inviteCodes/{code} {
+      allow read: if request.auth != null;
+      allow create: if request.auth.uid == request.resource.data.trainerUid
+                    && request.resource.data.used == false;
+      allow update: if request.auth != null
+                    && resource.data.used == false
+                    && request.resource.data.used == true
+                    && request.resource.data.clientUid == request.auth.uid;
+      allow delete: if request.auth.uid == resource.data.trainerUid;
+    }
+
+    // Programs (top-level, shared trainer/client)
+    match /programs/{programId} {
+      allow read: if request.auth != null
+                  && (request.auth.uid == resource.data.trainerUid
+                      || request.auth.uid == resource.data.clientUid);
+      allow create: if request.auth.uid == request.resource.data.trainerUid;
+      allow update, delete: if request.auth.uid == resource.data.trainerUid;
+    }
+
+    // Workout logs (top-level, shared trainer/client)
+    match /clientLogs/{logId} {
+      allow read: if request.auth != null
+                  && (request.auth.uid == resource.data.trainerUid
+                      || request.auth.uid == resource.data.clientUid);
+      allow create: if request.auth.uid == request.resource.data.clientUid;
+      allow update, delete: if request.auth.uid == resource.data.clientUid;
+    }
+  }
+}

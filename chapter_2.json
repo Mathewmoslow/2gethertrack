@@ -1,0 +1,227 @@
+{
+  "chapter": 2,
+  "title": "ACE IFT Model",
+  "caseStudy": "James, a 42-year-old sedentary male with a BMI of 30, has decided to start an exercise program. He has no medical limitations but hasn't exercised in 15 years. His trainer must apply the ACE Integrated Fitness Training (IFT) Model to systematically progress him through the phases of cardiorespiratory and muscular training, starting with building a foundation of stability and aerobic base before moving into more intense performance-based goals.",
+  "questions": [
+    {
+      "q": "What are the two primary components of the ACE IFT Model?",
+      "options": [
+        "Cardiorespiratory Training and Muscular Training",
+        "Flexibility and Nutrition",
+        "Speed and Power",
+        "Stability and Mobility"
+      ],
+      "correct": 0,
+      "rationale": "The IFT model is divided into Cardiorespiratory Training and Muscular Training."
+    },
+    {
+      "q": "In the Muscular Training component, what is the first phase of progression?",
+      "options": [
+        "Load Training",
+        "Functional Training",
+        "Movement Training",
+        "Performance Training"
+      ],
+      "correct": 1,
+      "rationale": "Functional Training (Phase 1) focuses on core and joint stability and mobility."
+    },
+    {
+      "q": "Which phase of the Cardiorespiratory Training component focuses on 'Aerobic Base'?",
+      "options": [
+        "Base Training",
+        "Fitness Training",
+        "Performance Training",
+        "Anaerobic Training"
+      ],
+      "correct": 0,
+      "rationale": "Base Training (Phase 1) is designed to build an initial aerobic foundation for sedentary clients."
+    },
+    {
+      "q": "During the Talk Test, if a client can speak comfortably but is starting to feel the intensity, they are likely at which metabolic marker?",
+      "options": [
+        "Resting Heart Rate",
+        "VT1 (First Ventilatory Threshold)",
+        "VT2 (Second Ventilatory Threshold)",
+        "VO2 Max"
+      ],
+      "correct": 1,
+      "rationale": "VT1 is the intensity where talking first becomes slightly difficult."
+    },
+    {
+      "q": "In the 'Fitness Training' phase of Cardiorespiratory Training, the focus is on:",
+      "options": [
+        "Increasing session duration only",
+        "Improving aerobic efficiency by introducing intervals at/above VT1",
+        "Training for competitive sports only",
+        "Performing 100% of training in Zone 3"
+      ],
+      "correct": 1,
+      "rationale": "Fitness Training (Phase 2) introduces intervals to challenge the aerobic system."
+    },
+    {
+      "q": "Movement Training (Phase 2 of Muscular Training) focuses on which of the following?",
+      "options": [
+        "Adding heavy external loads",
+        "Developing good movement patterns without compromising joint stability",
+        "Maximizing power output",
+        "Isolation of small muscle groups"
+      ],
+      "correct": 1,
+      "rationale": "Phase 2 emphasizes the five primary movement patterns (squat, lunge, push, pull, rotate) with proper form."
+    },
+    {
+      "q": "Performance Training (Phase 3 of Muscular Training) is characterized by:",
+      "options": [
+        "Improving agility, speed, and power",
+        "Correcting posture and muscle imbalances",
+        "Learning how to squat with a PVC pipe",
+        "Exercising at 50% of maximum heart rate"
+      ],
+      "correct": 0,
+      "rationale": "Performance training focuses on sport-specific or advanced fitness goals like speed and power."
+    },
+    {
+      "q": "In the ACE IFT Model, what is the 'Functional' phase primarily about?",
+      "options": [
+        "Losing weight as quickly as possible",
+        "Building a foundation of stability and mobility",
+        "Increasing 1-RM in the bench press",
+        "Running a marathon"
+      ],
+      "correct": 1,
+      "rationale": "The functional phase ensures the body can move efficiently before adding load or intensity."
+    },
+    {
+      "q": "The 'Three-Zone Intensity Model' helps trainers categorize intensity. Zone 2 is between which two markers?",
+      "options": [
+        "Rest and VT1",
+        "VT1 and VT2",
+        "VT2 and VO2 Max",
+        "VO2 Max and death"
+      ],
+      "correct": 1,
+      "rationale": "Zone 2 is the range between the first and second ventilatory thresholds."
+    },
+    {
+      "q": "Load Training (Phase 3 of Muscular Training) is most appropriate for clients with which goal?",
+      "options": [
+        "Improving posture only",
+        "Muscular hypertrophy or strength",
+        "Developing explosive jumping ability",
+        "Learning to walk without a cane"
+      ],
+      "correct": 1,
+      "rationale": "Load training focuses on traditional resistance training goals like muscle size and strength."
+    },
+    {
+      "q": "During Cardiorespiratory Base Training, the primary goal for a sedentary client is to:",
+      "options": [
+        "Reach Zone 3 as often as possible",
+        "Build a habit of regular physical activity and increase duration",
+        "Prepare for a triathlon",
+        "Achieve a VO2 max of 60 ml/kg/min"
+      ],
+      "correct": 1,
+      "rationale": "The focus of Base Training is adherence and building a basic aerobic foundation."
+    },
+    {
+      "q": "What is the key difference between Movement Training and Load Training?",
+      "options": [
+        "Movement training is for athletes; Load training is for beginners",
+        "Movement training focuses on patterns; Load training focuses on adding weight",
+        "There is no difference",
+        "Load training is only for the upper body"
+      ],
+      "correct": 1,
+      "rationale": "Movement training ensures mechanics are sound before adding external resistance in the Load phase."
+    },
+    {
+      "q": "In Performance Training, which variable is often introduced to increase intensity?",
+      "options": [
+        "Static stretching only",
+        "Plyometrics and medicine ball throws",
+        "Reducing the number of training days",
+        "Eliminating the warm-up"
+      ],
+      "correct": 1,
+      "rationale": "Performance training utilizes power-focused exercises like plyometrics."
+    },
+    {
+      "q": "A client who can no longer speak comfortably during exercise is likely in which intensity zone?",
+      "options": [
+        "Zone 1",
+        "Zone 2",
+        "Zone 3",
+        "The Recovery Zone"
+      ],
+      "correct": 2,
+      "rationale": "Zone 3 (above VT2) is where the intensity is so high that speech is very difficult."
+    },
+    {
+      "q": "The 'Five Primary Movements' of the IFT Model include: Squatting, Lunging, Pushing, Pulling, and:",
+      "options": [
+        "Jumping",
+        "Rotating",
+        "Swimming",
+        "Sprinting"
+      ],
+      "correct": 1,
+      "rationale": "Rotation is the fifth primary movement pattern identified in the ACE IFT Model."
+    },
+    {
+      "q": "What is the primary indicator that a client is ready to progress from Base Training to Fitness Training?",
+      "options": [
+        "They have lost 20 pounds",
+        "They can perform 20 minutes of steady-state exercise in Zone 1",
+        "They can bench press their body weight",
+        "They have been training for exactly one year"
+      ],
+      "correct": 1,
+      "rationale": "Consistency and the ability to maintain steady Zone 1 exercise are the keys to progressing from Base."
+    },
+    {
+      "q": "Which metabolic marker is also known as the 'Lactate Threshold' in some models?",
+      "options": [
+        "VT1",
+        "VT2",
+        "RHR",
+        "Maximum Heart Rate"
+      ],
+      "correct": 1,
+      "rationale": "VT2 is closely associated with the point where lactate accumulates rapidly in the blood."
+    },
+    {
+      "q": "In Muscular Training, a client with a history of back pain should start in which phase?",
+      "options": [
+        "Functional Training",
+        "Load Training",
+        "Performance Training",
+        "None of the above"
+      ],
+      "correct": 0,
+      "rationale": "Functional training focuses on stability and mobility, which is crucial for clients with previous injuries or imbalances."
+    },
+    {
+      "q": "What is the training focus of Zone 1?",
+      "options": [
+        "Anaerobic Power",
+        "Recovery and Aerobic Base building",
+        "VO2 max testing",
+        "Muscle failure"
+      ],
+      "correct": 1,
+      "rationale": "Zone 1 is low-to-moderate intensity, ideal for recovery and building an aerobic foundation."
+    },
+    {
+      "q": "The ACE IFT Model encourages a 'Client-Centered' approach. What does this mean?",
+      "options": [
+        "The trainer makes all decisions without input",
+        "Programs are based on the client's unique goals, preferences, and abilities",
+        "The client only does exercises they enjoy, even if unsafe",
+        "The trainer treats all clients exactly the same"
+      ],
+      "correct": 1,
+      "rationale": "The model is flexible and focuses on the individual needs of the client rather than a one-size-fits-all approach."
+    }
+  ]
+}

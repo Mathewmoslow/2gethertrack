@@ -1,0 +1,4088 @@
+[
+  {
+    "chapter": 1,
+    "title": "Role and Scope",
+    "caseStudy": "Sarah is a newly certified ACE Personal Trainer starting her first day at a local fitness center. A potential client, Mark, approaches her with a list of medications he is taking for hypertension and type 2 diabetes, asking for a specific exercise and diet plan to manage his conditions. Sarah must navigate her role effectively, identifying which services she can provide and when she must refer Mark to other healthcare professionals to ensure his safety and adhere to professional standards.",
+    "questions": [
+      {
+        "q": "Which of the following is within the scope of practice for an ACE Personal Trainer?",
+        "options": [
+          "Prescribing specific medications to manage hypertension",
+          "Designing a periodized exercise program based on a client's goals",
+          "Providing clinical nutrition counseling for eating disorders",
+          "Diagnosing the cause of a client's chronic low-back pain"
+        ],
+        "correct": 1,
+        "rationale": "Personal trainers are responsible for designing safe and effective exercise programs. They do not prescribe medication, provide clinical nutrition therapy, or diagnose medical conditions."
+      },
+      {
+        "q": "What is the primary purpose of professional certifications like the ACE Personal Trainer certification?",
+        "options": [
+          "To guarantee a specific salary for the trainer",
+          "To protect the public by ensuring trainers have a baseline of competence",
+          "To allow trainers to work in a clinical setting without supervision",
+          "To provide legal immunity for any injuries occurring during training"
+        ],
+        "correct": 1,
+        "rationale": "The primary goal of professional certification is to protect the public from harm by ensuring that professionals meet a minimum level of competence."
+      },
+      {
+        "q": "Which of the following scenarios would require a personal trainer to refer a client to a healthcare professional?",
+        "options": [
+          "A client wanting to improve their 5k run time",
+          "A client reporting sudden, sharp chest pain during exercise",
+          "A client asking for general healthy eating tips",
+          "A client seeking to increase their muscular hypertrophy"
+        ],
+        "correct": 1,
+        "rationale": "Chest pain (angina) is a major sign/symptom of cardiovascular disease and requires immediate medical referral."
+      },
+      {
+        "q": "According to the ACE Code of Ethics, what should a trainer do if they encounter a client's personal information?",
+        "options": [
+          "Share it with other trainers for educational purposes",
+          "Keep it confidential and secure according to privacy laws",
+          "Post success stories on social media without consent",
+          "Report all personal habits to the gym management"
+        ],
+        "correct": 1,
+        "rationale": "Maintaining client confidentiality is a core ethical and legal responsibility for health and fitness professionals."
+      },
+      {
+        "q": "Which of the following is a RECOGNIZED credentialing organization for fitness certifications?",
+        "options": [
+          "The Better Business Bureau (BBB)",
+          "The National Commission for Certifying Agencies (NCCA)",
+          "The International Monetary Fund (IMF)",
+          "The Food and Drug Administration (FDA)"
+        ],
+        "correct": 1,
+        "rationale": "The NCCA is the gold standard for accrediting professional certifications in the fitness industry."
+      },
+      {
+        "q": "When a client asks for a detailed meal plan to treat their diabetes, what is the MOST appropriate response?",
+        "options": [
+          "Provide a 1,500 calorie low-carb meal plan",
+          "Refer the client to a Registered Dietitian (RD) or physician",
+          "Suggest they follow a popular ketogenic diet",
+          "Tell them to stop eating processed sugars entirely"
+        ],
+        "correct": 1,
+        "rationale": "Medical Nutrition Therapy (MNT) for chronic diseases is outside the scope of a CPT and must be handled by an RD or doctor."
+      },
+      {
+        "q": "In the 'Allied Healthcare Continuum,' where does a Personal Trainer typically fit?",
+        "options": [
+          "Gatekeeper (Physicians/Nurses)",
+          "Secondary referral (Physical Therapists)",
+          "Nutritional support (Registered Dietitians)",
+          "Prevention and fitness/wellness support"
+        ],
+        "correct": 3,
+        "rationale": "Personal trainers focus on health promotion, wellness, and fitness, acting as a link between clinical care and lifestyle change."
+      },
+      {
+        "q": "What is the recommended response if a client asks for a supplement recommendation?",
+        "options": [
+          "Recommend a specific brand and dosage",
+          "Sell them a supplement you have in your bag",
+          "Provide evidence-based information and refer to a doctor",
+          "Tell them supplements are dangerous and they should never take them"
+        ],
+        "correct": 2,
+        "rationale": "Trainers can provide general education about supplements but should not prescribe them and should refer to a medical professional."
+      },
+      {
+        "q": "Which of the following is an example of 'diagnosing' (which is outside a trainer's scope)?",
+        "options": [
+          "Observing a client's knee valgus during a squat",
+          "Telling a client they have 'Patellofemoral Pain Syndrome'",
+          "Conducting a push-up test to assess muscular endurance",
+          "Recording a client's resting heart rate"
+        ],
+        "correct": 1,
+        "rationale": "Identifying a specific medical condition (like PFPS) is a diagnosis, which is the role of a doctor or physical therapist."
+      },
+      {
+        "q": "To maintain ACE certification, a trainer must earn how many Continuing Education Credits (CECs) every two years?",
+        "options": [
+          "1.0 (10 hours)",
+          "2.0 (20 hours)",
+          "5.0 (50 hours)",
+          "10.0 (100 hours)"
+        ],
+        "correct": 1,
+        "rationale": "ACE requires 2.0 CECs (equivalent to 20 hours of education) and a valid CPR/AED certification every 2 years."
+      },
+      {
+        "q": "What should a trainer do if a client presents with a known orthopedic injury but has been cleared for exercise?",
+        "options": [
+          "Ignore the injury and follow a standard program",
+          "Modify exercises to avoid pain and follow the doctor's recommendations",
+          "Provide physical therapy exercises to fix the injury",
+          "Perform deep-tissue massage on the injured area"
+        ],
+        "correct": 1,
+        "rationale": "Trainers should modify programs to stay within safety guidelines provided by medical professionals for known injuries."
+      },
+      {
+        "q": "Which of the following is a 'professional boundary' for a personal trainer?",
+        "options": [
+          "Developing a close romantic relationship with a client",
+          "Maintaining a business-only relationship focused on fitness goals",
+          "Borrowing money from a client to expand your business",
+          "Giving a client legal advice regarding their divorce"
+        ],
+        "correct": 1,
+        "rationale": "Professional boundaries ensure a safe, objective, and effective environment for the client."
+      },
+      {
+        "q": "What is the primary reason for a trainer to maintain a CPR/AED certification?",
+        "options": [
+          "It is required by the gym's insurance only",
+          "To be prepared for life-threatening emergencies during exercise",
+          "To allow the trainer to perform minor surgeries",
+          "To qualify for higher pay in clinical settings"
+        ],
+        "correct": 1,
+        "rationale": "Cardiovascular events can occur during exercise; trainers must be able to respond until EMS arrives."
+      },
+      {
+        "q": "Which of the following is an example of an appropriate educational resource for a client?",
+        "options": [
+          "A blog post from an unverified influencer",
+          "The Dietary Guidelines for Americans (USDA/HHS)",
+          "A peer-reviewed study on a drug the trainer is not licensed to discuss",
+          "The trainer's personal opinion on spiritual healing"
+        ],
+        "correct": 1,
+        "rationale": "Trainers should provide info from reputable, evidence-based government and professional organizations."
+      },
+      {
+        "q": "If a trainer is also a licensed massage therapist, can they provide massage to their personal training clients?",
+        "options": [
+          "No, that is a conflict of interest",
+          "Yes, as long as it is done under the LMT license and not the CPT scope",
+          "Only if the client pays in cash",
+          "Yes, because all CPTs can perform massage"
+        ],
+        "correct": 1,
+        "rationale": "A professional with multiple licenses must act within the specific scope of the license they are currently utilizing, or clearly delineate the roles."
+      },
+      {
+        "q": "A client tells you they are taking a new supplement that 'burns 1000 calories a day.' What is the BEST response?",
+        "options": [
+          "Tell them it sounds like a scam and to throw it away",
+          "Help them research the ingredients using credible sources like the NIH Office of Supplements",
+          "Ask for a sample so you can try it yourself",
+          "Congratulate them on finding a shortcut to weight loss"
+        ],
+        "correct": 1,
+        "rationale": "Empowering the client with evidence-based resources allows them to make informed decisions without the trainer 'prescribing' or 'prohibiting'."
+      },
+      {
+        "q": "Which task is MOST appropriate for a Personal Trainer during a session with a client with controlled asthma?",
+        "options": [
+          "Telling the client to stop taking their inhaler to build 'lung strength'",
+          "Ensuring the client has their rescue inhaler present and monitoring for symptoms",
+          "Auscultating the client's lungs for wheezing using a stethoscope",
+          "Changing the client's asthma medication dosage"
+        ],
+        "correct": 1,
+        "rationale": "Monitoring for safety and ensuring emergency equipment is available is within scope; managing medication or clinical assessment is not."
+      },
+      {
+        "q": "What does 'HIPAA' stand for in the context of client privacy?",
+        "options": [
+          "Health Information Privacy and Accountability Act",
+          "Health Insurance Portability and Accountability Act",
+          "Health Interest Policy for Athletes and Adults",
+          "High Intensity Physical Activity Association"
+        ],
+        "correct": 1,
+        "rationale": "HIPAA sets national standards for protecting sensitive patient/client health information."
+      },
+      {
+        "q": "A client is struggling with depression and mentions they are 'hopeless.' What should the trainer do?",
+        "options": [
+          "Try to provide psychological counseling during the set",
+          "Recommend they increase their workout intensity to 'feel better'",
+          "Refer the client to a mental health professional",
+          "Tell them to just 'think positive'"
+        ],
+        "correct": 2,
+        "rationale": "Mental health issues are outside the scope of a CPT and require referral to a licensed therapist or psychiatrist."
+      },
+      {
+        "q": "Which of the following is a key component of 'Professionalism' for a CPT?",
+        "options": [
+          "Showing up on time and dressing appropriately",
+          "Charging the highest rates in the city",
+          "Guaranteeing six-pack abs in 2 weeks",
+          "Sharing personal secrets with clients to build trust"
+        ],
+        "correct": 0,
+        "rationale": "Reliability, appropriate appearance, and adherence to ethical standards are hallmarks of professionalism."
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "title": "ACE IFT Model",
+    "caseStudy": "James, a 42-year-old sedentary male with a BMI of 30, has decided to start an exercise program. He has no medical limitations but hasn't exercised in 15 years. His trainer must apply the ACE Integrated Fitness Training (IFT) Model to systematically progress him through the phases of cardiorespiratory and muscular training, starting with building a foundation of stability and aerobic base before moving into more intense performance-based goals.",
+    "questions": [
+      {
+        "q": "What are the two primary components of the ACE IFT Model?",
+        "options": [
+          "Cardiorespiratory Training and Muscular Training",
+          "Flexibility and Nutrition",
+          "Speed and Power",
+          "Stability and Mobility"
+        ],
+        "correct": 0,
+        "rationale": "The IFT model is divided into Cardiorespiratory Training and Muscular Training."
+      },
+      {
+        "q": "In the Muscular Training component, what is the first phase of progression?",
+        "options": [
+          "Load Training",
+          "Functional Training",
+          "Movement Training",
+          "Performance Training"
+        ],
+        "correct": 1,
+        "rationale": "Functional Training (Phase 1) focuses on core and joint stability and mobility."
+      },
+      {
+        "q": "Which phase of the Cardiorespiratory Training component focuses on 'Aerobic Base'?",
+        "options": [
+          "Base Training",
+          "Fitness Training",
+          "Performance Training",
+          "Anaerobic Training"
+        ],
+        "correct": 0,
+        "rationale": "Base Training (Phase 1) is designed to build an initial aerobic foundation for sedentary clients."
+      },
+      {
+        "q": "During the Talk Test, if a client can speak comfortably but is starting to feel the intensity, they are likely at which metabolic marker?",
+        "options": [
+          "Resting Heart Rate",
+          "VT1 (First Ventilatory Threshold)",
+          "VT2 (Second Ventilatory Threshold)",
+          "VO2 Max"
+        ],
+        "correct": 1,
+        "rationale": "VT1 is the intensity where talking first becomes slightly difficult."
+      },
+      {
+        "q": "In the 'Fitness Training' phase of Cardiorespiratory Training, the focus is on:",
+        "options": [
+          "Increasing session duration only",
+          "Improving aerobic efficiency by introducing intervals at/above VT1",
+          "Training for competitive sports only",
+          "Performing 100% of training in Zone 3"
+        ],
+        "correct": 1,
+        "rationale": "Fitness Training (Phase 2) introduces intervals to challenge the aerobic system."
+      },
+      {
+        "q": "Movement Training (Phase 2 of Muscular Training) focuses on which of the following?",
+        "options": [
+          "Adding heavy external loads",
+          "Developing good movement patterns without compromising joint stability",
+          "Maximizing power output",
+          "Isolation of small muscle groups"
+        ],
+        "correct": 1,
+        "rationale": "Phase 2 emphasizes the five primary movement patterns (squat, lunge, push, pull, rotate) with proper form."
+      },
+      {
+        "q": "Performance Training (Phase 3 of Muscular Training) is characterized by:",
+        "options": [
+          "Improving agility, speed, and power",
+          "Correcting posture and muscle imbalances",
+          "Learning how to squat with a PVC pipe",
+          "Exercising at 50% of maximum heart rate"
+        ],
+        "correct": 0,
+        "rationale": "Performance training focuses on sport-specific or advanced fitness goals like speed and power."
+      },
+      {
+        "q": "In the ACE IFT Model, what is the 'Functional' phase primarily about?",
+        "options": [
+          "Losing weight as quickly as possible",
+          "Building a foundation of stability and mobility",
+          "Increasing 1-RM in the bench press",
+          "Running a marathon"
+        ],
+        "correct": 1,
+        "rationale": "The functional phase ensures the body can move efficiently before adding load or intensity."
+      },
+      {
+        "q": "The 'Three-Zone Intensity Model' helps trainers categorize intensity. Zone 2 is between which two markers?",
+        "options": [
+          "Rest and VT1",
+          "VT1 and VT2",
+          "VT2 and VO2 Max",
+          "VO2 Max and death"
+        ],
+        "correct": 1,
+        "rationale": "Zone 2 is the range between the first and second ventilatory thresholds."
+      },
+      {
+        "q": "Load Training (Phase 3 of Muscular Training) is most appropriate for clients with which goal?",
+        "options": [
+          "Improving posture only",
+          "Muscular hypertrophy or strength",
+          "Developing explosive jumping ability",
+          "Learning to walk without a cane"
+        ],
+        "correct": 1,
+        "rationale": "Load training focuses on traditional resistance training goals like muscle size and strength."
+      },
+      {
+        "q": "During Cardiorespiratory Base Training, the primary goal for a sedentary client is to:",
+        "options": [
+          "Reach Zone 3 as often as possible",
+          "Build a habit of regular physical activity and increase duration",
+          "Prepare for a triathlon",
+          "Achieve a VO2 max of 60 ml/kg/min"
+        ],
+        "correct": 1,
+        "rationale": "The focus of Base Training is adherence and building a basic aerobic foundation."
+      },
+      {
+        "q": "What is the key difference between Movement Training and Load Training?",
+        "options": [
+          "Movement training is for athletes; Load training is for beginners",
+          "Movement training focuses on patterns; Load training focuses on adding weight",
+          "There is no difference",
+          "Load training is only for the upper body"
+        ],
+        "correct": 1,
+        "rationale": "Movement training ensures mechanics are sound before adding external resistance in the Load phase."
+      },
+      {
+        "q": "In Performance Training, which variable is often introduced to increase intensity?",
+        "options": [
+          "Static stretching only",
+          "Plyometrics and medicine ball throws",
+          "Reducing the number of training days",
+          "Eliminating the warm-up"
+        ],
+        "correct": 1,
+        "rationale": "Performance training utilizes power-focused exercises like plyometrics."
+      },
+      {
+        "q": "A client who can no longer speak comfortably during exercise is likely in which intensity zone?",
+        "options": [
+          "Zone 1",
+          "Zone 2",
+          "Zone 3",
+          "The Recovery Zone"
+        ],
+        "correct": 2,
+        "rationale": "Zone 3 (above VT2) is where the intensity is so high that speech is very difficult."
+      },
+      {
+        "q": "The 'Five Primary Movements' of the IFT Model include: Squatting, Lunging, Pushing, Pulling, and:",
+        "options": [
+          "Jumping",
+          "Rotating",
+          "Swimming",
+          "Sprinting"
+        ],
+        "correct": 1,
+        "rationale": "Rotation is the fifth primary movement pattern identified in the ACE IFT Model."
+      },
+      {
+        "q": "What is the primary indicator that a client is ready to progress from Base Training to Fitness Training?",
+        "options": [
+          "They have lost 20 pounds",
+          "They can perform 20 minutes of steady-state exercise in Zone 1",
+          "They can bench press their body weight",
+          "They have been training for exactly one year"
+        ],
+        "correct": 1,
+        "rationale": "Consistency and the ability to maintain steady Zone 1 exercise are the keys to progressing from Base."
+      },
+      {
+        "q": "Which metabolic marker is also known as the 'Lactate Threshold' in some models?",
+        "options": [
+          "VT1",
+          "VT2",
+          "RHR",
+          "Maximum Heart Rate"
+        ],
+        "correct": 1,
+        "rationale": "VT2 is closely associated with the point where lactate accumulates rapidly in the blood."
+      },
+      {
+        "q": "In Muscular Training, a client with a history of back pain should start in which phase?",
+        "options": [
+          "Functional Training",
+          "Load Training",
+          "Performance Training",
+          "None of the above"
+        ],
+        "correct": 0,
+        "rationale": "Functional training focuses on stability and mobility, which is crucial for clients with previous injuries or imbalances."
+      },
+      {
+        "q": "What is the training focus of Zone 1?",
+        "options": [
+          "Anaerobic Power",
+          "Recovery and Aerobic Base building",
+          "VO2 max testing",
+          "Muscle failure"
+        ],
+        "correct": 1,
+        "rationale": "Zone 1 is low-to-moderate intensity, ideal for recovery and building an aerobic foundation."
+      },
+      {
+        "q": "The ACE IFT Model encourages a 'Client-Centered' approach. What does this mean?",
+        "options": [
+          "The trainer makes all decisions without input",
+          "Programs are based on the client's unique goals, preferences, and abilities",
+          "The client only does exercises they enjoy, even if unsafe",
+          "The trainer treats all clients exactly the same"
+        ],
+        "correct": 1,
+        "rationale": "The model is flexible and focuses on the individual needs of the client rather than a one-size-fits-all approach."
+      }
+    ]
+  },
+  {
+    "chapter": 3,
+    "title": "Behavior Change",
+    "caseStudy": "Lisa is a 35-year-old mother of two who has tried 'every diet' and exercise plan with little success. She often starts strong but loses motivation after three weeks. She tells her new trainer, 'I want to change, but I'm afraid I'll fail again.' The trainer must use behavioral science to help Lisa build self-efficacy, identify barriers, and move through the stages of change to create a lasting lifestyle transformation.",
+    "questions": [
+      {
+        "q": "In the Transtheoretical Model (TTM), a client who is weighing the pros and cons of changing but has not yet taken action is in which stage?",
+        "options": [
+          "Precontemplation",
+          "Contemplation",
+          "Preparation",
+          "Action"
+        ],
+        "correct": 1,
+        "rationale": "Contemplation is the stage where the individual is aware of the problem and considering change but is ambivalent."
+      },
+      {
+        "q": "Which of the following is an example of 'Self-Efficacy'?",
+        "options": [
+          "A client's actual ability to run a mile",
+          "A client's belief in their ability to successfully perform an exercise",
+          "A trainer's confidence in their own skills",
+          "The amount of weight a client can lift"
+        ],
+        "correct": 1,
+        "rationale": "Self-efficacy is the subjective belief in one's own capability to perform a task."
+      },
+      {
+        "q": "According to the Health Belief Model, what is the strongest predictor of behavior change?",
+        "options": [
+          "Perceived susceptibility",
+          "Perceived seriousness",
+          "Perceived barriers",
+          "Perceived benefits"
+        ],
+        "correct": 2,
+        "rationale": "While all are important, perceived barriers often have the most significant impact on whether an individual takes action."
+      },
+      {
+        "q": "Which strategy is most appropriate for a client in the 'Precontemplation' stage?",
+        "options": [
+          "Providing a detailed workout schedule",
+          "Setting SMART goals",
+          "Providing information about the risks of inactivity",
+          "Introducing high-intensity intervals"
+        ],
+        "correct": 2,
+        "rationale": "Precontemplators don't see the need to change; education on the benefits/risks is the primary goal."
+      },
+      {
+        "q": "What does the 'S' in SMART goals stand for?",
+        "options": [
+          "Simple",
+          "Specific",
+          "Sustainable",
+          "Standard"
+        ],
+        "correct": 1,
+        "rationale": "Specific goals clearly define what is to be accomplished."
+      },
+      {
+        "q": "Which of the following is an 'Intrinsic' motivator?",
+        "options": [
+          "Winning a trophy",
+          "Getting a discount on gym fees",
+          "The feeling of accomplishment after a workout",
+          "Pleasing a spouse"
+        ],
+        "correct": 2,
+        "rationale": "Intrinsic motivation comes from within the individual, such as enjoyment or a sense of mastery."
+      },
+      {
+        "q": "The 'Righting Reflex' is a common mistake where the trainer:",
+        "options": [
+          "Always gives the correct exercise form",
+          "Corrects a client's posture",
+          "Attempts to 'fix' a client's behavior by giving advice",
+          "Uses a mirror to show the client their form"
+        ],
+        "correct": 2,
+        "rationale": "The righting reflex can cause resistance in clients who are ambivalent about change."
+      },
+      {
+        "q": "Which of the following is one of the four key processes of Motivational Interviewing?",
+        "options": [
+          "Commanding",
+          "Engaging",
+          "Criticizing",
+          "Directing"
+        ],
+        "correct": 1,
+        "rationale": "The four processes are Engaging, Focusing, Evoking, and Planning."
+      },
+      {
+        "q": "A client who has bought a gym membership and new shoes but hasn't started working out yet is in which stage?",
+        "options": [
+          "Contemplation",
+          "Preparation",
+          "Action",
+          "Maintenance"
+        ],
+        "correct": 1,
+        "rationale": "Preparation involves taking small steps toward change and intending to start soon."
+      },
+      {
+        "q": "What is 'Decisional Balance'?",
+        "options": [
+          "The ability to balance on one leg",
+          "The comparison of the pros and cons of a behavior change",
+          "The ratio of work to rest in a session",
+          "The financial budget for training sessions"
+        ],
+        "correct": 1,
+        "rationale": "It refers to the client's internal weighing of the advantages and disadvantages of changing."
+      },
+      {
+        "q": "Which of the following is an example of 'Operant Conditioning' in a fitness setting?",
+        "options": [
+          "A trainer yelling at a client for being late",
+          "Providing praise and positive reinforcement after a successful set",
+          "The client feeling tired after a workout",
+          "The client forgetting their water bottle"
+        ],
+        "correct": 1,
+        "rationale": "Positive reinforcement increases the likelihood that a behavior will be repeated."
+      },
+      {
+        "q": "Locus of Control refers to:",
+        "options": [
+          "The physical location of the gym",
+          "The trainer's control over the client's diet",
+          "The degree to which people believe they have control over their lives",
+          "The amount of tension in a muscle during a lift"
+        ],
+        "correct": 2,
+        "rationale": "Internal locus of control is associated with better adherence to exercise programs."
+      },
+      {
+        "q": "A client who says, 'I will go to the gym 3 days a week for 30 minutes for the next month' is using which goal-setting technique?",
+        "options": [
+          "Outcome goal",
+          "Process goal",
+          "Vague goal",
+          "Performance goal"
+        ],
+        "correct": 1,
+        "rationale": "Process goals focus on the actions required to achieve an outcome."
+      },
+      {
+        "q": "Which of the following is a potential barrier to exercise adherence?",
+        "options": [
+          "High self-efficacy",
+          "Strong social support",
+          "Lack of time",
+          "Enjoyment of the activity"
+        ],
+        "correct": 2,
+        "rationale": "Lack of time is the most commonly cited barrier to regular exercise."
+      },
+      {
+        "q": "The 'Stages of Change' model is also known as:",
+        "options": [
+          "The Health Belief Model",
+          "The Social Cognitive Theory",
+          "The Transtheoretical Model",
+          "The Self-Determination Theory"
+        ],
+        "correct": 2,
+        "rationale": "TTM is the technical name for the stages of change model."
+      },
+      {
+        "q": "Which of the following describes 'Self-Monitoring'?",
+        "options": [
+          "A trainer watching a client's form",
+          "A client keeping a workout log or food diary",
+          "A client weighing themselves every hour",
+          "A trainer checking their own heart rate"
+        ],
+        "correct": 1,
+        "rationale": "Self-monitoring is a powerful tool for behavior change and awareness."
+      },
+      {
+        "q": "What is 'Cognitive Restructuring'?",
+        "options": [
+          "Learning a new exercise",
+          "Changing negative thought patterns into positive ones",
+          "Resting the brain after a workout",
+          "Studying for a certification exam"
+        ],
+        "correct": 1,
+        "rationale": "It involves identifying and challenging irrational or maladaptive thoughts."
+      },
+      {
+        "q": "Social Cognitive Theory emphasizes the interaction between the individual, their behavior, and:",
+        "options": [
+          "Their genetics",
+          "Their environment",
+          "Their trainer's personality",
+          "Their income"
+        ],
+        "correct": 1,
+        "rationale": "Reciprocal determinism involves the person, behavior, and environment."
+      },
+      {
+        "q": "Which of the following is a sign of 'Burnout' in a client?",
+        "options": [
+          "Increased energy",
+          "Loss of interest and chronic fatigue",
+          "Improved sleep",
+          "Better performance"
+        ],
+        "correct": 1,
+        "rationale": "Overtraining or mental fatigue can lead to a drop in motivation and physical performance."
+      },
+      {
+        "q": "What is the primary goal of Motivational Interviewing?",
+        "options": [
+          "To force the client to change",
+          "To help the client resolve ambivalence and find their own reasons for change",
+          "To give the trainer a sense of power",
+          "To sell more training sessions"
+        ],
+        "correct": 1,
+        "rationale": "MI is a collaborative, goal-oriented style of communication for strengthening personal motivation."
+      }
+    ]
+  },
+  {
+    "chapter": 4,
+    "title": "Communication & Teaching",
+    "caseStudy": "A trainer is leading a small group session with three clients: one who prefers diagrams and watching (Visual), one who likes detailed explanations (Auditory), and one who wants to 'just do it' and feel the muscles (Kinesthetic). The trainer must effectively use verbal and non-verbal communication, demonstrate exercises, and provide constructive feedback to ensure all three clients learn safely and stay engaged.",
+    "questions": [
+      {
+        "q": "Which learning style benefits MOST from seeing a demonstration of an exercise?",
+        "options": [
+          "Auditory",
+          "Visual",
+          "Kinesthetic",
+          "Olfactory"
+        ],
+        "correct": 1,
+        "rationale": "Visual learners process information best through seeing demonstrations, videos, or images."
+      },
+      {
+        "q": "A client who learns best by physically performing the movement is a:",
+        "options": [
+          "Visual learner",
+          "Auditory learner",
+          "Kinesthetic learner",
+          "Cognitive learner"
+        ],
+        "correct": 2,
+        "rationale": "Kinesthetic learners need to 'feel' the movement to understand it."
+      },
+      {
+        "q": "During the 'Cognitive' stage of learning, the client's movements are typically:",
+        "options": [
+          "Smooth and automatic",
+          "Clumsy and require significant mental focus",
+          "Faster than the trainer's",
+          "Perfect every time"
+        ],
+        "correct": 1,
+        "rationale": "The cognitive stage is the initial phase of learning where movements are uncoordinated."
+      },
+      {
+        "q": "Which of the following is an example of an 'Open-Ended' question?",
+        "options": [
+          "'Are you tired?'",
+          "'Did you eat breakfast?'",
+          "'What are your biggest challenges with staying active?'",
+          "'Can you come at 5 PM?'"
+        ],
+        "correct": 2,
+        "rationale": "Open-ended questions encourage the client to provide more detail than a simple yes/no."
+      },
+      {
+        "q": "Which of the following is a form of non-verbal communication?",
+        "options": [
+          "A trainer's tone of voice",
+          "A trainer's body posture and eye contact",
+          "The words used in an email",
+          "A text message to a client"
+        ],
+        "correct": 1,
+        "rationale": "Body language, gestures, and eye contact are critical non-verbal cues."
+      },
+      {
+        "q": "The 'Associative' stage of learning is characterized by:",
+        "options": [
+          "Total mastery of the movement",
+          "Refining the movement and making fewer errors",
+          "Total confusion",
+          "Not needing any feedback"
+        ],
+        "correct": 1,
+        "rationale": "In this stage, the client has the basic movement down and is refining their skill."
+      },
+      {
+        "q": "What is 'Reflective Listening'?",
+        "options": [
+          "Repeating back what the client said to confirm understanding",
+          "Thinking about the session after it ends",
+          "Listening to music while training",
+          "Watching yourself in the mirror while talking"
+        ],
+        "correct": 0,
+        "rationale": "Reflections show empathy and ensure the trainer has correctly understood the client."
+      },
+      {
+        "q": "Which of the following is the BEST way to provide feedback to a client?",
+        "options": [
+          "Only point out what they did wrong",
+          "Use the 'Sandwich' approach: positive, correction, positive",
+          "Wait until the end of the month to give feedback",
+          "Yell at them so they remember"
+        ],
+        "correct": 1,
+        "rationale": "The sandwich approach maintains motivation while addressing necessary corrections."
+      },
+      {
+        "q": "When a client reaches the 'Autonomous' stage of learning, the trainer should:",
+        "options": [
+          "Stop watching them entirely",
+          "Provide less feedback and more complex challenges",
+          "Continue to explain every single detail",
+          "Go back to the cognitive stage"
+        ],
+        "correct": 1,
+        "rationale": "Autonomous learners can perform the skill with little conscious thought and need less frequent feedback."
+      },
+      {
+        "q": "What is 'Extrinsic Feedback'?",
+        "options": [
+          "The 'feel' of the muscle contracting",
+          "Feedback provided by an external source, like a trainer or a video",
+          "The client's own internal thoughts",
+          "The sound of the weights clanking"
+        ],
+        "correct": 1,
+        "rationale": "Extrinsic feedback comes from outside the learner (e.g., cues from the trainer)."
+      },
+      {
+        "q": "Which of the following is an effective 'Visual' cue?",
+        "options": [
+          "'Pull your shoulder blades together'",
+          "Pointing to the muscle that should be working",
+          "Describing the history of the squat",
+          "Telling a joke"
+        ],
+        "correct": 1,
+        "rationale": "Pointing or using physical targets are visual/proprioceptive cues."
+      },
+      {
+        "q": "Which of the following is a barrier to effective communication?",
+        "options": [
+          "Active listening",
+          "Using jargon and technical terms the client doesn't understand",
+          "Asking clarifying questions",
+          "Maintaining eye contact"
+        ],
+        "correct": 1,
+        "rationale": "Trainers should avoid 'over-explaining' with technical language that may confuse clients."
+      },
+      {
+        "q": "The 'Tell, Show, Do' method is a teaching strategy that combines:",
+        "options": [
+          "Auditory, Visual, and Kinesthetic learning",
+          "Reading, Writing, and Arithmetic",
+          "Running, Jumping, and Throwing",
+          "Eating, Sleeping, and Training"
+        ],
+        "correct": 0,
+        "rationale": "This sequence addresses the primary learning styles in order."
+      },
+      {
+        "q": "What is 'Empathy'?",
+        "options": [
+          "Feeling sorry for a client",
+          "The ability to understand and share the feelings of another",
+          "Agreeing with everything a client says",
+          "Giving a client money"
+        ],
+        "correct": 1,
+        "rationale": "Empathy is crucial for building rapport and a strong professional relationship."
+      },
+      {
+        "q": "A trainer who stands with their arms crossed and looks at their watch is conveying:",
+        "options": [
+          "Confidence",
+          "Boredom or impatience",
+          "Excitement",
+          "Professionalism"
+        ],
+        "correct": 1,
+        "rationale": "Non-verbal cues can significantly impact the client's perception of the trainer's engagement."
+      },
+      {
+        "q": "Which of the following is an example of 'Positive Reinforcement'?",
+        "options": [
+          "'You did that rep perfectly, great job!'",
+          "'If you don't do this, you'll stay fat'",
+          "Saying nothing when they do it right",
+          "Charging a late fee"
+        ],
+        "correct": 0,
+        "rationale": "Positive reinforcement encourages the repetition of a desired behavior."
+      },
+      {
+        "q": "How should a trainer handle a client who is frustrated with their progress?",
+        "options": [
+          "Tell them they aren't working hard enough",
+          "Validate their feelings and review their small successes",
+          "Ignore the frustration",
+          "Cancel the session"
+        ],
+        "correct": 1,
+        "rationale": "Acknowledging the client's feelings builds trust and allows for a productive conversation."
+      },
+      {
+        "q": "Which of the following is a 'Proprioceptive' cue?",
+        "options": [
+          "'Look in the mirror'",
+          "'Listen to the rhythm'",
+          "'Imagine there is a wall behind you that you are trying to touch with your hips'",
+          "'Read this book'"
+        ],
+        "correct": 2,
+        "rationale": "External cues or imagery help the client understand their body's position in space."
+      },
+      {
+        "q": "What is the primary goal of the 'Investigation' stage of the trainer-client relationship?",
+        "options": [
+          "To show off the trainer's knowledge",
+          "To gather information about the client's health, goals, and history",
+          "To perform a 1-RM bench press",
+          "To sign a contract"
+        ],
+        "correct": 1,
+        "rationale": "Investigation is about data collection and understanding the client's needs."
+      },
+      {
+        "q": "Rapport is best described as:",
+        "options": [
+          "A legal contract",
+          "A relationship of trust and mutual understanding",
+          "The distance between the trainer and client",
+          "A type of exercise equipment"
+        ],
+        "correct": 1,
+        "rationale": "Building rapport is the foundation of a successful coaching relationship."
+      }
+    ]
+  },
+  {
+    "chapter": 5,
+    "title": "Health Screening",
+    "caseStudy": "David is a 55-year-old executive who wants to start a high-intensity training program. He has high cholesterol and a family history of heart disease, but he currently feels fine and walks 30 minutes a day. The trainer must use the ACSM pre-participation screening algorithm to determine if David needs medical clearance before beginning more vigorous exercise.",
+    "questions": [
+      {
+        "q": "The primary goal of pre-participation screening is to identify individuals at risk for:",
+        "options": [
+          "Muscle soreness",
+          "Sudden cardiac death or myocardial infarction",
+          "Weight gain",
+          "Losing motivation"
+        ],
+        "correct": 1,
+        "rationale": "Screening ensures safety by identifying underlying cardiovascular or metabolic risks."
+      },
+      {
+        "q": "According to the current ACSM algorithm, which of the following is a key factor in determining the need for medical clearance?",
+        "options": [
+          "Age and gender",
+          "Current physical activity level",
+          "BMI over 25",
+          "Number of years they have smoked"
+        ],
+        "correct": 1,
+        "rationale": "The algorithm focuses on current activity, known disease, and signs/symptoms."
+      },
+      {
+        "q": "If a client is currently active, has a known metabolic disease, and is asymptomatic, do they need medical clearance for VIGOROUS exercise?",
+        "options": [
+          "No",
+          "Yes",
+          "Only if they are over 40",
+          "Only if they are female"
+        ],
+        "correct": 1,
+        "rationale": "Active individuals with known disease require clearance before progressing to vigorous intensity."
+      },
+      {
+        "q": "Which of the following is a 'Major Sign or Symptom' of cardiovascular disease?",
+        "options": [
+          "Muscle ache in the hamstrings",
+          "Ankle edema (swelling)",
+          "Mild fatigue after a long day",
+          "Slight increase in appetite"
+        ],
+        "correct": 1,
+        "rationale": "Ankle edema is a clinical sign associated with heart failure or venous insufficiency."
+      },
+      {
+        "q": "The PAR-Q+ is primarily used to:",
+        "options": [
+          "Test maximal strength",
+          "Screen for exercise safety and the need for medical referral",
+          "Calculate body fat percentage",
+          "Plan a nutrition strategy"
+        ],
+        "correct": 1,
+        "rationale": "The Physical Activity Readiness Questionnaire for Everyone (PAR-Q+) is a self-screening tool."
+      },
+      {
+        "q": "Which of the following individuals would DEFINITELY require medical clearance before starting ANY exercise?",
+        "options": [
+          "A sedentary person with no known disease or symptoms",
+          "An active person with no known disease or symptoms",
+          "A sedentary person with known cardiovascular disease",
+          "A fit person who wants to run a marathon"
+        ],
+        "correct": 2,
+        "rationale": "Sedentary individuals with known disease or symptoms must be cleared first."
+      },
+      {
+        "q": "What is 'Orthopnea'?",
+        "options": [
+          "Pain in the joints",
+          "Shortness of breath when lying flat",
+          "Dizziness upon standing",
+          "High blood pressure"
+        ],
+        "correct": 1,
+        "rationale": "Orthopnea is a symptom of heart failure."
+      },
+      {
+        "q": "Syncope is a medical term for:",
+        "options": [
+          "Fainting or dizziness",
+          "Rapid heart rate",
+          "Chest pain",
+          "Leg cramps"
+        ],
+        "correct": 0,
+        "rationale": "Syncope is often caused by a drop in blood pressure or reduced blood flow to the brain."
+      },
+      {
+        "q": "Intermittent Claudication refers to:",
+        "options": [
+          "A type of interval training",
+          "Pain in the lower limbs associated with lack of blood flow during exercise",
+          "A breathing technique",
+          "A mental health condition"
+        ],
+        "correct": 1,
+        "rationale": "It is a sign of peripheral artery disease (PAD)."
+      },
+      {
+        "q": "In the health screening process, 'Vigorous' intensity is defined as:",
+        "options": [
+          "30-40% HRR",
+          "40-60% HRR",
+          ">= 60% HRR",
+          "100% HRR"
+        ],
+        "correct": 2,
+        "rationale": "Vigorous activity is generally considered 60% or more of heart rate reserve."
+      },
+      {
+        "q": "What should a trainer do if a client reports 'Paroxysmal nocturnal dyspnea'?",
+        "options": [
+          "Have them do more cardio",
+          "Immediately refer them to a physician",
+          "Tell them to sleep on their side",
+          "Ignore it unless it happens during the session"
+        ],
+        "correct": 1,
+        "rationale": "This is a major symptom of heart failure and requires medical evaluation."
+      },
+      {
+        "q": "Which of the following is considered a 'known' metabolic disease?",
+        "options": [
+          "Hypertension",
+          "Type 1 or Type 2 Diabetes",
+          "High Cholesterol",
+          "Obesity"
+        ],
+        "correct": 1,
+        "rationale": "Diabetes is a metabolic disease; hypertension and cholesterol are risk factors."
+      },
+      {
+        "q": "If an active client develops new symptoms (like chest pain) during exercise, what is the trainer's action?",
+        "options": [
+          "Slow down the pace",
+          "Stop exercise and seek medical clearance",
+          "Give them an aspirin and continue",
+          "Ask them to come back tomorrow"
+        ],
+        "correct": 1,
+        "rationale": "Any new symptoms in an active individual require immediate cessation of exercise and medical referral."
+      },
+      {
+        "q": "What is the difference between an 'Informed Consent' and a 'Waiver'?",
+        "options": [
+          "They are the same",
+          "Informed consent explains risks; Waiver releases liability",
+          "Informed consent is for the gym; Waiver is for the trainer",
+          "Waivers are for children; Informed consent is for adults"
+        ],
+        "correct": 1,
+        "rationale": "Informed consent ensures the client knows the risks; a waiver is a legal release from liability."
+      },
+      {
+        "q": "A client with a blood pressure of 142/92 mmHg is categorized as having:",
+        "options": [
+          "Normal BP",
+          "Elevated BP",
+          "Stage 1 Hypertension",
+          "Stage 2 Hypertension"
+        ],
+        "correct": 3,
+        "rationale": "Stage 2 Hypertension is >= 140 systolic or >= 90 diastolic."
+      },
+      {
+        "q": "Tachycardia is defined as a resting heart rate of:",
+        "options": [
+          "< 60 bpm",
+          "60-100 bpm",
+          "> 100 bpm",
+          "> 200 bpm"
+        ],
+        "correct": 2,
+        "rationale": "Tachycardia is an abnormally fast resting heart rate."
+      },
+      {
+        "q": "Which form provides the trainer with the client's medical history and current medications?",
+        "options": [
+          "PAR-Q+",
+          "Health-History Questionnaire",
+          "Informed Consent",
+          "Liability Waiver"
+        ],
+        "correct": 1,
+        "rationale": "The Health-History Questionnaire gathers detailed medical information."
+      },
+      {
+        "q": "If a client is taking Beta-Blockers, how will their heart rate respond to exercise?",
+        "options": [
+          "It will be higher than normal",
+          "It will be lower than normal (blunted)",
+          "It will stay the same",
+          "It will fluctuate wildly"
+        ],
+        "correct": 1,
+        "rationale": "Beta-blockers lower both resting and exercise heart rates, making RPE a better measure of intensity."
+      },
+      {
+        "q": "What is the first step in the ACSM screening algorithm?",
+        "options": [
+          "Check for signs and symptoms of disease",
+          "Determine current physical activity level",
+          "Calculate BMI",
+          "Perform a 1.5-mile run test"
+        ],
+        "correct": 1,
+        "rationale": "The first step is identifying if the client currently participates in regular exercise."
+      },
+      {
+        "q": "A client who has not exercised in 3 months but was previously an athlete is considered:",
+        "options": [
+          "Active",
+          "Sedentary",
+          "Highly Fit",
+          "Exempt from screening"
+        ],
+        "correct": 1,
+        "rationale": "Regular exercise is defined as 30 mins, 3 days/week, for the last 3 months."
+      }
+    ]
+  },
+  {
+    "chapter": 6,
+    "title": "Nutrition",
+    "caseStudy": "Kevin is a 25-year-old bodybuilder who consumes 300g of protein daily and takes several 'proprietary blend' supplements. He asks his ACE trainer for a detailed daily meal plan and advice on which anabolic supplements are most effective. The trainer must provide evidence-based nutritional guidance while staying strictly within their scope of practice, referring Kevin to a Registered Dietitian for clinical needs.",
+    "questions": [
+      {
+        "q": "Which of the following is WITHIN the scope of practice for a Personal Trainer regarding nutrition?",
+        "options": [
+          "Prescribing a 1,200 calorie diet for weight loss",
+          "Discussing the Dietary Guidelines for Americans",
+          "Treating an iron deficiency with supplements",
+          "Providing meal plans for a client with kidney disease"
+        ],
+        "correct": 1,
+        "rationale": "Trainers can provide general non-medical nutrition information and education."
+      },
+      {
+        "q": "What is the recommended protein intake for a healthy, sedentary adult?",
+        "options": [
+          "0.5 g/kg",
+          "0.8 g/kg",
+          "1.5 g/kg",
+          "2.5 g/kg"
+        ],
+        "correct": 1,
+        "rationale": "The RDA for protein for a sedentary adult is 0.8 grams per kilogram of body weight."
+      },
+      {
+        "q": "Which macronutrient is the body's preferred source of energy for high-intensity exercise?",
+        "options": [
+          "Fat",
+          "Protein",
+          "Carbohydrate",
+          "Alcohol"
+        ],
+        "correct": 2,
+        "rationale": "Carbohydrates are quickly broken down into glucose for energy."
+      },
+      {
+        "q": "What is the energy density of Fat?",
+        "options": [
+          "4 kcal/g",
+          "7 kcal/g",
+          "9 kcal/g",
+          "12 kcal/g"
+        ],
+        "correct": 2,
+        "rationale": "Fat provides 9 calories per gram, making it the most energy-dense macronutrient."
+      },
+      {
+        "q": "A 'Complete' protein source contains:",
+        "options": [
+          "All 20 amino acids",
+          "Only essential amino acids",
+          "All 9 essential amino acids",
+          "Only non-essential amino acids"
+        ],
+        "correct": 2,
+        "rationale": "Complete proteins (mostly animal-based) provide all essential amino acids the body cannot make."
+      },
+      {
+        "q": "The Acceptable Macronutrient Distribution Range (AMDR) for Carbohydrates is:",
+        "options": [
+          "10-35%",
+          "20-35%",
+          "45-65%",
+          "70-80%"
+        ],
+        "correct": 2,
+        "rationale": "The majority of daily calories should come from carbohydrates according to the AMDR."
+      },
+      {
+        "q": "Which type of fat is considered 'heart-healthy' and should be emphasized in the diet?",
+        "options": [
+          "Saturated fat",
+          "Trans fat",
+          "Monounsaturated fat",
+          "Hydrogenated fat"
+        ],
+        "correct": 2,
+        "rationale": "Monounsaturated and polyunsaturated fats support cardiovascular health."
+      },
+      {
+        "q": "What is the primary role of Protein in the body?",
+        "options": [
+          "Quick energy",
+          "Insulation and hormone production",
+          "Growth and repair of tissues",
+          "Vitamin storage"
+        ],
+        "correct": 2,
+        "rationale": "Protein is essential for muscle repair and enzymatic functions."
+      },
+      {
+        "q": "How many calories are in 1 gram of Alcohol?",
+        "options": [
+          "4",
+          "7",
+          "9",
+          "0"
+        ],
+        "correct": 1,
+        "rationale": "Alcohol provides 7 kcal/g but no nutritional value."
+      },
+      {
+        "q": "The 'Glycemic Index' measures:",
+        "options": [
+          "The amount of fiber in a food",
+          "How quickly a carbohydrate food raises blood glucose",
+          "The total calories in a meal",
+          "The percentage of fat in a food"
+        ],
+        "correct": 1,
+        "rationale": "High GI foods cause a rapid spike in blood sugar."
+      },
+      {
+        "q": "Which vitamin is 'Fat-Soluble'?",
+        "options": [
+          "Vitamin C",
+          "Vitamin B12",
+          "Vitamin D",
+          "Folate"
+        ],
+        "correct": 2,
+        "rationale": "Vitamins A, D, E, and K are fat-soluble."
+      },
+      {
+        "q": "What is the minimum recommended water intake for men per day (total water)?",
+        "options": [
+          "1.0 Liter",
+          "2.5 Liters",
+          "3.7 Liters",
+          "10 Liters"
+        ],
+        "correct": 2,
+        "rationale": "The National Academy of Medicine recommends about 3.7 liters for men."
+      },
+      {
+        "q": "Hyponatremia is a condition caused by:",
+        "options": [
+          "Too much sugar",
+          "Too much salt",
+          "Critically low blood sodium levels (often from over-hydration)",
+          "High blood pressure"
+        ],
+        "correct": 2,
+        "rationale": "Over-consumption of water without electrolyte replacement can be dangerous."
+      },
+      {
+        "q": "Which of the following is a 'Complex' carbohydrate?",
+        "options": [
+          "Table sugar",
+          "Honey",
+          "Whole grain bread",
+          "Fruit juice"
+        ],
+        "correct": 2,
+        "rationale": "Complex carbs (starches/fibers) take longer to digest than simple sugars."
+      },
+      {
+        "q": "The DASH diet is specifically designed to help manage:",
+        "options": [
+          "Diabetes",
+          "Hypertension",
+          "Muscle growth",
+          "Hair loss"
+        ],
+        "correct": 1,
+        "rationale": "Dietary Approaches to Stop Hypertension focus on low sodium and high mineral intake."
+      },
+      {
+        "q": "For weight loss, a deficit of how many calories per day is generally recommended for a sustainable 1lb/week loss?",
+        "options": [
+          "100 kcal",
+          "500 kcal",
+          "1000 kcal",
+          "2000 kcal"
+        ],
+        "correct": 1,
+        "rationale": "A 500 kcal daily deficit equals 3,500 kcal/week, roughly the energy in 1lb of fat."
+      },
+      {
+        "q": "Which of the following is a 'Hidden' source of sodium?",
+        "options": [
+          "Fresh broccoli",
+          "Processed/canned soups",
+          "Plain chicken breast",
+          "Olive oil"
+        ],
+        "correct": 1,
+        "rationale": "Most sodium in the American diet comes from processed and restaurant foods."
+      },
+      {
+        "q": "What is the primary risk of a very-high-protein diet for a person with pre-existing kidney issues?",
+        "options": [
+          "Increased muscle mass",
+          "Stressing the kidneys' ability to filter urea",
+          "Better hydration",
+          "Higher energy levels"
+        ],
+        "correct": 1,
+        "rationale": "Excess protein metabolism produces nitrogenous waste that kidneys must excrete."
+      },
+      {
+        "q": "Which supplement is one of the most well-researched for increasing strength and muscle volume?",
+        "options": [
+          "Green tea extract",
+          "Creatine monohydrate",
+          "Raspberry ketones",
+          "Vitamin E"
+        ],
+        "correct": 1,
+        "rationale": "Creatine is highly effective for short-duration, high-intensity performance."
+      },
+      {
+        "q": "If a trainer suspects a client has an eating disorder, what should they do?",
+        "options": [
+          "Give them a strict meal plan to fix it",
+          "Refer them to a qualified medical professional or therapist",
+          "Tell them to 'just eat more'",
+          "Monitor their weight daily"
+        ],
+        "correct": 1,
+        "rationale": "Eating disorders are serious psychological conditions outside a CPT's scope."
+      }
+    ]
+  },
+  {
+    "chapter": 7,
+    "title": "Resting Assessments",
+    "caseStudy": "A 50-year-old male client, John, presents for his initial assessment. He is slightly overweight and hasn't had a physical in years. The trainer must measure his resting heart rate, blood pressure, and body composition to establish a baseline. John is nervous, which might affect his readings, so the trainer must use proper technique to ensure accuracy and determine if any results warrant a medical referral.",
+    "questions": [
+      {
+        "q": "When measuring resting heart rate, how long should the client sit quietly before the measurement?",
+        "options": [
+          "30 seconds",
+          "1 minute",
+          "5 minutes",
+          "10 minutes"
+        ],
+        "correct": 2,
+        "rationale": "Five minutes of quiet rest is standard to ensure the heart rate has stabilized."
+      },
+      {
+        "q": "Which artery is most commonly used to measure blood pressure?",
+        "options": [
+          "Radial",
+          "Carotid",
+          "Brachial",
+          "Femoral"
+        ],
+        "correct": 2,
+        "rationale": "The brachial artery in the antecubital space is the standard site for BP measurement."
+      },
+      {
+        "q": "A blood pressure reading of 128/78 mmHg is classified as:",
+        "options": [
+          "Normal",
+          "Elevated",
+          "Stage 1 Hypertension",
+          "Stage 2 Hypertension"
+        ],
+        "correct": 1,
+        "rationale": "Elevated BP is 120-129 systolic AND <80 diastolic."
+      },
+      {
+        "q": "Which of the following is a 'Normal' resting heart rate for an adult?",
+        "options": [
+          "40-60 bpm",
+          "60-100 bpm",
+          "100-120 bpm",
+          "120-150 bpm"
+        ],
+        "correct": 1,
+        "rationale": "The average adult RHR is between 60 and 100 bpm."
+      },
+      {
+        "q": "Body Mass Index (BMI) is calculated using which two variables?",
+        "options": [
+          "Weight and Age",
+          "Weight and Height",
+          "Waist Circumference and Weight",
+          "Body Fat % and Height"
+        ],
+        "correct": 1,
+        "rationale": "BMI = weight (kg) / height^2 (m)."
+      },
+      {
+        "q": "A BMI of 32.5 kg/m2 is categorized as:",
+        "options": [
+          "Underweight",
+          "Normal weight",
+          "Overweight",
+          "Obese"
+        ],
+        "correct": 3,
+        "rationale": "Obesity is defined as a BMI >= 30."
+      },
+      {
+        "q": "Which body composition assessment uses skinfold callipers?",
+        "options": [
+          "Bioelectrical Impedance (BIA)",
+          "Hydrostatic Weighing",
+          "Anthropometry",
+          "DEXA Scan"
+        ],
+        "correct": 2,
+        "rationale": "Skinfold measurement is a common anthropometric method."
+      },
+      {
+        "q": "In women, a waist-to-hip ratio (WHR) of >0.86 is considered:",
+        "options": [
+          "Low risk",
+          "Average risk",
+          "High risk",
+          "Athletic"
+        ],
+        "correct": 2,
+        "rationale": "Higher WHR indicates android obesity, which increases health risks."
+      },
+      {
+        "q": "The 'Essential Fat' percentage for men is approximately:",
+        "options": [
+          "2-5%",
+          "10-13%",
+          "18-24%",
+          "25-30%"
+        ],
+        "correct": 0,
+        "rationale": "Men require significantly less essential fat than women (who need 10-13%)."
+      },
+      {
+        "q": "Bioelectrical Impedance (BIA) is based on the principle that:",
+        "options": [
+          "Fat conducts electricity better than muscle",
+          "Lean tissue (water) conducts electricity better than fat",
+          "The skin's thickness determines body fat",
+          "Bone density is the key to weight"
+        ],
+        "correct": 1,
+        "rationale": "Muscle has high water content and conducts current; fat is an insulator."
+      },
+      {
+        "q": "Where is the 'Waist' measurement taken for a circumference assessment?",
+        "options": [
+          "At the narrowest part of the torso",
+          "At the level of the umbilicus (belly button)",
+          "At the widest part of the hips",
+          "Across the chest"
+        ],
+        "correct": 0,
+        "rationale": "The standard waist measurement is at the narrowest point between the ribs and iliac crest."
+      },
+      {
+        "q": "A male client with a waist circumference of 42 inches (107 cm) is at:",
+        "options": [
+          "Low risk",
+          "Increased risk for chronic disease",
+          "Normal risk",
+          "Athletic status"
+        ],
+        "correct": 1,
+        "rationale": "For men, a waist circumference >40 inches is a high-risk indicator."
+      },
+      {
+        "q": "What is 'White Coat Hypertension'?",
+        "options": [
+          "High BP caused by exercise",
+          "High BP caused by the stress of being in a medical/assessment setting",
+          "Low BP after eating",
+          "High BP only at night"
+        ],
+        "correct": 1,
+        "rationale": "Anxiety during assessment can artificially inflate blood pressure readings."
+      },
+      {
+        "q": "When using a blood pressure cuff, the first sound heard (Phase I Korotkoff) represents:",
+        "options": [
+          "Diastolic pressure",
+          "Mean arterial pressure",
+          "Systolic pressure",
+          "Resting heart rate"
+        ],
+        "correct": 2,
+        "rationale": "The first thumping sound is the systolic pressure."
+      },
+      {
+        "q": "The 'Jackson and Pollock' formula is commonly used for:",
+        "options": [
+          "Calculating 1-RM",
+          "Predicting VO2 max",
+          "Calculating body fat from skinfold sites",
+          "Determining caloric needs"
+        ],
+        "correct": 2,
+        "rationale": "This is the standard formula for 3-site or 7-site skinfold assessments."
+      },
+      {
+        "q": "What is the primary limitation of BMI?",
+        "options": [
+          "It is too hard to calculate",
+          "It does not distinguish between fat mass and lean muscle mass",
+          "It is only for children",
+          "It requires expensive equipment"
+        ],
+        "correct": 1,
+        "rationale": "Athletes with high muscle mass may be classified as 'obese' by BMI."
+      },
+      {
+        "q": "Which of the following can lead to an inaccurate skinfold measurement?",
+        "options": [
+          "Measuring on the right side of the body",
+          "Measuring immediately after exercise (dehydration/blood flow)",
+          "Taking duplicate measurements",
+          "Marking the sites with a pen"
+        ],
+        "correct": 1,
+        "rationale": "Exercise-induced changes in skin blood flow or hydration status can skew calliper results."
+      },
+      {
+        "q": "The 'Gold Standard' for body composition assessment (though less common) is:",
+        "options": [
+          "BMI",
+          "Skinfolds",
+          "Hydrostatic (underwater) weighing",
+          "Waist circumference"
+        ],
+        "correct": 2,
+        "rationale": "Hydrostatic weighing is highly accurate for measuring body density."
+      },
+      {
+        "q": "How should a trainer handle a client with a resting BP of 160/100 mmHg?",
+        "options": [
+          "Start with high-intensity cardio",
+          "Proceed with a max strength test",
+          "Refer to a physician immediately and do not perform any exercise testing",
+          "Tell them to drink more water"
+        ],
+        "correct": 2,
+        "rationale": "This is Stage 2 Hypertension and requires medical clearance before any testing/exercise."
+      },
+      {
+        "q": "Which of the following represents 'Bradycardia'?",
+        "options": [
+          "RHR of 45 bpm",
+          "RHR of 72 bpm",
+          "RHR of 110 bpm",
+          "RHR of 150 bpm"
+        ],
+        "correct": 0,
+        "rationale": "Bradycardia is a resting heart rate below 60 bpm."
+      }
+    ]
+  },
+  {
+    "chapter": 8,
+    "title": "Cardiorespiratory Training",
+    "caseStudy": "Maria is a 30-year-old female who wants to run her first 10k. She currently walks for 20 minutes three times a week. Her trainer needs to assess her current cardiorespiratory fitness using the submaximal talk test for VT1 and design a program that follows the ACE IFT Model, progressing her from Base Training into Fitness Training with appropriate intervals.",
+    "questions": [
+      {
+        "q": "The point at which lactate begins to accumulate in the blood faster than it can be cleared is known as:",
+        "options": [
+          "VT1",
+          "VT2",
+          "VO2 Max",
+          "Aerobic Threshold"
+        ],
+        "correct": 1,
+        "rationale": "VT2 is the point where metabolic byproducts accumulate rapidly, often called the lactate threshold."
+      },
+      {
+        "q": "What is the training focus in 'Base Training' (Phase 1)?",
+        "options": [
+          "Improving anaerobic power",
+          "Increasing VO2 max",
+          "Building an aerobic base and encouraging adherence",
+          "Maximal interval training"
+        ],
+        "correct": 2,
+        "rationale": "The focus is on steady-state exercise in Zone 1 to build a foundation."
+      },
+      {
+        "q": "The 'Talk Test' is a subjective measure of:",
+        "options": [
+          "Muscular strength",
+          "Intensity and metabolic thresholds",
+          "Flexibility",
+          "Lung volume"
+        ],
+        "correct": 1,
+        "rationale": "The talk test correlates well with ventilatory thresholds (VT1 and VT2)."
+      },
+      {
+        "q": "If a client can talk but not comfortably during exercise, they are in which zone?",
+        "options": [
+          "Zone 1",
+          "Zone 2",
+          "Zone 3",
+          "Recovery"
+        ],
+        "correct": 1,
+        "rationale": "Zone 2 is the range between VT1 and VT2 where speech becomes uncomfortable."
+      },
+      {
+        "q": "Which of the following is a SUBMAXIMAL cardiorespiratory test?",
+        "options": [
+          "YMCA Submaximal Step Test",
+          "1-RM Bench Press",
+          "Sit and Reach",
+          "Skinfold measurement"
+        ],
+        "correct": 0,
+        "rationale": "The step test uses heart rate response to submaximal work to estimate fitness."
+      },
+      {
+        "q": "The 'FITT-VP' principle stands for:",
+        "options": [
+          "Frequency, Intensity, Time, Type, Volume, Progression",
+          "Fitness, Intention, Tension, Timing, Velocity, Power",
+          "Fast, Intense, Tough, Training, Valor, Pride",
+          "Form, Injury, Technique, Talent, Vitality, Pace"
+        ],
+        "correct": 0,
+        "rationale": "This acronym outlines the variables of a cardiorespiratory program."
+      },
+      {
+        "q": "What is the recommended frequency for moderate-intensity aerobic exercise for most adults?",
+        "options": [
+          "1 day/week",
+          "2 days/week",
+          ">= 5 days/week",
+          "Every hour"
+        ],
+        "correct": 2,
+        "rationale": "The ACSM/ACE guideline is 5 or more days of moderate activity per week."
+      },
+      {
+        "q": "The 'Karvonen Formula' is used to calculate:",
+        "options": [
+          "Maximal heart rate",
+          "Target Heart Rate using Heart Rate Reserve (HRR)",
+          "BMI",
+          "Body fat percentage"
+        ],
+        "correct": 1,
+        "rationale": "Target HR = [(Max HR - Resting HR) x % Intensity] + Resting HR."
+      },
+      {
+        "q": "What is the first progression for a client in 'Base Training'?",
+        "options": [
+          "Increase intensity to Zone 2",
+          "Increase duration of the sessions",
+          "Introduce plyometrics",
+          "Start heavy weightlifting"
+        ],
+        "correct": 1,
+        "rationale": "Clients should first increase duration/frequency before increasing intensity."
+      },
+      {
+        "q": "In 'Fitness Training' (Phase 2), intervals are typically performed at:",
+        "options": [
+          "Just below VT1",
+          "Just below VT2",
+          "At or above VT1 and just below VT2",
+          "Above VO2 Max"
+        ],
+        "correct": 2,
+        "rationale": "Phase 2 introduces intervals in Zone 2 to improve aerobic efficiency."
+      },
+      {
+        "q": "A client who wants to compete in a marathon should eventually reach which training phase?",
+        "options": [
+          "Base Training",
+          "Fitness Training",
+          "Performance Training",
+          "Initial Training"
+        ],
+        "correct": 2,
+        "rationale": "Performance training (Phase 3) is for endurance goals and competitive performance."
+      },
+      {
+        "q": "The 'Overload' principle means:",
+        "options": [
+          "Doing too much and getting injured",
+          "Providing a stimulus greater than what the body is used to",
+          "Using the same weight for 10 years",
+          "Only training once a month"
+        ],
+        "correct": 1,
+        "rationale": "Overload is necessary for the body to adapt and improve."
+      },
+      {
+        "q": "Which of the following is an example of 'Active Recovery'?",
+        "options": [
+          "Sitting on the couch",
+          "Low-intensity walking or light cycling between hard sessions",
+          "Sleeping for 12 hours",
+          "A deep-tissue massage"
+        ],
+        "correct": 1,
+        "rationale": "Active recovery helps maintain blood flow and facilitate repair without adding stress."
+      },
+      {
+        "q": "What happens to Stroke Volume as a result of chronic aerobic training?",
+        "options": [
+          "It decreases",
+          "It increases",
+          "It stays the same",
+          "It disappears"
+        ],
+        "correct": 1,
+        "rationale": "The heart becomes stronger and pumps more blood per beat (increased stroke volume)."
+      },
+      {
+        "q": "The 'SAID' principle stands for:",
+        "options": [
+          "Specific Adaptation to Imposed Demands",
+          "Simple Aerobic Interval Design",
+          "Strength And Intensity Development",
+          "Slow And Intense Drills"
+        ],
+        "correct": 0,
+        "rationale": "The body adapts specifically to the type of stress placed upon it."
+      },
+      {
+        "q": "Which of the following is a sign of 'Overtraining'?",
+        "options": [
+          "Increased appetite",
+          "Decreased resting heart rate",
+          "Decreased performance and persistent fatigue",
+          "Better sleep quality"
+        ],
+        "correct": 2,
+        "rationale": "Overtraining syndrome occurs when the volume/intensity exceeds the body's recovery capacity."
+      },
+      {
+        "q": "The 'Rating of Perceived Exertion' (RPE) Borg scale ranges from:",
+        "options": [
+          "1 to 10",
+          "6 to 20",
+          "0 to 100",
+          "50 to 100"
+        ],
+        "correct": 1,
+        "rationale": "The 6-20 scale correlates roughly with heart rate (e.g., 6 = 60 bpm, 20 = 200 bpm)."
+      },
+      {
+        "q": "Intervals in 'Performance Training' (Phase 3) often reach which intensity?",
+        "options": [
+          "Zone 1 only",
+          "Zone 2 only",
+          "Zone 3 (above VT2)",
+          "Rest only"
+        ],
+        "correct": 2,
+        "rationale": "Performance training involves high-intensity intervals to improve anaerobic capacity."
+      },
+      {
+        "q": "What is the 'Cross-Training'?",
+        "options": [
+          "Training while angry",
+          "Using different modes of exercise to improve overall fitness and reduce injury risk",
+          "Training with a cross",
+          "Only doing one exercise"
+        ],
+        "correct": 1,
+        "rationale": "Cross-training helps prevent overuse injuries and boredom."
+      },
+      {
+        "q": "What is the primary fuel source for exercise in Zone 1?",
+        "options": [
+          "Pure protein",
+          "Creatine phosphate",
+          "Fats (Lipids)",
+          "Blood glucose only"
+        ],
+        "correct": 2,
+        "rationale": "At lower intensities, the body relies more heavily on fat oxidation."
+      }
+    ]
+  },
+  {
+    "chapter": 9,
+    "title": "Muscular Foundations",
+    "caseStudy": "Kevin is a beginner who wants to 'tone up.' He has poor posture (slumped shoulders and anterior pelvic tilt) and limited hip mobility. Before starting heavy weightlifting, his trainer must focus on Muscular Foundations, focusing on the five primary movement patterns and ensuring proper joint stability and mobility to prevent injury and create a solid base for future loading.",
+    "questions": [
+      {
+        "q": "Which muscle contraction involves the muscle lengthening while under tension?",
+        "options": [
+          "Concentric",
+          "Eccentric",
+          "Isometric",
+          "Isokinetic"
+        ],
+        "correct": 1,
+        "rationale": "Eccentric contractions act as a 'brake' and involve lengthening."
+      },
+      {
+        "q": "What is an 'Agonist' muscle?",
+        "options": [
+          "The muscle that opposes the movement",
+          "The muscle that is the prime mover for a specific action",
+          "A muscle that assists the prime mover",
+          "A muscle that stabilizes a joint"
+        ],
+        "correct": 1,
+        "rationale": "The agonist is primarily responsible for the movement (e.g., biceps in a curl)."
+      },
+      {
+        "q": "The 'Length-Tension Relationship' describes:",
+        "options": [
+          "How long a workout should be",
+          "The relationship between a muscle's length and the force it can produce",
+          "The tension between a trainer and client",
+          "How much a muscle can stretch before snapping"
+        ],
+        "correct": 1,
+        "rationale": "There is an optimal length at which a muscle can generate maximal force."
+      },
+      {
+        "q": "Which type of muscle fiber is most resistant to fatigue and used for endurance?",
+        "options": [
+          "Type I (Slow-Twitch)",
+          "Type IIa (Fast-Twitch)",
+          "Type IIx (Fast-Twitch)",
+          "Type III"
+        ],
+        "correct": 0,
+        "rationale": "Type I fibers are oxidative and suited for long-duration activity."
+      },
+      {
+        "q": "What is 'Hypertrophy'?",
+        "options": [
+          "An increase in the number of muscle cells",
+          "An increase in the size of muscle cells",
+          "A decrease in muscle size",
+          "Muscle soreness"
+        ],
+        "correct": 1,
+        "rationale": "Hypertrophy is the growth of existing muscle fibers."
+      },
+      {
+        "q": "Which of the following is one of the 'Five Primary Movements'?",
+        "options": [
+          "Bicep Curl",
+          "Tricep Extension",
+          "Lunge",
+          "Side Raise"
+        ],
+        "correct": 2,
+        "rationale": "The five movements are Squat, Lunge, Push, Pull, and Rotate."
+      },
+      {
+        "q": "The 'Core' muscles primarily function to:",
+        "options": [
+          "Make you look good in a swimsuit",
+          "Provide stability and transfer force between the upper and lower body",
+          "Flex the bicep",
+          "Help you breathe only"
+        ],
+        "correct": 1,
+        "rationale": "The core is the foundation for all movement and stability."
+      },
+      {
+        "q": "What is an 'Isometric' contraction?",
+        "options": [
+          "A contraction with no change in muscle length",
+          "A contraction where the muscle shortens",
+          "A contraction where the muscle lengthens",
+          "A contraction at a constant speed"
+        ],
+        "correct": 0,
+        "rationale": "Static holds (like a plank) are isometric exercises."
+      },
+      {
+        "q": "Which joint is primarily designed for 'Mobility'?",
+        "options": [
+          "Knee",
+          "Lumbar Spine",
+          "Glenohumeral (Shoulder)",
+          "Foot"
+        ],
+        "correct": 2,
+        "rationale": "The shoulder is a highly mobile ball-and-socket joint."
+      },
+      {
+        "q": "What is 'Reciprocal Inhibition'?",
+        "options": [
+          "The trainer and client disagreeing",
+          "The relaxation of the antagonist muscle while the agonist contracts",
+          "The muscle cramping up",
+          "Double muscle growth"
+        ],
+        "correct": 1,
+        "rationale": "To allow the agonist to shorten, the nervous system inhibits the antagonist."
+      },
+      {
+        "q": "Which plane of motion divides the body into right and left halves?",
+        "options": [
+          "Sagittal",
+          "Frontal",
+          "Transverse",
+          "Horizontal"
+        ],
+        "correct": 0,
+        "rationale": "Sagittal plane movements include forward and backward actions like walking."
+      },
+      {
+        "q": "A 'Biceps Curl' occurs in which plane of motion?",
+        "options": [
+          "Sagittal",
+          "Frontal",
+          "Transverse",
+          "Oblique"
+        ],
+        "correct": 0,
+        "rationale": "Flexion and extension occur in the sagittal plane."
+      },
+      {
+        "q": "What is the 'Synergist' muscle's role?",
+        "options": [
+          "To stop the movement",
+          "To assist the agonist in performing the movement",
+          "To stay still",
+          "To provide electricity"
+        ],
+        "correct": 1,
+        "rationale": "Synergists help the prime mover (e.g., brachialis assists the biceps)."
+      },
+      {
+        "q": "Which of the following is a 'Closed-Kinetic-Chain' exercise?",
+        "options": [
+          "Leg extension machine",
+          "Squat",
+          "Bicep curl",
+          "Dumbbell press"
+        ],
+        "correct": 1,
+        "rationale": "In CKC exercises, the distal extremity (feet) is fixed to the ground or a stable surface."
+      },
+      {
+        "q": "Muscle spindles respond to:",
+        "options": [
+          "Tension in the tendon",
+          "Changes in muscle length and speed of stretch",
+          "Temperature",
+          "Pain only"
+        ],
+        "correct": 1,
+        "rationale": "Spindles trigger the stretch reflex to prevent over-stretching."
+      },
+      {
+        "q": "The Golgi Tendon Organ (GTO) responds to:",
+        "options": [
+          "Muscle length",
+          "Muscle tension",
+          "Joint angle",
+          "Pressure"
+        ],
+        "correct": 1,
+        "rationale": "GTOs inhibit the muscle if tension is too high (autogenic inhibition)."
+      },
+      {
+        "q": "What is 'Atrophy'?",
+        "options": [
+          "Muscle growth",
+          "Wasting away or decrease in muscle size",
+          "A type of trophy for winning a race",
+          "Muscle flexibility"
+        ],
+        "correct": 1,
+        "rationale": "Atrophy occurs with disuse or aging."
+      },
+      {
+        "q": "Which muscle is responsible for 'Internal Rotation' of the shoulder?",
+        "options": [
+          "Infraspinatus",
+          "Teres minor",
+          "Subscapularis",
+          "Deltoid"
+        ],
+        "correct": 2,
+        "rationale": "Subscapularis is the only rotator cuff muscle that performs internal rotation."
+      },
+      {
+        "q": "What is 'Dynamic Stretching'?",
+        "options": [
+          "Holding a stretch for 60 seconds",
+          "Moving parts of the body and gradually increasing reach/speed",
+          "Using a partner to push you",
+          "Stretching while sleeping"
+        ],
+        "correct": 1,
+        "rationale": "Dynamic stretching is preferred as part of a warm-up."
+      },
+      {
+        "q": "The 'Stability and Mobility' phase focuses on:",
+        "options": [
+          "Maximal strength",
+          "Restoring joint function and postural alignment",
+          "Explosive power",
+          "Building as much muscle as possible"
+        ],
+        "correct": 1,
+        "rationale": "This foundational phase prepares the body for the stress of load training."
+      }
+    ]
+  },
+  {
+    "chapter": 10,
+    "title": "Muscular Assessments",
+    "caseStudy": "During a 'Bend and Lift' assessment (squat), a trainer notices that the client's knees cave inward (valgus) and their torso leans forward excessively. The trainer also performs a 'Push-up test' to assess endurance. These assessments provide the data needed to identify muscle imbalances and determine the appropriate starting point for the client's muscular training program.",
+    "questions": [
+      {
+        "q": "The 'Bend and Lift' screen primarily assesses which movement?",
+        "options": [
+          "Lunge",
+          "Pushing",
+          "Squatting",
+          "Rotating"
+        ],
+        "correct": 2,
+        "rationale": "The bend and lift screen evaluates the mechanics of a squat."
+      },
+      {
+        "q": "During a squat, if a client's knees cave inward (Valgus), which muscle is likely weak?",
+        "options": [
+          "Adductors",
+          "Gluteus Medius",
+          "Quadriceps",
+          "Gastrocnemius"
+        ],
+        "correct": 1,
+        "rationale": "Weak hip abductors/external rotators (like the gluteus medius) allow the knees to cave."
+      },
+      {
+        "q": "The 'Hurdle Step' screen assesses which of the following?",
+        "options": [
+          "Upper body strength",
+          "Single-leg stability and hip mobility",
+          "Maximal speed",
+          "Hand-eye coordination"
+        ],
+        "correct": 1,
+        "rationale": "It mimics the gait cycle and tests stability on one leg."
+      },
+      {
+        "q": "An 'Excessive Forward Lean' during a squat often indicates tightness in which muscle?",
+        "options": [
+          "Hamstrings",
+          "Gastrocnemius/Soleus (Calves)",
+          "Rectus Abdominis",
+          "Gluteus Maximus"
+        ],
+        "correct": 1,
+        "rationale": "Tight calves limit ankle dorsiflexion, forcing the torso forward to keep balance."
+      },
+      {
+        "q": "Which test is used to assess 'Muscular Endurance' of the upper body?",
+        "options": [
+          "1-RM Bench Press",
+          "Push-up Test",
+          "Vertical Jump",
+          "Sit and Reach"
+        ],
+        "correct": 1,
+        "rationale": "The push-up test measures how many reps can be performed before fatigue."
+      },
+      {
+        "q": "The 'Thomas Test' assesses the flexibility of which muscle group?",
+        "options": [
+          "Hamstrings",
+          "Hip Flexors",
+          "Low Back",
+          "Shoulders"
+        ],
+        "correct": 1,
+        "rationale": "The Thomas test checks for tight iliopsoas or rectus femoris."
+      },
+      {
+        "q": "If a client cannot touch their toes during a 'Passive Straight-Leg Raise', which muscle is likely tight?",
+        "options": [
+          "Quadriceps",
+          "Hamstrings",
+          "Calves",
+          "Hip flexors"
+        ],
+        "correct": 1,
+        "rationale": "The straight-leg raise is a standard test for hamstring length."
+      },
+      {
+        "q": "The 'Shark Skill Test' is used to assess:",
+        "options": [
+          "Swimming speed",
+          "Agility and neuromuscular control",
+          "Strength",
+          "Flexibility"
+        ],
+        "correct": 1,
+        "rationale": "This grid-based test evaluates lower-body agility."
+      },
+      {
+        "q": "What is the primary purpose of the 'Stork-Stand Balance Test'?",
+        "options": [
+          "To see how long someone can stand on one leg",
+          "To assess static balance",
+          "To test ankle strength",
+          "To look like a bird"
+        ],
+        "correct": 1,
+        "rationale": "Static balance is a key component of functional fitness."
+      },
+      {
+        "q": "The 'McGill's Torso Muscular Endurance Test Battery' includes the trunk flexor test, trunk extensor test, and:",
+        "options": [
+          "Squat test",
+          "Side bridge (plank) test",
+          "Push-up test",
+          "Pull-up test"
+        ],
+        "correct": 1,
+        "rationale": "McGill's battery assesses core endurance in three planes."
+      },
+      {
+        "q": "A 'Scapular Winging' observation during a push-up indicates weakness in which muscle?",
+        "options": [
+          "Pectoralis Major",
+          "Serratus Anterior",
+          "Biceps",
+          "Upper Trapezius"
+        ],
+        "correct": 1,
+        "rationale": "The serratus anterior holds the scapula against the rib cage."
+      },
+      {
+        "q": "The '1-RM' test stands for:",
+        "options": [
+          "One-Repetition Maximum",
+          "One-Rest Minute",
+          "One-Round Mastery",
+          "Optimal Range Movement"
+        ],
+        "correct": 0,
+        "rationale": "It is the maximum weight a client can lift for one complete rep."
+      },
+      {
+        "q": "Before performing a 1-RM test, the client should:",
+        "options": [
+          "Not eat for 24 hours",
+          "Perform a thorough warm-up",
+          "Sit still for 30 minutes",
+          "Take a nap"
+        ],
+        "correct": 1,
+        "rationale": "Warming up is essential for safety and optimal performance in max testing."
+      },
+      {
+        "q": "The 'Pro-Agility Test' (20-yard shuttle) measures:",
+        "options": [
+          "Aerobic capacity",
+          "Linear speed",
+          "Agility and ability to change direction",
+          "Vertical jump"
+        ],
+        "correct": 2,
+        "rationale": "Agility tests involve rapid changes in direction and position."
+      },
+      {
+        "q": "Which of the following is a contraindication for maximal strength testing?",
+        "options": [
+          "Being an athlete",
+          "Having hypertension or cardiovascular disease",
+          "Wanting to build muscle",
+          "Being under 30 years old"
+        ],
+        "correct": 1,
+        "rationale": "Maximal exertion causes significant BP spikes and heart stress."
+      },
+      {
+        "q": "The 'Y-Balance Test' assesses:",
+        "options": [
+          "Flexibility",
+          "Dynamic balance and functional reach",
+          "Maximal power",
+          "Upper body endurance"
+        ],
+        "correct": 1,
+        "rationale": "It challenges balance while the client reaches in three directions."
+      },
+      {
+        "q": "If a client's low back arches during a shoulder press, it may indicate:",
+        "options": [
+          "Strong core",
+          "Tight hip flexors or lack of core stability",
+          "Strong shoulders",
+          "Good flexibility"
+        ],
+        "correct": 1,
+        "rationale": "The 'Pelvic Tilt' or lumbar extension often compensates for lack of range or stability."
+      },
+      {
+        "q": "The 'Vertical Jump Test' is a measure of:",
+        "options": [
+          "Endurance",
+          "Flexibility",
+          "Leg Power",
+          "Balance"
+        ],
+        "correct": 2,
+        "rationale": "Jump height correlates with explosive power output."
+      },
+      {
+        "q": "Which assessment should be performed LAST in a sequence?",
+        "options": [
+          "Resting heart rate",
+          "Skinfold measurements",
+          "Maximal strength or power tests",
+          "Static posture observation"
+        ],
+        "correct": 2,
+        "rationale": "High-intensity tests should follow resting and low-intensity assessments."
+      },
+      {
+        "q": "A client with 'Forward Head Posture' likely has tightness in which muscles?",
+        "options": [
+          "Abdominals",
+          "Cervical extensors (upper traps/levator scapulae)",
+          "Glutes",
+          "Hamstrings"
+        ],
+        "correct": 1,
+        "rationale": "Tightness in the upper neck/back muscles pulls the head forward."
+      }
+    ]
+  },
+  {
+    "chapter": 11,
+    "title": "Integrated Programming",
+    "caseStudy": "A trainer is designing a comprehensive 12-week program for a 45-year-old client who wants to improve both their cardiorespiratory fitness and muscular strength for a Spartan race. The trainer must integrate different training modalities, manage volume and intensity, and apply the principles of periodization to ensure the client reaches peak performance while avoiding overtraining.",
+    "questions": [
+      {
+        "q": "Periodization involves:",
+        "options": [
+          "Doing the same workout every day",
+          "The systematic manipulation of training variables over time",
+          "Only training for one week a year",
+          "Training only the upper body"
+        ],
+        "correct": 1,
+        "rationale": "Periodization prevents plateaus and overtraining by varying intensity and volume."
+      },
+      {
+        "q": "A 'Macrocycle' typically represents:",
+        "options": [
+          "A single workout",
+          "A week of training",
+          "An entire training year or season",
+          "A one-month block"
+        ],
+        "correct": 2,
+        "rationale": "The macrocycle is the long-term overview of the training plan."
+      },
+      {
+        "q": "What is a 'Mesocycle'?",
+        "options": [
+          "A 4-6 week block of training with a specific focus",
+          "A 24-hour period",
+          "A 10-year plan",
+          "The first 5 minutes of a workout"
+        ],
+        "correct": 0,
+        "rationale": "Mesocycles focus on specific goals like hypertrophy, strength, or power."
+      },
+      {
+        "q": "The 'Linear Periodization' model is characterized by:",
+        "options": [
+          "Increasing volume while decreasing intensity",
+          "Consistent increases in intensity and decreases in volume over time",
+          "Randomly choosing exercises",
+          "Changing variables every single day"
+        ],
+        "correct": 1,
+        "rationale": "Linear periodization progressively increases load as the 'peak' approaches."
+      },
+      {
+        "q": "Which of the following is a 'Microcycle'?",
+        "options": [
+          "A 6-month block",
+          "A 1-week training plan",
+          "A single repetition",
+          "A 10-minute warm-up"
+        ],
+        "correct": 1,
+        "rationale": "Microcycles are the smallest units, usually lasting one week."
+      },
+      {
+        "q": "What is the recommended rest interval for a client focused on 'Maximal Strength' (lifting >90% 1-RM)?",
+        "options": [
+          "30 seconds",
+          "1 minute",
+          "2-5 minutes",
+          "10 minutes"
+        ],
+        "correct": 2,
+        "rationale": "Heavy lifting requires longer recovery for ATP-CP systems to replenish."
+      },
+      {
+        "q": "The 'Training Volume' is calculated as:",
+        "options": [
+          "Sets x Reps",
+          "Sets x Reps x Weight",
+          "Weight / Sets",
+          "Total time in the gym"
+        ],
+        "correct": 1,
+        "rationale": "Volume-load provides a measure of total work performed."
+      },
+      {
+        "q": "Which of the following is an example of an 'Undulating' periodization model?",
+        "options": [
+          "Increasing weight every week for 12 weeks",
+          "Varying intensity and volume within a week (e.g., Heavy, Light, Moderate days)",
+          "Using the same weight for everything",
+          "Only training on Mondays"
+        ],
+        "correct": 1,
+        "rationale": "Undulating periodization changes variables more frequently than linear models."
+      },
+      {
+        "q": "What is 'Tapering'?",
+        "options": [
+          "Increasing training to the max before a race",
+          "A systematic reduction in training volume before a competition",
+          "Using tape to fix an injury",
+          "Stopping exercise entirely for a month"
+        ],
+        "correct": 1,
+        "rationale": "Tapering allows for full recovery and 'supercompensation' before an event."
+      },
+      {
+        "q": "Which of the following is a 'Compound' exercise?",
+        "options": [
+          "Bicep Curl",
+          "Leg Extension",
+          "Squat",
+          "Calf Raise"
+        ],
+        "correct": 2,
+        "rationale": "Compound exercises involve multiple joints and muscle groups."
+      },
+      {
+        "q": "The 'Principle of Reversibility' states that:",
+        "options": [
+          "If you don't use it, you lose it (detraining)",
+          "You can reverse aging with exercise",
+          "Muscles turn into fat",
+          "Exercise is bad for the heart"
+        ],
+        "correct": 0,
+        "rationale": "Fitness gains are lost when the training stimulus is removed."
+      },
+      {
+        "q": "What is the primary goal of the 'Preparation' phase in periodization?",
+        "options": [
+          "Winning the gold medal",
+          "Building a base of general fitness and hypertrophy",
+          "Testing 1-RM every day",
+          "Resting"
+        ],
+        "correct": 1,
+        "rationale": "The preparatory phase builds the foundation for more intense sport-specific work."
+      },
+      {
+        "q": "Which variable should be manipulated FIRST for a beginner?",
+        "options": [
+          "Intensity (Weight)",
+          "Frequency and Duration",
+          "Power output",
+          "Plyometric volume"
+        ],
+        "correct": 1,
+        "rationale": "Beginners should build consistency and volume before adding high intensity."
+      },
+      {
+        "q": "The 'Two-for-Two' rule for progression states:",
+        "options": [
+          "Do two sets of two reps",
+          "If a client can perform 2 extra reps on the last set for 2 consecutive sessions, increase the weight",
+          "Train two days, rest two days",
+          "Bring two friends to get a discount"
+        ],
+        "correct": 1,
+        "rationale": "This is a conservative and effective way to ensure the load is appropriate."
+      },
+      {
+        "q": "What is the recommended repetition range for 'Muscular Hypertrophy'?",
+        "options": [
+          "1-5 reps",
+          "6-12 reps",
+          "15-25 reps",
+          "50+ reps"
+        ],
+        "correct": 1,
+        "rationale": "Moderate reps (6-12) with moderate-to-high volume are optimal for muscle growth."
+      },
+      {
+        "q": "For 'Muscular Endurance', the rest intervals should be:",
+        "options": [
+          "30 seconds or less",
+          "2 minutes",
+          "5 minutes",
+          "No rest for 2 hours"
+        ],
+        "correct": 0,
+        "rationale": "Short rest periods challenge the muscle's ability to recover from metabolic fatigue."
+      },
+      {
+        "q": "Which of the following describes 'Supersets'?",
+        "options": [
+          "Doing one set and going home",
+          "Performing two different exercises back-to-back with little rest",
+          "Doing 100 reps in one set",
+          "Training only once a month"
+        ],
+        "correct": 1,
+        "rationale": "Supersets increase training density and can save time."
+      },
+      {
+        "q": "The 'Diminishing Returns' principle suggests:",
+        "options": [
+          "The more fit you become, the harder it is to make further gains",
+          "Exercise has no value after age 50",
+          "You should never train more than 10 minutes",
+          "Gains are infinite"
+        ],
+        "correct": 0,
+        "rationale": "Beginners see rapid progress, while elite athletes must work much harder for small improvements."
+      },
+      {
+        "q": "What is the 'Active Recovery' phase in a periodized plan?",
+        "options": [
+          "A week of total bed rest",
+          "A week of low-intensity, non-specific activity to allow for mental and physical recovery",
+          "Running a marathon on your day off",
+          "Lifting weights while sleeping"
+        ],
+        "correct": 1,
+        "rationale": "Also called a 'deload' week, it is essential for long-term progress."
+      },
+      {
+        "q": "Which exercise order is generally recommended?",
+        "options": [
+          "Small muscles before large muscles",
+          "Isolation exercises before compound exercises",
+          "Power/Multi-joint exercises before isolation exercises",
+          "Abdominals first"
+        ],
+        "correct": 2,
+        "rationale": "Power and compound movements require the most energy and focus."
+      }
+    ]
+  },
+  {
+    "chapter": 12,
+    "title": "Obesity Considerations",
+    "caseStudy": "Sarah has a BMI of 34 and has struggled with obesity her entire adult life. She is often intimidated by the gym and has joint pain in her knees. Her trainer must create a welcoming environment, focus on low-impact activities to protect her joints, and design a program that emphasizes consistency, calorie expenditure, and long-term behavior change over rapid, unsustainable weight loss.",
+    "questions": [
+      {
+        "q": "Obesity is defined as a Body Mass Index (BMI) of:",
+        "options": [
+          ">= 25 kg/m2",
+          ">= 30 kg/m2",
+          ">= 35 kg/m2",
+          ">= 40 kg/m2"
+        ],
+        "correct": 1,
+        "rationale": "BMI 25-29.9 is overweight; 30+ is obese."
+      },
+      {
+        "q": "Which type of fat distribution is most associated with cardiovascular and metabolic risk?",
+        "options": [
+          "Gynoid (Pear-shaped)",
+          "Android (Apple-shaped/Visceral fat)",
+          "Ectomorphic",
+          "Subcutaneous fat on the legs"
+        ],
+        "correct": 1,
+        "rationale": "Visceral fat (around the organs) is metabolically active and inflammatory."
+      },
+      {
+        "q": "What is the initial recommended duration for aerobic exercise for an obese client?",
+        "options": [
+          "60 minutes of HIIT daily",
+          "30-60 minutes total per day, which can be done in 10-minute bouts",
+          "3 hours a week",
+          "5 minutes once a month"
+        ],
+        "correct": 1,
+        "rationale": "Accumulating small bouts improves adherence and reduces joint stress."
+      },
+      {
+        "q": "For weight loss and prevention of weight regain, the ACSM recommends how many minutes of moderate-intensity exercise per week?",
+        "options": [
+          "150 minutes",
+          "200-300 minutes",
+          "75 minutes",
+          "1000 minutes"
+        ],
+        "correct": 1,
+        "rationale": "Higher volumes of activity are often necessary for long-term weight maintenance."
+      },
+      {
+        "q": "What is a common 'barrier' to exercise for individuals with obesity?",
+        "options": [
+          "Too much energy",
+          "Fear of injury or joint pain",
+          "High self-esteem",
+          "Easy access to equipment"
+        ],
+        "correct": 1,
+        "rationale": "Joint issues and weight-related discomfort are significant barriers."
+      },
+      {
+        "q": "Which type of exercise is often preferred for obese clients to minimize orthopedic stress?",
+        "options": [
+          "Running on concrete",
+          "Box jumps",
+          "Water-based exercise or recumbent cycling",
+          "Heavy powerlifting"
+        ],
+        "correct": 2,
+        "rationale": "Non-weight-bearing activities are easier on the joints."
+      },
+      {
+        "q": "What is 'Basal Metabolic Rate' (BMR)?",
+        "options": [
+          "The calories burned during a workout",
+          "The number of calories the body needs to maintain basic physiological functions at rest",
+          "The speed of a person's walk",
+          "The amount of water in the body"
+        ],
+        "correct": 1,
+        "rationale": "BMR accounts for 60-75% of total daily energy expenditure."
+      },
+      {
+        "q": "The 'Thermic Effect of Food' (TEF) refers to:",
+        "options": [
+          "Cooking food to high temperatures",
+          "The energy required to digest, absorb, and store nutrients",
+          "Drinking hot water to burn fat",
+          "Spicy food's effect on metabolism"
+        ],
+        "correct": 1,
+        "rationale": "TEF accounts for about 10% of total energy expenditure."
+      },
+      {
+        "q": "What is 'NEAT' in the context of metabolism?",
+        "options": [
+          "Non-Exercise Activity Thermogenesis",
+          "New Exercise And Training",
+          "Nightly Energy And Tension",
+          "Never Eat After Ten"
+        ],
+        "correct": 0,
+        "rationale": "NEAT includes all activity that isn't formal exercise (fidgeting, walking to the car, etc.)."
+      },
+      {
+        "q": "For an obese client, what is a primary benefit of resistance training?",
+        "options": [
+          "Spot reduction of fat on the arms",
+          "Increasing lean body mass to help maintain BMR during weight loss",
+          "Winning a bodybuilding show",
+          "Becoming more flexible"
+        ],
+        "correct": 1,
+        "rationale": "Muscle mass is metabolically active; resistance training helps preserve it during a calorie deficit."
+      },
+      {
+        "q": "A safe and sustainable rate of weight loss is generally considered to be:",
+        "options": [
+          "5-10 lbs per week",
+          "1-2 lbs per week",
+          "1 lb per month",
+          "20 lbs per month"
+        ],
+        "correct": 1,
+        "rationale": "Gradual weight loss is more likely to be maintained long-term."
+      },
+      {
+        "q": "Which of the following is a symptom of 'Heat Intolerance' often seen in obese individuals?",
+        "options": [
+          "Feeling cold all the time",
+          "Excessive sweating and rapid fatigue in warm environments",
+          "Shivers",
+          "Dry skin"
+        ],
+        "correct": 1,
+        "rationale": "Adipose tissue acts as insulation, making it harder for the body to dissipate heat."
+      },
+      {
+        "q": "How should a trainer modify a squat for a client with significant obesity and knee pain?",
+        "options": [
+          "Have them do deep squats with a barbell",
+          "Use a chair or bench for 'sit-to-stands'",
+          "Tell them to skip leg day",
+          "Perform jumping squats"
+        ],
+        "correct": 1,
+        "rationale": "Box squats or sit-to-stands provide support and ensure proper depth and safety."
+      },
+      {
+        "q": "What is the 'Weight-Neutral' approach to health?",
+        "options": [
+          "Focusing on health behaviors (fitness, nutrition) rather than just the number on the scale",
+          "Ignoring the client's weight entirely even if it's dangerous",
+          "Weightlifting without adding plates",
+          "Staying the same weight forever"
+        ],
+        "correct": 0,
+        "rationale": "This approach focuses on markers like BP, mood, and energy rather than just BMI."
+      },
+      {
+        "q": "Obese clients are at a higher risk for which respiratory condition?",
+        "options": [
+          "Asthma",
+          "Obstructive Sleep Apnea",
+          "Lung cancer",
+          "Tuberculosis"
+        ],
+        "correct": 1,
+        "rationale": "Excess weight around the neck and chest can interfere with breathing during sleep."
+      },
+      {
+        "q": "Why is 'Weight Bias' a concern for fitness professionals?",
+        "options": [
+          "It makes the scale inaccurate",
+          "It can lead to poor client-trainer rapport and decreased client motivation",
+          "It only affects the trainer",
+          "It is required for motivation"
+        ],
+        "correct": 1,
+        "rationale": "Stigmatizing clients based on weight is unprofessional and harmful."
+      },
+      {
+        "q": "Which hormone, produced by fat cells, helps regulate energy balance by inhibiting hunger?",
+        "options": [
+          "Insulin",
+          "Leptin",
+          "Ghrelin",
+          "Cortisol"
+        ],
+        "correct": 1,
+        "rationale": "Leptin signals the brain when the body has enough energy stored; obesity can lead to 'leptin resistance'."
+      },
+      {
+        "q": "Ghrelin is known as the:",
+        "options": [
+          "Satiety hormone",
+          "Hunger hormone",
+          "Stress hormone",
+          "Sleep hormone"
+        ],
+        "correct": 1,
+        "rationale": "Ghrelin is produced in the stomach and signals the brain to eat."
+      },
+      {
+        "q": "What is 'Metabolic Syndrome'?",
+        "options": [
+          "A single disease caused by sugar",
+          "A cluster of conditions (high BP, high sugar, excess waist fat) that increase heart disease risk",
+          "A fast metabolism",
+          "A rare genetic disorder"
+        ],
+        "correct": 1,
+        "rationale": "Metabolic syndrome is a significant risk factor for diabetes and stroke."
+      },
+      {
+        "q": "When starting a program with an obese client, the trainer should FIRST focus on:",
+        "options": [
+          "Calculating the 1-RM bench press",
+          "Building rapport and identifying the client's 'Why'",
+          "Selling them fat-burning supplements",
+          "Making them cry during the first workout"
+        ],
+        "correct": 1,
+        "rationale": "Psychological readiness and a strong relationship are the foundations of success."
+      }
+    ]
+  },
+  {
+    "chapter": 13,
+    "title": "Chronic Disease",
+    "caseStudy": "Robert is a 60-year-old with type 2 diabetes and stable coronary artery disease. He has been cleared by his cardiologist to exercise. The trainer must understand the specific considerations for his conditions, such as monitoring blood glucose levels, avoiding high-intensity activities that might trigger angina, and being aware of the effects of his medications on his heart rate and blood pressure.",
+    "questions": [
+      {
+        "q": "For a client with Type 1 Diabetes, exercise should be avoided if blood glucose is:",
+        "options": [
+          "100 mg/dL",
+          "150 mg/dL",
+          "> 250 mg/dL with ketones present",
+          "90 mg/dL"
+        ],
+        "correct": 2,
+        "rationale": "High glucose with ketones indicates a lack of insulin and a risk for ketoacidosis."
+      },
+      {
+        "q": "What is the primary concern for a diabetic client taking insulin during exercise?",
+        "options": [
+          "Hyperglycemia",
+          "Hypoglycemia (Low blood sugar)",
+          "Weight gain",
+          "Improved vision"
+        ],
+        "correct": 1,
+        "rationale": "Exercise increases glucose uptake, which can lead to a dangerous drop in blood sugar if not managed."
+      },
+      {
+        "q": "A client with 'Stable Angina' experiences chest pain that:",
+        "options": [
+          "Happens randomly at rest",
+          "Is predictable and triggered by a certain level of exertion",
+          "Lasts for 24 hours straight",
+          "Is always a heart attack"
+        ],
+        "correct": 1,
+        "rationale": "Stable angina is managed with medication and by staying below the ischemic threshold."
+      },
+      {
+        "q": "Which type of exercise should be avoided by a client with severe Hypertension?",
+        "options": [
+          "Walking",
+          "Heavy isometrics and the Valsalva maneuver",
+          "Stretching",
+          "Tai Chi"
+        ],
+        "correct": 1,
+        "rationale": "Breath-holding (Valsalva) can cause a dangerous spike in blood pressure."
+      },
+      {
+        "q": "For a client with Asthma, which environment is most likely to trigger an attack?",
+        "options": [
+          "Warm and humid",
+          "Cold and dry",
+          "Indoor gym with air conditioning",
+          "At sea level"
+        ],
+        "correct": 1,
+        "rationale": "Cold, dry air is a common trigger for exercise-induced bronchoconstriction."
+      },
+      {
+        "q": "Osteoarthritis is characterized by:",
+        "options": [
+          "Systemic inflammation of the joints",
+          "Degeneration of articular cartilage",
+          "Low bone density",
+          "Muscle tears"
+        ],
+        "correct": 1,
+        "rationale": "It is often called 'wear and tear' arthritis."
+      },
+      {
+        "q": "Which type of exercise is BEST for a client with Osteoporosis to improve bone density?",
+        "options": [
+          "Swimming",
+          "Weight-bearing aerobic exercise and resistance training",
+          "Cycling",
+          "Stretching only"
+        ],
+        "correct": 1,
+        "rationale": "Bones adapt to the mechanical stress of weight-bearing activity."
+      },
+      {
+        "q": "For a client with Chronic Obstructive Pulmonary Disease (COPD), the trainer should monitor intensity using:",
+        "options": [
+          "Target Heart Rate",
+          "Dyspnea Scale",
+          "VO2 Max",
+          "Weight lifted"
+        ],
+        "correct": 1,
+        "rationale": "Shortness of breath (dyspnea) is the primary limiting factor for COPD clients."
+      },
+      {
+        "q": "What is 'Peripheral Artery Disease' (PAD)?",
+        "options": [
+          "A disease of the brain",
+          "Narrowing of the arteries in the legs, causing pain during walking",
+          "High blood pressure in the arms",
+          "A type of skin rash"
+        ],
+        "correct": 1,
+        "rationale": "PAD causes claudication (leg pain) during activity."
+      },
+      {
+        "q": "For a client with PAD, exercise should be performed to:",
+        "options": [
+          "The point of no pain",
+          "The point of moderate to severe pain, followed by rest, to encourage collateral circulation",
+          "Until they fall over",
+          "Never"
+        ],
+        "correct": 1,
+        "rationale": "Walking into the pain helps the body adapt and improve blood flow over time."
+      },
+      {
+        "q": "A client with Rheumatoid Arthritis should avoid exercise during:",
+        "options": [
+          "The morning",
+          "An acute 'flare-up' or period of high inflammation",
+          "The weekend",
+          "The winter"
+        ],
+        "correct": 1,
+        "rationale": "Rest is necessary during active inflammatory periods."
+      },
+      {
+        "q": "Which of the following is a symptom of Hypoglycemia?",
+        "options": [
+          "Extreme thirst",
+          "Confusion, shakiness, and cold/clammy skin",
+          "Fruit-smelling breath",
+          "High energy"
+        ],
+        "correct": 1,
+        "rationale": "Trainers must recognize these signs and provide fast-acting carbohydrates."
+      },
+      {
+        "q": "Beta-blockers are commonly prescribed for heart conditions. Their effect on heart rate is:",
+        "options": [
+          "Increases it",
+          "Decreases it at rest and during exercise",
+          "No effect",
+          "Makes it irregular"
+        ],
+        "correct": 1,
+        "rationale": "Because heart rate is 'blunted,' trainers should use RPE to monitor intensity."
+      },
+      {
+        "q": "What is 'Post-Exercise Hypotension'?",
+        "options": [
+          "High BP after a workout",
+          "A temporary drop in BP after exercise, which can cause dizziness",
+          "Muscle growth",
+          "Fast heart rate"
+        ],
+        "correct": 1,
+        "rationale": "Clients should have a gradual cool-down to prevent blood pooling and fainting."
+      },
+      {
+        "q": "For a client with Cancer, the primary goal of exercise during treatment is:",
+        "options": [
+          "To run a marathon",
+          "To maintain functional capacity and reduce fatigue",
+          "To cure the cancer",
+          "To lift maximal weights"
+        ],
+        "correct": 1,
+        "rationale": "Exercise helps manage the side effects of treatment and improves quality of life."
+      },
+      {
+        "q": "Which of the following is a benefit of exercise for Type 2 Diabetes?",
+        "options": [
+          "Increased insulin resistance",
+          "Improved insulin sensitivity and glucose uptake",
+          "Higher blood pressure",
+          "Decreased circulation"
+        ],
+        "correct": 1,
+        "rationale": "Exercise helps the body use insulin more effectively."
+      },
+      {
+        "q": "What is the 'Ischemic Threshold'?",
+        "options": [
+          "The heart rate at which chest pain or EKG changes occur",
+          "The maximum weight someone can lift",
+          "The amount of water in the blood",
+          "A type of muscle cramp"
+        ],
+        "correct": 0,
+        "rationale": "Trainers must keep clients with heart disease below this threshold."
+      },
+      {
+        "q": "Clients with low-back pain should avoid which of the following during an acute episode?",
+        "options": [
+          "Walking",
+          "High-impact movements and heavy spinal loading",
+          "Gentle stretching",
+          "Core stabilization exercises"
+        ],
+        "correct": 1,
+        "rationale": "Protecting the spine is the priority during flare-ups."
+      },
+      {
+        "q": "Which of the following is a 'Lifestyle Medicine' pillar?",
+        "options": [
+          "Physical Activity",
+          "Smoking Cessation",
+          "Stress Management",
+          "All of the above"
+        ],
+        "correct": 3,
+        "rationale": "Chronic disease management involves multiple lifestyle factors."
+      },
+      {
+        "q": "If a client with heart disease feels 'indigestion' or jaw pain during a session, the trainer should:",
+        "options": [
+          "Tell them to eat less",
+          "Stop the session and treat it as a potential cardiac event",
+          "Perform a push-up test",
+          "Give them a peppermint"
+        ],
+        "correct": 1,
+        "rationale": "Angina can manifest as referred pain in the jaw, neck, or stomach."
+      }
+    ]
+  },
+  {
+    "chapter": 14,
+    "title": "Lifespan Considerations",
+    "caseStudy": "A trainer is working with three different clients: a 12-year-old boy wanting to improve his soccer skills, a 30-year-old woman in her second trimester of pregnancy, and an 80-year-old man wanting to remain independent. The trainer must adapt their approach for each, focusing on proper growth and development for the youth, safety and comfort for the pregnant client, and balance and functional strength for the senior.",
+    "questions": [
+      {
+        "q": "Which of the following is a benefit of resistance training for Youth?",
+        "options": [
+          "Stunting growth",
+          "Increased bone mineral density and motor skill development",
+          "Damaging growth plates",
+          "Winning olympic medals at age 5"
+        ],
+        "correct": 1,
+        "rationale": "Supervised, age-appropriate lifting is safe and beneficial for children."
+      },
+      {
+        "q": "The primary focus for youth exercise programs should be on:",
+        "options": [
+          "Maximal strength",
+          "Fun, variety, and proper movement patterns",
+          "Losing weight",
+          "Professional scouting"
+        ],
+        "correct": 1,
+        "rationale": "Long-term athletic development starts with enjoyment and fundamental skills."
+      },
+      {
+        "q": "For pregnant women, the 'Relaxin' hormone increases the risk of:",
+        "options": [
+          "Muscle tears",
+          "Joint laxity and potential sprains",
+          "High blood pressure",
+          "Morning sickness"
+        ],
+        "correct": 1,
+        "rationale": "Relaxin softens ligaments, so trainers should avoid extreme ranges of motion."
+      },
+      {
+        "q": "After the first trimester, pregnant women should avoid exercise in which position?",
+        "options": [
+          "Seated",
+          "Standing",
+          "Supine (lying on the back)",
+          "Side-lying"
+        ],
+        "correct": 2,
+        "rationale": "Supine positions can compress the vena cava, reducing blood flow to the mother and fetus."
+      },
+      {
+        "q": "What is the recommended RPE for a pregnant woman during exercise?",
+        "options": [
+          "6-10",
+          "13-15 (Moderate)",
+          "18-20",
+          "1-2"
+        ],
+        "correct": 1,
+        "rationale": "Moderate intensity is generally safe for uncomplicated pregnancies."
+      },
+      {
+        "q": "Which of the following is a 'Warning Sign' to stop exercise during pregnancy?",
+        "options": [
+          "Increased energy",
+          "Vaginal bleeding or leaking of fluid",
+          "Slight sweating",
+          "Hunger"
+        ],
+        "correct": 1,
+        "rationale": "Trainers must be aware of medical red flags requiring immediate physician contact."
+      },
+      {
+        "q": "As people age, what happens to their 'Maximal Heart Rate'?",
+        "options": [
+          "It increases",
+          "It decreases",
+          "It stays the same",
+          "It becomes 220 for everyone"
+        ],
+        "correct": 1,
+        "rationale": "Max HR declines with age (roughly 220 - age)."
+      },
+      {
+        "q": "What is 'Sarcopenia'?",
+        "options": [
+          "Loss of bone density",
+          "Age-related loss of muscle mass and strength",
+          "Loss of vision",
+          "Skin wrinkling"
+        ],
+        "correct": 1,
+        "rationale": "Resistance training is the best way to combat sarcopenia in seniors."
+      },
+      {
+        "q": "For an 80-year-old client, which type of training is most critical for preventing falls?",
+        "options": [
+          "Bicep curls",
+          "Balance and power training",
+          "Running",
+          "Swimming"
+        ],
+        "correct": 1,
+        "rationale": "Balance and the ability to react quickly (power) prevent falls and injuries."
+      },
+      {
+        "q": "Which of the following is a physiological change associated with aging?",
+        "options": [
+          "Increased bone density",
+          "Increased body fat percentage and decreased lean mass",
+          "Faster reaction times",
+          "Increased skin elasticity"
+        ],
+        "correct": 1,
+        "rationale": "Metabolism often slows as body composition shifts towards more fat and less muscle."
+      },
+      {
+        "q": "For older adults, the focus of resistance training should be on:",
+        "options": [
+          "1-RM testing",
+          "Functional movements that mimic Activities of Daily Living (ADLs)",
+          "Bodybuilding for aesthetics",
+          "Olympic lifting"
+        ],
+        "correct": 1,
+        "rationale": "Training should help seniors stay independent (e.g., getting out of a chair)."
+      },
+      {
+        "q": "Can children perform 'Maximal' (1-RM) strength tests?",
+        "options": [
+          "Always",
+          "Never",
+          "Only under strict professional supervision and with proper form, but generally not recommended",
+          "Only if they are over 6 feet tall"
+        ],
+        "correct": 2,
+        "rationale": "While possible, submaximal testing is safer for developing skeletal systems."
+      },
+      {
+        "q": "Pregnant women should be encouraged to perform which type of exercises to support the pelvic floor?",
+        "options": [
+          "Squats",
+          "Kegels",
+          "Crunches",
+          "Deadlifts"
+        ],
+        "correct": 1,
+        "rationale": "Pelvic floor strength is important for pregnancy and recovery."
+      },
+      {
+        "q": "Older adults are at higher risk for which condition during exercise in the heat?",
+        "options": [
+          "Hypothermia",
+          "Dehydration and heat stroke",
+          "Frostbite",
+          "Sunburn only"
+        ],
+        "correct": 1,
+        "rationale": "Aging reduces the body's ability to thermoregulate and sense thirst."
+      },
+      {
+        "q": "What is the 'Talk Test' recommendation for a pregnant woman?",
+        "options": [
+          "They shouldn't be able to talk",
+          "They should be able to carry on a conversation",
+          "They should only say one word",
+          "They should sing a song"
+        ],
+        "correct": 1,
+        "rationale": "Maintaining a conversational pace ensures they aren't overexerting."
+      },
+      {
+        "q": "For youth, the 'National Physical Activity Guidelines' recommend how many minutes of activity daily?",
+        "options": [
+          "10 minutes",
+          "30 minutes",
+          "60 minutes or more",
+          "3 hours"
+        ],
+        "correct": 2,
+        "rationale": "Children need significant daily activity for healthy growth."
+      },
+      {
+        "q": "Which of the following is a common orthopedic concern for older adults?",
+        "options": [
+          "Osgood-Schlatter disease",
+          "Osteoarthritis",
+          "Growing pains",
+          "Excessive flexibility"
+        ],
+        "correct": 1,
+        "rationale": "Wear and tear on the joints is common in the senior population."
+      },
+      {
+        "q": "How should a trainer handle a child who is bored with a workout?",
+        "options": [
+          "Make them do extra push-ups",
+          "Gamify the exercises and keep them moving",
+          "Tell them to grow up",
+          "Cancel the session"
+        ],
+        "correct": 1,
+        "rationale": "Engagement is key for youth adherence."
+      },
+      {
+        "q": "Post-menopausal women are at an increased risk for:",
+        "options": [
+          "Building too much muscle",
+          "Osteoporosis (low bone density)",
+          "Low blood pressure",
+          "Increased height"
+        ],
+        "correct": 1,
+        "rationale": "A drop in estrogen leads to faster bone loss."
+      },
+      {
+        "q": "For a senior client, the initial goal of a program is often:",
+        "options": [
+          "To run a marathon",
+          "To improve stability, mobility, and confidence in movement",
+          "To lose 50 lbs",
+          "To bench press 225 lbs"
+        ],
+        "correct": 1,
+        "rationale": "Foundation first, especially for those with a high risk of falls."
+      }
+    ]
+  },
+  {
+    "chapter": 15,
+    "title": "Musculoskeletal Issues",
+    "caseStudy": "A client, Mark, is recovering from an acute lateral ankle sprain. He has been cleared for exercise by his physical therapist but still has limited range of motion. Another client, Sarah, complains of persistent low-back pain when performing squats. The trainer must design modifications for Mark's program and identify the movement errors and muscle imbalances contributing to Sarah's discomfort, ensuring both clients train safely within their limitations.",
+    "questions": [
+      {
+        "q": "What is the standard acute management protocol for a soft-tissue injury?",
+        "options": [
+          "HEAT (Heat, Elevate, Act, Tension)",
+          "RICE (Rest, Ice, Compression, Elevation)",
+          "PUSH (Push, Use, Stretch, Harder)",
+          "None of the above"
+        ],
+        "correct": 1,
+        "rationale": "RICE helps control inflammation and pain in the first 48-72 hours."
+      },
+      {
+        "q": "A 'Sprain' involves injury to which tissue?",
+        "options": [
+          "Muscle",
+          "Tendon",
+          "Ligament",
+          "Bone"
+        ],
+        "correct": 2,
+        "rationale": "Sprains are injuries to ligaments, which connect bone to bone."
+      },
+      {
+        "q": "A 'Strain' involves injury to which tissue?",
+        "options": [
+          "Ligament",
+          "Muscle or Tendon",
+          "Cartilage",
+          "Nerve"
+        ],
+        "correct": 1,
+        "rationale": "Strains affect the muscle-tendon unit."
+      },
+      {
+        "q": "Tennis Elbow (Lateral Epicondylitis) is an overuse injury of the:",
+        "options": [
+          "Wrist flexors",
+          "Wrist extensors",
+          "Biceps",
+          "Triceps"
+        ],
+        "correct": 1,
+        "rationale": "It occurs at the attachment of the wrist extensors on the lateral humerus."
+      },
+      {
+        "q": "Which of the following is a common cause of Plantar Fasciitis?",
+        "options": [
+          "Strong glutes",
+          "Tight calves and over-pronation",
+          "Wearing shoes that are too big",
+          "Excessive arm training"
+        ],
+        "correct": 1,
+        "rationale": "Tightness in the Achilles tendon and calves increases stress on the plantar fascia."
+      },
+      {
+        "q": "For a client with 'Patellofemoral Pain Syndrome' (Runner's Knee), which movement should be modified?",
+        "options": [
+          "Upper body pressing",
+          "Deep squats and lunges that cause pain",
+          "Bicep curls",
+          "Crunches"
+        ],
+        "correct": 1,
+        "rationale": "Excessive knee flexion under load can aggravate the patella."
+      },
+      {
+        "q": "Carpal Tunnel Syndrome involves compression of which nerve?",
+        "options": [
+          "Sciatic",
+          "Median",
+          "Ulnar",
+          "Radial"
+        ],
+        "correct": 1,
+        "rationale": "The median nerve passes through the carpal tunnel in the wrist."
+      },
+      {
+        "q": "A client with 'Greater Trochanteric Pain Syndrome' has pain in which area?",
+        "options": [
+          "The ankle",
+          "The lateral hip",
+          "The low back",
+          "The neck"
+        ],
+        "correct": 1,
+        "rationale": "This involves inflammation of the bursa or tendons on the outside of the hip."
+      },
+      {
+        "q": "Which of the following is a common symptom of a rotator cuff injury?",
+        "options": [
+          "Pain when reaching overhead",
+          "Numbness in the toes",
+          "Pain in the hamstrings",
+          "Abdominal cramping"
+        ],
+        "correct": 0,
+        "rationale": "The rotator cuff stabilizes the shoulder during overhead movements."
+      },
+      {
+        "q": "For a client with Low-Back Pain, which exercise is generally recommended for stabilization?",
+        "options": [
+          "Heavy deadlifts",
+          "Bird-Dog and Cat-Camel",
+          "Leg presses",
+          "Sit-ups"
+        ],
+        "correct": 1,
+        "rationale": "These exercises improve core stability without excessive spinal loading."
+      },
+      {
+        "q": "Shin Splints (Medial Tibial Stress Syndrome) are often caused by:",
+        "options": [
+          "Running on soft sand",
+          "Suddenly increasing running mileage or intensity",
+          "Stretching too much",
+          "Strong shin muscles"
+        ],
+        "correct": 1,
+        "rationale": "Overuse and repetitive impact are primary drivers."
+      },
+      {
+        "q": "What is 'Shoulder Impingement'?",
+        "options": [
+          "A type of shoulder massage",
+          "Compression of the rotator cuff tendons under the acromion",
+          "A dislocated shoulder",
+          "Strong shoulder muscles"
+        ],
+        "correct": 1,
+        "rationale": "Impingement causes pain during abduction and internal rotation."
+      },
+      {
+        "q": "Which muscle is often tight in individuals with 'Upper Crossed Syndrome'?",
+        "options": [
+          "Glutes",
+          "Pectoralis Major and Minor",
+          "Deep neck flexors",
+          "Lower trapezius"
+        ],
+        "correct": 1,
+        "rationale": "Tight chest muscles pull the shoulders forward."
+      },
+      {
+        "q": "Lower Crossed Syndrome is characterized by:",
+        "options": [
+          "Anterior pelvic tilt and tight hip flexors/low back",
+          "Strong abs",
+          "Flat back",
+          "Tight hamstrings and weak glutes"
+        ],
+        "correct": 0,
+        "rationale": "This postural imbalance increases stress on the lumbar spine."
+      },
+      {
+        "q": "A 'Grade III' sprain or strain involves:",
+        "options": [
+          "Microscopic tearing",
+          "Partial tearing",
+          "Complete tear or rupture of the tissue",
+          "No injury at all"
+        ],
+        "correct": 2,
+        "rationale": "Grade III is the most severe and often requires surgery."
+      },
+      {
+        "q": "Bursitis is the inflammation of:",
+        "options": [
+          "A bone",
+          "A muscle",
+          "A small fluid-filled sac that cushions joints",
+          "A nerve"
+        ],
+        "correct": 2,
+        "rationale": "Bursae reduce friction between tissues."
+      },
+      {
+        "q": "For a client with an acute injury, the trainer's first priority is to:",
+        "options": [
+          "Fix the injury with massage",
+          "Modify the program to avoid the injured area and follow medical advice",
+          "Tell the client to push through it",
+          "Diagnose the exact grade of the tear"
+        ],
+        "correct": 1,
+        "rationale": "Trainers do not diagnose or treat; they modify and refer."
+      },
+      {
+        "q": "Which type of stretching is generally safest for an injured muscle during the remodeling phase?",
+        "options": [
+          "Ballistic",
+          "Static stretching within a pain-free range",
+          "Proprioceptive Neuromuscular Facilitation (PNF) with max tension",
+          "No stretching ever"
+        ],
+        "correct": 1,
+        "rationale": "Gentle static stretching helps align new fibers."
+      },
+      {
+        "q": "IT Band Syndrome often causes pain at the:",
+        "options": [
+          "Groin",
+          "Lateral knee",
+          "Lower back",
+          "Bottom of the foot"
+        ],
+        "correct": 1,
+        "rationale": "The IT band rubs against the lateral femoral epicondyle."
+      },
+      {
+        "q": "Which of the following describes 'Disc Herniation'?",
+        "options": [
+          "A broken bone in the arm",
+          "The soft center of a spinal disc pushing through a crack in the tougher exterior",
+          "A type of muscle cramp",
+          "A skin condition"
+        ],
+        "correct": 1,
+        "rationale": "Herniation can cause nerve compression and radiating pain (sciatica)."
+      }
+    ]
+  },
+  {
+    "chapter": 16,
+    "title": "Emergency Procedures",
+    "caseStudy": "A trainer is working with a client when the client suddenly stops, clutches their chest, and collapses. The client is unresponsive and not breathing. The trainer must immediately activate the facility's Emergency Action Plan (EAP), use their CPR/AED training, and ensure the safety of other clients until emergency medical services (EMS) arrive.",
+    "questions": [
+      {
+        "q": "What is the first step when you find an unresponsive person?",
+        "options": [
+          "Start chest compressions",
+          "Check the scene for safety",
+          "Give two breaths",
+          "Call their family"
+        ],
+        "correct": 1,
+        "rationale": "Always ensure the environment is safe for you to help."
+      },
+      {
+        "q": "After ensuring scene safety, what is the next step for an unresponsive adult?",
+        "options": [
+          "Check for breathing and pulse, and activate EMS (Call 911)",
+          "Start an IV",
+          "Perform a squat test",
+          "Wait for 10 minutes"
+        ],
+        "correct": 0,
+        "rationale": "Early activation of EMS is critical for survival."
+      },
+      {
+        "q": "What is the recommended rate for chest compressions during CPR?",
+        "options": [
+          "20-40 per minute",
+          "60-80 per minute",
+          "100-120 per minute",
+          "200-300 per minute"
+        ],
+        "correct": 2,
+        "rationale": "High-quality CPR requires a rate of 100-120 compressions per minute."
+      },
+      {
+        "q": "What is the correct depth of chest compressions for an adult?",
+        "options": [
+          "At least 1 inch",
+          "At least 2 inches",
+          "Exactly 5 inches",
+          "The depth doesn't matter"
+        ],
+        "correct": 1,
+        "rationale": "Compressions must be deep enough to circulate blood."
+      },
+      {
+        "q": "When using an Automated External Defibrillator (AED), what is the first thing you should do?",
+        "options": [
+          "Attach the pads",
+          "Turn on the AED",
+          "Press the shock button",
+          "Clear the client"
+        ],
+        "correct": 1,
+        "rationale": "Turning it on will provide voice prompts to guide you."
+      },
+      {
+        "q": "If a client is choking and can no longer cough or speak, what should you perform?",
+        "options": [
+          "Chest compressions",
+          "Abdominal thrusts (Heimlich Maneuver)",
+          "Give them a glass of water",
+          "Tell them to relax"
+        ],
+        "correct": 1,
+        "rationale": "Abdominal thrusts help dislodge the obstruction."
+      },
+      {
+        "q": "Which of the following are signs of a Heart Attack?",
+        "options": [
+          "Chest pressure, shortness of breath, and pain radiating to the jaw or left arm",
+          "Hunger and thirst",
+          "Itchy skin",
+          "A sudden boost in energy"
+        ],
+        "correct": 0,
+        "rationale": "Recognizing signs of myocardial infarction is a life-saving skill."
+      },
+      {
+        "q": "A 'Stroke' is often identified using the FAST acronym. What does 'F' stand for?",
+        "options": [
+          "Fast heart rate",
+          "Face drooping",
+          "Falling down",
+          "Fainting"
+        ],
+        "correct": 1,
+        "rationale": "FAST stands for Face drooping, Arm weakness, Speech difficulty, Time to call 911."
+      },
+      {
+        "q": "What should you do if a client has a seizure?",
+        "options": [
+          "Place a spoon in their mouth",
+          "Restrain them",
+          "Clear the area of sharp objects and protect their head",
+          "Perform CPR immediately"
+        ],
+        "correct": 2,
+        "rationale": "Safety and preventing further injury are the priorities during a seizure."
+      },
+      {
+        "q": "Which of the following is a sign of 'Heat Stroke'?",
+        "options": [
+          "Excessive sweating",
+          "Cool, clammy skin",
+          "Altered mental status and hot, dry skin",
+          "A normal temperature"
+        ],
+        "correct": 2,
+        "rationale": "Heat stroke is a medical emergency where the body's cooling system fails."
+      },
+      {
+        "q": "How should you treat a minor skin abrasion (scrape) on a client?",
+        "options": [
+          "Ignore it",
+          "Clean with soap and water and apply a sterile dressing (using gloves)",
+          "Use your bare hands to clean it",
+          "Tell them to go to the hospital"
+        ],
+        "correct": 1,
+        "rationale": "Proper wound care and use of Personal Protective Equipment (PPE) are essential."
+      },
+      {
+        "q": "In the event of an emergency, what is an 'EAP'?",
+        "options": [
+          "Exercise Action Plan",
+          "Emergency Action Plan",
+          "Eating And Performance",
+          "Every Athlete's Priority"
+        ],
+        "correct": 1,
+        "rationale": "An EAP is a pre-determined protocol for handling emergencies in a facility."
+      },
+      {
+        "q": "What is the primary purpose of 'Secondary Assessment'?",
+        "options": [
+          "To call 911",
+          "To check for non-life-threatening injuries (bruises, fractures) once the client is stable",
+          "To test the client's strength",
+          "To sell more training"
+        ],
+        "correct": 1,
+        "rationale": "Secondary assessment is only done once life-threatening issues are addressed."
+      },
+      {
+        "q": "Which condition is characterized by a rapid, weak pulse, low BP, and cold/pale skin?",
+        "options": [
+          "High blood pressure",
+          "Shock",
+          "Muscle growth",
+          "Fever"
+        ],
+        "correct": 1,
+        "rationale": "Shock is a life-threatening condition where organs aren't getting enough blood."
+      },
+      {
+        "q": "If a client with diabetes becomes confused and sweaty, and you suspect low blood sugar, what should you do?",
+        "options": [
+          "Give them more insulin",
+          "Provide 15-20g of fast-acting carbohydrate (e.g., juice, glucose tabs)",
+          "Make them run a mile",
+          "Wait and see if it gets better"
+        ],
+        "correct": 1,
+        "rationale": "The 'Rule of 15' is used to treat hypoglycemia."
+      },
+      {
+        "q": "What should a trainer do to prevent 'Bloodborne Pathogen' transmission?",
+        "options": [
+          "Use Universal Precautions (gloves, proper disposal of needles/waste)",
+          "Sharing water bottles",
+          "Wiping sweat with the same towel",
+          "Not worrying about it"
+        ],
+        "correct": 0,
+        "rationale": "Treat all body fluids as if they are infectious."
+      },
+      {
+        "q": "Which of the following is a sign of 'Dyspnea'?",
+        "options": [
+          "Rapid breathing",
+          "Gasping for air or labored breathing",
+          "Stopped breathing",
+          "Deep, slow breaths"
+        ],
+        "correct": 1,
+        "rationale": "Dyspnea is difficult or labored breathing."
+      },
+      {
+        "q": "When should you stop performing CPR?",
+        "options": [
+          "When you get tired after 30 seconds",
+          "When the person starts breathing, an AED is ready, or EMS takes over",
+          "When you think it's not working",
+          "After 1 minute regardless of the situation"
+        ],
+        "correct": 1,
+        "rationale": "CPR must continue until the person is revived or higher-level care arrives."
+      },
+      {
+        "q": "What is 'Anaphylaxis'?",
+        "options": [
+          "A type of muscle growth",
+          "A severe, life-threatening allergic reaction",
+          "A broken bone",
+          "Lack of sleep"
+        ],
+        "correct": 1,
+        "rationale": "Anaphylaxis requires immediate medical attention and often an epinephrine injection."
+      },
+      {
+        "q": "Why is it important for a trainer to document an emergency incident?",
+        "options": [
+          "To get the client in trouble",
+          "For legal protection and to improve the facility's EAP",
+          "To post on social media",
+          "It is not important"
+        ],
+        "correct": 1,
+        "rationale": "Accurate incident reports are critical for legal and safety reviews."
+      }
+    ]
+  },
+  {
+    "chapter": 17,
+    "title": "Legal Guidelines",
+    "caseStudy": "A trainer is opening their own personal training studio. They must decide on a business structure (LLC vs. Sole Proprietorship), obtain professional liability insurance, and create legal documents such as a waiver, informed consent, and a service contract. They must also ensure they are following music licensing laws and protecting client data to avoid legal and financial risks.",
+    "questions": [
+      {
+        "q": "Which of the following is the most common legal claim against personal trainers?",
+        "options": [
+          "Libel",
+          "Negligence",
+          "Theft",
+          "Arson"
+        ],
+        "correct": 1,
+        "rationale": "Negligence involves a failure to act as a reasonable professional would in a similar situation."
+      },
+      {
+        "q": "What is 'Professional Liability Insurance'?",
+        "options": [
+          "Insurance for your car",
+          "Insurance that protects against claims of negligence or 'malpractice'",
+          "Health insurance for the trainer",
+          "Life insurance"
+        ],
+        "correct": 1,
+        "rationale": "This is essential for protecting the trainer's assets in case of a lawsuit."
+      },
+      {
+        "q": "A 'Waiver' is a legal document that:",
+        "options": [
+          "Guarantees the client will lose weight",
+          "Releases the trainer from liability for injuries caused by inherent risks or simple negligence",
+          "Allows the trainer to diagnose diseases",
+          "Is not legally binding"
+        ],
+        "correct": 1,
+        "rationale": "Waivers are a primary line of defense in risk management."
+      },
+      {
+        "q": "What is 'Informed Consent'?",
+        "options": [
+          "A contract to buy 10 sessions",
+          "A document where the client acknowledges they understand the risks of exercise",
+          "Permission to post a client's photo on Instagram",
+          "A medical diagnosis"
+        ],
+        "correct": 1,
+        "rationale": "Informed consent ensures the client is participating voluntarily and with full knowledge."
+      },
+      {
+        "q": "Which business structure provides the MOST protection for personal assets?",
+        "options": [
+          "Sole Proprietorship",
+          "General Partnership",
+          "Limited Liability Company (LLC) or Corporation",
+          "Informal Agreement"
+        ],
+        "correct": 2,
+        "rationale": "LLCs separate personal and business assets and liabilities."
+      },
+      {
+        "q": "What is 'Vicarious Liability' (Respondeat Superior)?",
+        "options": [
+          "The trainer's liability for their own actions",
+          "The liability of an employer for the actions of their employees",
+          "The client's liability for getting hurt",
+          "A type of insurance"
+        ],
+        "correct": 1,
+        "rationale": "Gym owners can be held responsible for the negligence of their staff."
+      },
+      {
+        "q": "To prove 'Negligence,' which four elements must be present?",
+        "options": [
+          "Duty, Breach of Duty, Proximate Cause, Damages",
+          "Money, Time, Effort, Results",
+          "Contract, Waiver, Insurance, License",
+          "None of the above"
+        ],
+        "correct": 0,
+        "rationale": "All four must be established for a negligence claim to succeed."
+      },
+      {
+        "q": "Which of the following is an example of 'Breach of Duty'?",
+        "options": [
+          "Following the IFT model correctly",
+          "Allowing a client to perform an exercise they are not ready for, leading to injury",
+          "Showing up 5 minutes early",
+          "Referring a client to a doctor"
+        ],
+        "correct": 1,
+        "rationale": "Breach of duty is a failure to meet the standard of care."
+      },
+      {
+        "q": "What are 'Inherent Risks' of exercise?",
+        "options": [
+          "Risks that can be completely eliminated",
+          "Risks that are a natural part of physical activity (e.g., muscle soreness, accidental trips)",
+          "Risks caused by the trainer being drunk",
+          "There are no risks"
+        ],
+        "correct": 1,
+        "rationale": "Inherent risks exist even when everyone acts reasonably."
+      },
+      {
+        "q": "Can a trainer provide 'Medical Advice'?",
+        "options": [
+          "Yes, if they have read a lot of books",
+          "Only if the client asks",
+          "No, it is outside their scope of practice and a legal risk",
+          "Only for minor issues like the flu"
+        ],
+        "correct": 2,
+        "rationale": "Providing medical advice without a license is illegal and highly risky."
+      },
+      {
+        "q": "What is 'Product Liability'?",
+        "options": [
+          "Liability for the trainer's behavior",
+          "Liability for injuries caused by defective equipment (e.g., a snapped resistance band)",
+          "The cost of a gym membership",
+          "The trainer's certification"
+        ],
+        "correct": 1,
+        "rationale": "Equipment manufacturers and sometimes gym owners can be liable for faulty gear."
+      },
+      {
+        "q": "Why should a trainer use a written 'Service Contract'?",
+        "options": [
+          "To make the client afraid of them",
+          "To clearly define expectations, fees, cancellation policies, and the scope of services",
+          "It is not necessary",
+          "To collect the client's credit card number for fraud"
+        ],
+        "correct": 1,
+        "rationale": "Contracts prevent misunderstandings and protect both parties."
+      },
+      {
+        "q": "Which law protects the privacy of a client's health information?",
+        "options": [
+          "OSHA",
+          "HIPAA",
+          "The Patriot Act",
+          "The Clean Air Act"
+        ],
+        "correct": 1,
+        "rationale": "HIPAA sets standards for the protection of personal health data."
+      },
+      {
+        "q": "What is 'Copyright' in the context of a fitness business?",
+        "options": [
+          "The right to copy a trainer's workout",
+          "The legal protection for creative works (e.g., logos, marketing copy, music)",
+          "The price of a book",
+          "A type of squat"
+        ],
+        "correct": 1,
+        "rationale": "Using music or images without permission can lead to legal action."
+      },
+      {
+        "q": "Does a trainer need a special license to play music in a group class?",
+        "options": [
+          "No, they can use their personal Spotify",
+          "Yes, businesses need 'Public Performance' licenses (e.g., ASCAP, BMI)",
+          "Only if the music is loud",
+          "Music is free for everyone"
+        ],
+        "correct": 1,
+        "rationale": "Personal streaming accounts do not cover public business use."
+      },
+      {
+        "q": "Which of the following is a 'Sole Proprietor'?",
+        "options": [
+          "A business owned and operated by one person",
+          "A group of 10 people",
+          "A government agency",
+          "A multi-national corporation"
+        ],
+        "correct": 0,
+        "rationale": "Sole proprietorship is the simplest but least protected business form."
+      },
+      {
+        "q": "What is the 'Standard of Care'?",
+        "options": [
+          "The minimum level of care a professional must provide to avoid negligence",
+          "How much a trainer likes their client",
+          "The price of a training session",
+          "A type of hospital"
+        ],
+        "correct": 0,
+        "rationale": "It is based on what a reasonably prudent CPT would do."
+      },
+      {
+        "q": "An 'Independent Contractor' is different from an 'Employee' because:",
+        "options": [
+          "They get paid more",
+          "They have more control over their own schedule and how they perform the work",
+          "They don't have to follow any laws",
+          "They are not human"
+        ],
+        "correct": 1,
+        "rationale": "The IRS uses specific criteria to distinguish between contractors and employees."
+      },
+      {
+        "q": "What is 'Sexual Harassment' in a training environment?",
+        "options": [
+          "Unwelcome sexual advances or conduct that creates a hostile environment",
+          "Telling a client they look fit",
+          "Asking a client about their weekend",
+          "A type of exercise"
+        ],
+        "correct": 0,
+        "rationale": "Trainers must maintain professional boundaries at all times."
+      },
+      {
+        "q": "How long should a trainer keep client records (contracts, health history, session logs)?",
+        "options": [
+          "One week",
+          "Until the client leaves",
+          "Several years (usually 3-7 years, depending on state laws)",
+          "Forever"
+        ],
+        "correct": 2,
+        "rationale": "Records are vital for legal defense and are subject to statutes of limitations."
+      }
+    ]
+  },
+  {
+    "chapter": 18,
+    "title": "Business Fundamentals",
+    "caseStudy": "A trainer, Alex, wants to grow his business from 5 clients to 20 clients. He needs to develop a marketing plan, improve his sales skills, and manage his time effectively. He is considering offering 'Hybrid' training (in-person and online) to reach a wider audience and is tracking his 'closing ratio' to see how many of his consultations turn into paying clients.",
+    "questions": [
+      {
+        "q": "What is a 'Business Plan'?",
+        "options": [
+          "A workout schedule",
+          "A formal document outlining a business's goals and how it will achieve them",
+          "A list of exercises",
+          "A bank statement"
+        ],
+        "correct": 1,
+        "rationale": "A business plan is a roadmap for success."
+      },
+      {
+        "q": "In marketing, 'The Four Ps' are:",
+        "options": [
+          "Push-ups, Pull-ups, Planks, Power",
+          "Product, Price, Place, Promotion",
+          "People, Passion, Purpose, Profit",
+          "Plan, Prepare, Perform, Persist"
+        ],
+        "correct": 1,
+        "rationale": "These are the core pillars of a marketing mix."
+      },
+      {
+        "q": "What is a 'Target Market'?",
+        "options": [
+          "Everyone in the world",
+          "The grocery store",
+          "A specific group of people most likely to buy your services",
+          "A place to buy darts"
+        ],
+        "correct": 2,
+        "rationale": "Focusing on a niche (e.g., post-natal women, golfers) improves marketing efficiency."
+      },
+      {
+        "q": "Which of the following is a 'Direct' marketing strategy?",
+        "options": [
+          "Posting on a personal Instagram",
+          "Sending a targeted email to a list of leads",
+          "Wearing a gym shirt to the mall",
+          "Having a website"
+        ],
+        "correct": 1,
+        "rationale": "Direct marketing involves reaching out to specific individuals."
+      },
+      {
+        "q": "What is a 'Lead'?",
+        "options": [
+          "A piece of heavy metal",
+          "A potential client who has shown interest in your services",
+          "A signed contract",
+          "The owner of a gym"
+        ],
+        "correct": 1,
+        "rationale": "Generating and 'nurturing' leads is the first step in the sales process."
+      },
+      {
+        "q": "What is a 'Closing Ratio'?",
+        "options": [
+          "The speed at which you finish a workout",
+          "The number of prospects who become paying clients divided by total prospects",
+          "How fast you shut the gym door",
+          "The ratio of fat to muscle"
+        ],
+        "correct": 1,
+        "rationale": "If you talk to 10 people and 2 sign up, your ratio is 20%."
+      },
+      {
+        "q": "Which of the following is a 'Fixed' expense?",
+        "options": [
+          "Marketing flyers",
+          "Monthly studio rent",
+          "New sneakers",
+          "Bottled water for clients"
+        ],
+        "correct": 1,
+        "rationale": "Fixed expenses do not change based on the number of clients you have."
+      },
+      {
+        "q": "A 'Variable' expense is one that:",
+        "options": [
+          "Never changes",
+          "Changes depending on business volume (e.g., credit card processing fees)",
+          "Is only for the summer",
+          "Is free"
+        ],
+        "correct": 1,
+        "rationale": "The more you sell, the more you pay in variable costs."
+      },
+      {
+        "q": "What is 'Branding'?",
+        "options": [
+          "A mark on a cow",
+          "The unique identity, values, and 'feel' of your business",
+          "Just your logo",
+          "Charging high prices"
+        ],
+        "correct": 1,
+        "rationale": "Branding helps you stand out in a crowded market."
+      },
+      {
+        "q": "Which of the following is an effective way to get 'Referrals'?",
+        "options": [
+          "Asking happy clients to recommend you to their friends",
+          "Yelling at people on the street",
+          "Waiting for people to find you",
+          "Being a bad trainer"
+        ],
+        "correct": 0,
+        "rationale": "Word-of-mouth is the most powerful marketing tool in fitness."
+      },
+      {
+        "q": "What is the primary benefit of 'Small Group Training' for a trainer?",
+        "options": [
+          "It is easier to teach",
+          "It increases the trainer's hourly rate while lowering the cost for each client",
+          "It requires no equipment",
+          "Clients don't have to work as hard"
+        ],
+        "correct": 1,
+        "rationale": "Training 4 people at $40 each ($160/hr) is better than 1 at $80 ($80/hr)."
+      },
+      {
+        "q": "In sales, an 'Objection' is:",
+        "options": [
+          "A reason a client says 'no' (e.g., 'It's too expensive')",
+          "A legal claim",
+          "The end of a session",
+          "A type of exercise"
+        ],
+        "correct": 0,
+        "rationale": "Successful salespeople learn to 'handle' objections with empathy and value."
+      },
+      {
+        "q": "What is 'Active Prospecting'?",
+        "options": [
+          "Waiting for the phone to ring",
+          "Proactively seeking out new clients through networking and outreach",
+          "Digging for gold",
+          "Looking in the mirror"
+        ],
+        "correct": 1,
+        "rationale": "Successful trainers don't just wait; they go find clients."
+      },
+      {
+        "q": "A 'Value Proposition' is:",
+        "options": [
+          "The price of a session",
+          "A statement explaining why a client should choose you over a competitor",
+          "A discount code",
+          "A high-intensity interval"
+        ],
+        "correct": 1,
+        "rationale": "It highlights your unique benefits."
+      },
+      {
+        "q": "What is 'Niche' marketing?",
+        "options": [
+          "Marketing to everyone",
+          "Marketing to a very specific segment of the population (e.g., marathon runners)",
+          "Marketing only on the weekend",
+          "Marketing with posters"
+        ],
+        "correct": 1,
+        "rationale": "Specializing makes you an expert in that area."
+      },
+      {
+        "q": "Why is 'Time Management' critical for a self-employed trainer?",
+        "options": [
+          "To have more time to watch TV",
+          "To balance training sessions, admin, marketing, and personal life",
+          "It isn't; you just work all the time",
+          "To avoid paying taxes"
+        ],
+        "correct": 1,
+        "rationale": "Preventing burnout and staying organized is key to longevity."
+      },
+      {
+        "q": "What is 'Social Proof'?",
+        "options": [
+          "A science experiment",
+          "Testimonials and success stories from current clients",
+          "A Facebook account",
+          "Being popular in school"
+        ],
+        "correct": 1,
+        "rationale": "Potential clients trust you more when they see others have succeeded."
+      },
+      {
+        "q": "Which of the following is a 'Direct' cost of a training session?",
+        "options": [
+          "The gym's electricity bill",
+          "The trainer's time and any disposable equipment used (e.g., alcohol wipes)",
+          "The trainer's college tuition",
+          "The client's car insurance"
+        ],
+        "correct": 1,
+        "rationale": "Direct costs are tied to the delivery of the service."
+      },
+      {
+        "q": "What is 'Return on Investment' (ROI)?",
+        "options": [
+          "The amount of weight lost",
+          "The profit earned compared to the amount of money invested",
+          "Getting a refund",
+          "Doing an exercise again"
+        ],
+        "correct": 1,
+        "rationale": "If you spend $100 on ads and get $500 in sales, your ROI is high."
+      },
+      {
+        "q": "The MOST important factor in retaining clients long-term is:",
+        "options": [
+          "The trainer's looks",
+          "The quality of the relationship and the results achieved",
+          "Having the newest equipment",
+          "Always having a sale"
+        ],
+        "correct": 1,
+        "rationale": "Relationships and progress are the 'sticky' factors in fitness."
+      }
+    ]
+  }
+]
