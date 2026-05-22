@@ -661,16 +661,8 @@ function renderMatrix() {
 // ===== Logic: ACE Education =====
 async function loadAceData() {
     try {
-        const [qRes, sRes] = await Promise.all([
-            fetch('../ace_questions.json'),
-            fetch('../ace_scenarios.json')
-        ]);
-        const questions = await qRes.json();
-        const scenarios = await sRes.json();
-        state.aceBank = questions.map(ch => ({
-            ...ch,
-            caseStudy: scenarios.find(x => x.chapter === ch.chapter)?.scenario || null
-        }));
+        const res = await fetch('../ace_questions_full.json');
+        state.aceBank = await res.json();
     } catch (e) {
         console.error("ACE data failed", e);
     }
