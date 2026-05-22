@@ -26,7 +26,9 @@ const dom = {
     historyList: document.getElementById('historyList'),
     trackerName: document.getElementById('trackingWorkoutName'),
     exerciseLogs: document.getElementById('exerciseLogs'),
-    btnFinish: document.getElementById('btnFinishWorkout')
+    btnFinish: document.getElementById('btnFinishWorkout'),
+    btnSignOut: document.getElementById('btnClientSignOut'),
+    identityLabel: document.getElementById('clientIdentity')
 };
 
 // ===== Initialization =====
@@ -51,6 +53,7 @@ async function init() {
                 dom.splash.classList.add('hide');
                 dom.app.classList.remove('hide');
                 dom.clientGreeting.textContent = `Ready for your session?`;
+                if (dom.identityLabel) dom.identityLabel.textContent = user.email || '';
                 subscribeAssignedWorkouts();
                 subscribeWorkoutHistory();
             } else {
@@ -58,8 +61,23 @@ async function init() {
                 dom.splash.classList.remove('hide');
                 state.assignedWorkouts = [];
                 state.workoutHistory = [];
+                if (dom.identityLabel) dom.identityLabel.textContent = '';
             }
         });
+
+        // Sign out button
+        if (dom.btnSignOut) {
+            dom.btnSignOut.onclick = async () => {
+                try {
+                    const { signOut } = await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js');
+                    await signOut(auth);
+                    toast('Signed out');
+                } catch (e) {
+                    console.error(e);
+                    toast('Sign out failed');
+                }
+            };
+        }
 
         // Sign in (existing user)
         document.getElementById('btnClientSignIn').onclick = async () => {
