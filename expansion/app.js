@@ -926,7 +926,7 @@ function addExerciseToCanvas(id) {
     el.dataset.exerciseTitle = exercise.Title;
     el.innerHTML = `
         <div class="canvas-item-header">
-            <strong>${exercise.Title}${curated ? ' <span class="curated-star" title="Aaron\\'s curated programming">★</span>' : ''}</strong>
+            <strong>${exercise.Title}${curated ? ' <span class="curated-star" title="Aaron&#39;s curated programming">★</span>' : ''}</strong>
             <button class="remove-btn">×</button>
         </div>
         ${curated?.description ? `<p class="canvas-item-desc">${curated.description}</p>` : ''}
