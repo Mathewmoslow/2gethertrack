@@ -69,7 +69,7 @@ async function init() {
             try {
                 await signInWithEmailAndPassword(auth, email, password);
             } catch (e) {
-                toast(e.message);
+                toast(friendlyAuthError(e));
             }
         };
 
@@ -111,7 +111,7 @@ async function init() {
                 toast(`Welcome, ${name}!`);
             } catch (e) {
                 console.error(e);
-                toast(e.message);
+                toast(friendlyAuthError(e));
             }
         };
     } catch (e) {
@@ -283,6 +283,24 @@ function switchView(viewId) {
     state.currentView = viewId;
     dom.navItems.forEach(item => item.classList.toggle('active', item.dataset.view === viewId));
     dom.views.forEach(view => view.classList.toggle('active', view.id === `view-${viewId}`));
+}
+
+function friendlyAuthError(e) {
+    const code = e?.code || '';
+    const map = {
+        'auth/invalid-email': 'That email looks malformed',
+        'auth/missing-password': 'Password required',
+        'auth/weak-password': 'Password must be at least 6 characters',
+        'auth/email-already-in-use': 'That email is already registered — try signing in instead',
+        'auth/invalid-credential': 'Wrong email or password',
+        'auth/invalid-login-credentials': 'Wrong email or password',
+        'auth/user-not-found': 'No account with that email — use an invite code instead',
+        'auth/wrong-password': 'Wrong password',
+        'auth/too-many-requests': 'Too many attempts — wait a minute and try again',
+        'auth/network-request-failed': 'Network error — check your connection',
+        'auth/unauthorized-domain': 'This domain is not authorized in Firebase Auth settings'
+    };
+    return map[code] || e?.message || 'Authentication failed';
 }
 
 function toast(msg) {

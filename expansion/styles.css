@@ -823,6 +823,9 @@ button {
     border-radius: 12px;
     box-shadow: var(--shadow);
     transition: 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    z-index: 3000;
+    max-width: 90vw;
+    text-align: center;
 }
 .toast.active { transform: translateX(-50%) translateY(0); }
 

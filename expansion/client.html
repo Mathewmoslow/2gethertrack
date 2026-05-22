@@ -25,26 +25,26 @@
             <p class="splash-sub">Log in to see your programs and track progress</p>
 
             <!-- Existing user sign-in -->
-            <div class="splash-actions" id="signinPane">
+            <form class="splash-actions" id="signinPane" onsubmit="return false;">
                 <input type="email" id="cliAuthEmail" placeholder="Email" autocomplete="username" />
                 <input type="password" id="cliAuthPassword" placeholder="Password" autocomplete="current-password" minlength="6" />
                 <div class="auth-buttons">
-                    <button class="btn btn-primary" id="btnClientSignIn">Sign In</button>
+                    <button type="submit" class="btn btn-primary" id="btnClientSignIn">Sign In</button>
                 </div>
-                <button class="btn btn-ghost" id="btnShowInvite" style="margin-top:1rem;">First time? I have an invite code</button>
-            </div>
+                <button type="button" class="btn btn-ghost" id="btnShowInvite" style="margin-top:1rem;">First time? I have an invite code</button>
+            </form>
 
             <!-- Invite code signup -->
-            <div class="splash-actions hide" id="invitePane">
+            <form class="splash-actions hide" id="invitePane" onsubmit="return false;">
                 <input type="text" id="cliInviteCode" placeholder="Invite code (6 letters/numbers)" maxlength="6" autocapitalize="characters" style="text-align:center; letter-spacing:0.3rem; font-weight:700;" />
                 <input type="text" id="cliSignupName" placeholder="Your name" autocomplete="name" />
                 <input type="email" id="cliSignupEmail" placeholder="Email" autocomplete="username" />
                 <input type="password" id="cliSignupPassword" placeholder="Choose a password (6+ chars)" autocomplete="new-password" minlength="6" />
                 <div class="auth-buttons">
-                    <button class="btn btn-primary" id="btnClaimInvite">Create Account</button>
+                    <button type="submit" class="btn btn-primary" id="btnClaimInvite">Create Account</button>
                 </div>
-                <button class="btn btn-ghost" id="btnBackToSignIn" style="margin-top:1rem;">Already have an account? Sign in</button>
-            </div>
+                <button type="button" class="btn btn-ghost" id="btnBackToSignIn" style="margin-top:1rem;">Already have an account? Sign in</button>
+            </form>
         </div>
     </div>
 

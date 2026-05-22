@@ -119,25 +119,28 @@ async function init() {
 
         // Auth Handlers
         document.getElementById('btnSignIn').onclick = async () => {
-            const email = document.getElementById('authEmail').value;
+            const email = document.getElementById('authEmail').value.trim();
             const password = document.getElementById('authPassword').value;
+            if (!email || !password) { toast('Email and password required'); return; }
             try {
                 await signInWithEmailAndPassword(auth, email, password);
                 document.getElementById('authPassword').value = '';
             } catch (e) {
-                toast(e.message);
+                toast(friendlyAuthError(e));
             }
         };
 
         document.getElementById('btnCreateAccount').onclick = async () => {
-            const email = document.getElementById('authEmail').value;
+            const email = document.getElementById('authEmail').value.trim();
             const password = document.getElementById('authPassword').value;
+            if (!email || !password) { toast('Email and password required'); return; }
+            if (password.length < 6) { toast('Password must be at least 6 characters'); return; }
             try {
                 await createUserWithEmailAndPassword(auth, email, password);
                 document.getElementById('authPassword').value = '';
                 toast("Account created!");
             } catch (e) {
-                toast(e.message);
+                toast(friendlyAuthError(e));
             }
         };
 
@@ -280,6 +283,24 @@ function timeAgo(d) {
 function setText(id, val) {
     const el = document.getElementById(id);
     if (el) el.textContent = val;
+}
+
+function friendlyAuthError(e) {
+    const code = e?.code || '';
+    const map = {
+        'auth/invalid-email': 'That email looks malformed',
+        'auth/missing-password': 'Password required',
+        'auth/weak-password': 'Password must be at least 6 characters',
+        'auth/email-already-in-use': 'That email is already registered — try signing in instead',
+        'auth/invalid-credential': 'Wrong email or password',
+        'auth/invalid-login-credentials': 'Wrong email or password',
+        'auth/user-not-found': 'No account with that email — create one instead',
+        'auth/wrong-password': 'Wrong password',
+        'auth/too-many-requests': 'Too many attempts — wait a minute and try again',
+        'auth/network-request-failed': 'Network error — check your connection',
+        'auth/unauthorized-domain': 'This domain is not authorized in Firebase Auth settings'
+    };
+    return map[code] || e?.message || 'Authentication failed';
 }
 
 function renderLedger() {

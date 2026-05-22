@@ -15,14 +15,14 @@
             <h1 class="splash-title">2gether<span>Track</span> Suite</h1>
             <p class="splash-sub">Unified Trainer Dashboard & Client Expansion</p>
             <div id="cfgStatus"></div>
-            <div class="splash-actions">
+            <form class="splash-actions" id="authForm" onsubmit="return false;">
                 <input type="email" id="authEmail" placeholder="Email address" autocomplete="username" />
                 <input type="password" id="authPassword" placeholder="Password" autocomplete="current-password" minlength="6" />
                 <div class="auth-buttons">
-                    <button class="btn btn-primary" id="btnSignIn">Sign In</button>
-                    <button class="btn btn-ghost" id="btnCreateAccount">Create Account</button>
+                    <button type="submit" class="btn btn-primary" id="btnSignIn">Sign In</button>
+                    <button type="button" class="btn btn-ghost" id="btnCreateAccount">Create Account</button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 
