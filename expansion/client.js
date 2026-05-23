@@ -39,7 +39,7 @@ async function init() {
         const { initializeApp } = await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js');
         const authMod = await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js');
         const fsMod = await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js');
-        const { getAuth, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword } = authMod;
+        const { getAuth, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail } = authMod;
         const { getFirestore, collection, doc, onSnapshot, addDoc, setDoc, getDoc, serverTimestamp, query, where, orderBy } = fsMod;
 
         const app = initializeApp(firebaseConfig);
@@ -78,6 +78,18 @@ async function init() {
                 }
             };
         }
+
+        // Forgot password
+        document.getElementById('btnClientForgot').onclick = async () => {
+            const email = document.getElementById('cliAuthEmail').value.trim();
+            if (!email) { toast('Type your email above first, then click Forgot password'); return; }
+            try {
+                await sendPasswordResetEmail(auth, email);
+                toast(`Password reset email sent to ${email}`);
+            } catch (e) {
+                toast(friendlyAuthError(e));
+            }
+        };
 
         // Sign in (existing user)
         document.getElementById('btnClientSignIn').onclick = async () => {

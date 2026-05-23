@@ -40,8 +40,6 @@ const dom = {
     views: document.querySelectorAll('.view'),
     exerciseList: document.getElementById('exerciseList'),
     workoutCanvas: document.getElementById('workoutCanvas'),
-    filterBodyPart: document.getElementById('filterBodyPart'),
-    filterEquipment: document.getElementById('filterEquipment'),
     ledgerContent: document.getElementById('ledger-content'),
     aceContent: document.getElementById('ace-content'),
     settingsContent: document.getElementById('settings-content'),
@@ -52,7 +50,6 @@ const dom = {
 // ===== Initialization =====
 async function init() {
     setupEventListeners();
-    populateFilters();
     renderExerciseLibrary();
     
     // Initialize Firebase
@@ -60,7 +57,7 @@ async function init() {
         const { initializeApp } = await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js');
         const authMod = await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js');
         const fsMod = await import('https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js');
-        const { getAuth, onAuthStateChanged, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword } = authMod;
+        const { getAuth, onAuthStateChanged, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail } = authMod;
         const { getFirestore, collection, doc, onSnapshot, addDoc, setDoc, deleteDoc, getDoc, serverTimestamp, query, where, getDocs } = fsMod;
         
         const app = initializeApp(firebaseConfig);
@@ -139,6 +136,17 @@ async function init() {
                 await createUserWithEmailAndPassword(auth, email, password);
                 document.getElementById('authPassword').value = '';
                 toast("Account created!");
+            } catch (e) {
+                toast(friendlyAuthError(e));
+            }
+        };
+
+        document.getElementById('btnForgotPassword').onclick = async () => {
+            const email = document.getElementById('authEmail').value.trim();
+            if (!email) { toast('Type your email above first, then click Forgot password'); return; }
+            try {
+                await sendPasswordResetEmail(auth, email);
+                toast(`Password reset email sent to ${email}`);
             } catch (e) {
                 toast(friendlyAuthError(e));
             }
@@ -773,15 +781,24 @@ function setupEventListeners() {
         });
     });
 
-    dom.filterBodyPart.addEventListener('change', (e) => {
-        state.libraryFilters.bodyPart = e.target.value;
-        renderExerciseLibrary();
-    });
-
-    dom.filterEquipment.addEventListener('change', (e) => {
-        state.libraryFilters.equipment = e.target.value;
-        renderExerciseLibrary();
-    });
+    // New builder filters
+    const builderSearch = document.getElementById('builderSearch');
+    if (builderSearch) {
+        builderSearch.addEventListener('input', (e) => {
+            state.libraryFilters.search = e.target.value;
+            renderExerciseLibrary();
+        });
+    }
+    renderBodyPartChips();
+    renderTierPicker();
+    const curatedChip = document.getElementById('curatedChip');
+    if (curatedChip) {
+        curatedChip.onclick = () => {
+            state.libraryFilters.curatedOnly = !state.libraryFilters.curatedOnly;
+            curatedChip.classList.toggle('active', state.libraryFilters.curatedOnly);
+            renderExerciseLibrary();
+        };
+    }
 
     // Drag and Drop Logic
     dom.workoutCanvas.addEventListener('dragover', (e) => {
@@ -827,41 +844,48 @@ function setupEventListeners() {
         };
     }
 
-    // Equipment-tier picker (Full Gym / Hotel Gym / Room Only)
-    const tierWrap = document.createElement('div');
-    tierWrap.className = 'tier-picker';
+}
+
+function renderTierPicker() {
+    const tierRow = document.getElementById('tierRow');
+    if (!tierRow) return;
     const tiers = [
         { id: 'full', label: 'Full Gym', icon: '🏋️' },
         { id: 'hotel', label: 'Hotel', icon: '🏨' },
         { id: 'room', label: 'Room Only', icon: '✈️' }
     ];
-    tiers.forEach(t => {
-        const btn = document.createElement('button');
-        btn.className = 'tier-btn' + (state.travelTier === t.id ? ' active' : '');
-        btn.dataset.tier = t.id;
-        btn.innerHTML = `${t.icon} ${t.label}`;
+    tierRow.innerHTML = `<div class="tier-picker">${tiers.map(t => `
+        <button class="tier-btn ${state.travelTier === t.id ? 'active' : ''}" data-tier="${t.id}">${t.icon} ${t.label}</button>
+    `).join('')}</div>`;
+    tierRow.querySelectorAll('.tier-btn').forEach(btn => {
         btn.onclick = () => {
-            state.travelTier = t.id;
-            state.isTravelMode = t.id !== 'full'; // keep legacy flag in sync
-            tierWrap.querySelectorAll('.tier-btn').forEach(b => b.classList.toggle('active', b.dataset.tier === t.id));
+            state.travelTier = btn.dataset.tier;
+            state.isTravelMode = btn.dataset.tier !== 'full';
+            tierRow.querySelectorAll('.tier-btn').forEach(b => b.classList.toggle('active', b.dataset.tier === btn.dataset.tier));
             renderExerciseLibrary();
         };
-        tierWrap.appendChild(btn);
     });
+}
 
-    // Coach's Picks chip (curated-only filter)
-    const curatedChip = document.createElement('button');
-    curatedChip.className = 'curated-chip';
-    curatedChip.innerHTML = '★ Coach\'s Picks';
-    curatedChip.onclick = () => {
-        state.libraryFilters.curatedOnly = !state.libraryFilters.curatedOnly;
-        curatedChip.classList.toggle('active', state.libraryFilters.curatedOnly);
-        renderExerciseLibrary();
-    };
-
-    const libraryFilters = document.querySelector('.library-filters');
-    libraryFilters.prepend(curatedChip);
-    libraryFilters.prepend(tierWrap);
+function renderBodyPartChips() {
+    const container = document.getElementById('bodypartChips');
+    if (!container) return;
+    const bodyParts = ['All', ...new Set(EXERCISE_DB.map(ex => ex.BodyPart))].filter(Boolean).sort((a, b) => {
+        if (a === 'All') return -1;
+        if (b === 'All') return 1;
+        return a.localeCompare(b);
+    });
+    container.innerHTML = bodyParts.map(bp => {
+        const active = (bp === 'All' && !state.libraryFilters.bodyPart) || bp === state.libraryFilters.bodyPart;
+        return `<button class="bp-chip ${active ? 'active' : ''}" data-bp="${bp === 'All' ? '' : bp}">${bp}</button>`;
+    }).join('');
+    container.querySelectorAll('.bp-chip').forEach(btn => {
+        btn.onclick = () => {
+            state.libraryFilters.bodyPart = btn.dataset.bp;
+            container.querySelectorAll('.bp-chip').forEach(b => b.classList.toggle('active', b === btn));
+            renderExerciseLibrary();
+        };
+    });
 }
 
 function renderExerciseLibrary() {
@@ -896,24 +920,37 @@ function renderExerciseLibrary() {
 
     const limited = filtered.slice(0, 150);
 
+    if (limited.length === 0) {
+        dom.exerciseList.innerHTML = '<p class="mini-caption" style="padding:1rem; grid-column:1/-1;">No exercises match these filters. Try clearing them or switching equipment tier.</p>';
+        return;
+    }
+
+    dom.exerciseList.innerHTML = '';
     limited.forEach(ex => {
         const curated = getCuratedFor(ex.Title);
         const el = document.createElement('div');
-        el.className = 'exercise-item' + (curated ? ' curated' : '');
+        el.className = 'exercise-card' + (curated ? ' curated' : '');
         el.draggable = true;
         el.dataset.id = ex.id;
         el.innerHTML = `
-            <span class="ex-name">${ex.Title}</span>
-            <span class="ex-meta">${curated ? '★ Coach' : ex.Equipment}</span>
+            <div class="ex-card-body">
+                <span class="ex-name">${ex.Title}</span>
+                <span class="ex-meta">${curated ? '★ Coach' : `${ex.BodyPart} • ${ex.Equipment}`}</span>
+            </div>
+            <button class="ex-add-btn" data-add="${ex.id}" title="Add to workout">+</button>
         `;
-        el.title = curated ? `${curated.description}\nCues: ${curated.cues}` : `${ex.BodyPart} • ${ex.Equipment}`;
         el.addEventListener('dragstart', (e) => e.dataTransfer.setData('text/plain', ex.id));
         dom.exerciseList.appendChild(el);
     });
 
-    if (limited.length === 0) {
-        dom.exerciseList.innerHTML = '<p class="mini-caption" style="padding:1rem;">No exercises match these filters.</p>';
-    }
+    dom.exerciseList.querySelectorAll('[data-add]').forEach(btn => {
+        btn.onclick = (e) => {
+            e.stopPropagation();
+            addExerciseToCanvas(btn.dataset.add);
+            // Scroll canvas into view so user sees the addition
+            dom.workoutCanvas.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        };
+    });
 }
 
 function switchView(viewId) {
@@ -1037,12 +1074,6 @@ function populateClientDropdown() {
     select.value = currentVal;
 }
 
-function populateFilters() {
-    const bodyParts = [...new Set(EXERCISE_DB.map(ex => ex.BodyPart))].sort();
-    const equipment = [...new Set(EXERCISE_DB.map(ex => ex.Equipment))].sort();
-    bodyParts.forEach(bp => { const opt = new Option(bp, bp); dom.filterBodyPart.add(opt); });
-    equipment.forEach(eq => { const opt = new Option(eq, eq); dom.filterEquipment.add(opt); });
-}
 
 // Start App
 init();

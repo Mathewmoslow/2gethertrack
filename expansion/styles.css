@@ -106,6 +106,17 @@ button {
 
 .btn-primary { background: var(--accent-orange); color: white; flex: 1; }
 .btn-ghost { background: transparent; color: white; border: 1px solid var(--line); flex: 1; }
+.btn-link {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    text-decoration: underline;
+    padding: 0.4rem;
+    text-align: center;
+    cursor: pointer;
+}
+.btn-link:hover { color: var(--accent-orange); }
 
 /* ========== SHELL ========== */
 #app {
@@ -527,6 +538,188 @@ button {
 .chapter-info h4 { margin-bottom: 4px; }
 .chapter-info p { font-size: 0.85rem; color: var(--text-secondary); }
 
+/* ========== BUILDER STACKED LAYOUT ========== */
+.builder-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.builder-canvas-card {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--card-bg);
+    max-height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.builder-canvas-card .drop-container {
+    overflow-y: auto;
+    min-height: 100px;
+    flex: 1;
+    border: 2px dashed var(--line);
+    border-radius: 12px;
+    padding: 1rem;
+    transition: 0.2s;
+}
+
+.builder-canvas-card .drop-container.drag-over {
+    border-color: var(--accent-orange);
+    background: rgba(255, 152, 0, 0.05);
+}
+
+.empty-canvas {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 1.5rem 1rem;
+}
+
+.empty-canvas strong {
+    display: block;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.empty-canvas p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.kbd {
+    display: inline-block;
+    background: var(--accent-orange);
+    color: white;
+    padding: 0 0.45rem;
+    border-radius: 4px;
+    font-family: 'Cabinet Grotesk', monospace;
+    font-weight: 800;
+    font-size: 0.85rem;
+    line-height: 1.3;
+}
+
+.builder-library-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 1.2rem;
+    box-shadow: var(--shadow);
+}
+
+.library-toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.filter-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.builder-search {
+    flex: 1;
+    background: #2a2a2a;
+    border: 1px solid var(--line);
+    color: white;
+    padding: 0.6rem 0.9rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    outline: none;
+}
+
+.builder-search:focus { border-color: var(--accent-blue); }
+
+/* Body-part chip strip */
+.bodypart-chips {
+    display: flex;
+    gap: 0.4rem;
+    overflow-x: auto;
+    padding: 0.2rem 0 0.4rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+.bodypart-chips::-webkit-scrollbar { height: 4px; }
+.bodypart-chips::-webkit-scrollbar-thumb { background: var(--line); border-radius: 4px; }
+
+.bp-chip {
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--text-secondary);
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: 0.15s;
+}
+
+.bp-chip:hover { color: var(--text-primary); }
+
+.bp-chip.active {
+    background: var(--accent-orange);
+    border-color: var(--accent-orange);
+    color: white;
+}
+
+/* Exercise grid (replaces stacked list) */
+.exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 0.6rem;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.exercise-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #2a2a2a;
+    padding: 0.6rem 0.6rem 0.6rem 0.9rem;
+    border-radius: 10px;
+    cursor: grab;
+    border: 1px solid transparent;
+    transition: 0.15s;
+}
+
+.exercise-card:hover { background: #333; }
+.exercise-card:active { cursor: grabbing; }
+
+.exercise-card.curated {
+    border-color: rgba(255, 152, 0, 0.4);
+    background: linear-gradient(90deg, rgba(255,152,0,0.08), #2a2a2a 60%);
+}
+
+.ex-card-body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.ex-add-btn {
+    background: var(--accent-orange);
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-left: 0.5rem;
+    flex-shrink: 0;
+    transition: 0.15s;
+}
+
+.ex-add-btn:hover { transform: scale(1.1); }
+.ex-add-btn:active { transform: scale(0.95); }
+
 /* ========== EQUIPMENT TIER PICKER + COACH'S PICKS ========== */
 .tier-picker {
     display: flex;
@@ -574,40 +767,21 @@ button {
     color: var(--accent-orange);
 }
 
-/* Library list items */
-.exercise-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #2a2a2a;
-    padding: 0.7rem 0.9rem;
-    border-radius: 10px;
-    margin-bottom: 6px;
-    cursor: grab;
-    font-size: 0.88rem;
-    border: 1px solid transparent;
-    transition: 0.15s;
-}
-
-.exercise-item:hover { background: #333; }
-.exercise-item:active { cursor: grabbing; }
-
-.exercise-item.curated {
-    border-color: rgba(255, 152, 0, 0.4);
-    background: linear-gradient(90deg, rgba(255,152,0,0.08), #2a2a2a 60%);
-}
-
-.ex-name { font-weight: 600; }
+.ex-name { font-weight: 600; font-size: 0.88rem; }
 
 .ex-meta {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.04em;
     font-weight: 700;
+    margin-top: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-.exercise-item.curated .ex-meta { color: var(--accent-orange); }
+.exercise-card.curated .ex-meta { color: var(--accent-orange); }
 
 /* Canvas item curated indicators */
 .canvas-item.curated {
@@ -898,22 +1072,24 @@ button {
         grid-template-columns: 1fr;
     }
 
-    .builder-layout {
+    .builder-canvas-card {
+        max-height: 45vh;
+    }
+
+    .exercise-grid {
         grid-template-columns: 1fr;
-        height: auto;
-        gap: 1rem;
+        max-height: none;
     }
 
-    .builder-library {
-        max-height: 400px;
+    .canvas-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.6rem;
     }
-}
 
-/* Tablet (iPad Horizontal) & Desktop */
-@media (min-width: 769px) {
-    /* Current styles already handle this well */
-    .builder-layout {
-        height: calc(100vh - 160px);
+    .canvas-actions {
+        flex-direction: column;
+        gap: 0.5rem;
     }
 }
 

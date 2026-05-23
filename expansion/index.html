@@ -22,6 +22,7 @@
                     <button type="submit" class="btn btn-primary" id="btnSignIn">Sign In</button>
                     <button type="button" class="btn btn-ghost" id="btnCreateAccount">Create Account</button>
                 </div>
+                <button type="button" class="btn-link" id="btnForgotPassword">Forgot password?</button>
             </form>
         </div>
     </div>
@@ -134,28 +135,37 @@
 
                 <!-- Program Builder View (New) -->
                 <section id="view-builder" class="view">
-                    <div class="builder-layout">
-                        <div class="builder-library">
-                            <h3>Exercise Library</h3>
-                            <div class="library-filters">
-                                <select id="filterBodyPart"><option value="">Body Part</option></select>
-                                <select id="filterEquipment"><option value="">Equipment</option></select>
-                            </div>
-                            <div id="exerciseList" class="drag-container">
-                                <!-- JS Generated -->
-                            </div>
-                        </div>
-                        <div class="builder-canvas">
+                    <div class="builder-stack">
+                        <!-- Canvas pinned on top -->
+                        <div class="builder-canvas-card card">
                             <div class="canvas-header">
-                                <input type="text" id="programName" placeholder="Untitled Program">
+                                <input type="text" id="programName" placeholder="Name this program...">
                                 <div class="canvas-actions">
                                     <select id="assignClient"><option value="">Assign to Client...</option></select>
                                     <button class="btn btn-primary" id="btnSaveProgram">Save Program</button>
                                 </div>
                             </div>
                             <div id="workoutCanvas" class="drop-container">
-                                <div class="empty-canvas">Drag exercises here to start building</div>
+                                <div class="empty-canvas">
+                                    <strong>Build your workout here</strong>
+                                    <p>Tap <span class="kbd">+</span> on any exercise below, or drag it into this box. Then set reps, weight, and cues per exercise.</p>
+                                </div>
                             </div>
+                        </div>
+
+                        <!-- Exercise library -->
+                        <div class="builder-library-card">
+                            <div class="library-toolbar">
+                                <div class="tier-row" id="tierRow"><!-- JS-injected tier picker --></div>
+                                <div class="filter-row">
+                                    <button class="curated-chip" id="curatedChip">★ Coach's Picks</button>
+                                    <input type="search" id="builderSearch" placeholder="Search exercises..." class="builder-search" />
+                                </div>
+                                <div class="bodypart-chips" id="bodypartChips">
+                                    <!-- JS-injected chips: All, Chest, Back, etc. -->
+                                </div>
+                            </div>
+                            <div id="exerciseList" class="exercise-grid"></div>
                         </div>
                     </div>
                 </section>
