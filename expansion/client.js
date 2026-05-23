@@ -112,26 +112,27 @@ async function init() {
             if (!code || code.length !== 6) { toast('Enter the 6-character code'); return; }
             if (!name || !email || !password) { toast('Fill in all fields'); return; }
 
+            let step = 'start';
             try {
-                // 1. Look up the invite code (must exist and be unused)
+                step = 'read-invite';
                 const codeRef = doc(db, 'inviteCodes', code);
                 const codeSnap = await getDoc(codeRef);
                 if (!codeSnap.exists()) { toast('Invite code not found'); return; }
                 const codeData = codeSnap.data();
                 if (codeData.used) { toast('This code has already been used'); return; }
 
-                // 2. Create the auth account
+                step = 'create-account';
                 const cred = await createUserWithEmailAndPassword(auth, email, password);
                 const clientUid = cred.user.uid;
 
-                // 3. Link the client UID onto the trainer's roster entry
+                step = 'link-roster';
                 await setDoc(
                     doc(db, 'users', codeData.trainerUid, 'clients', codeData.rosterId),
                     { clientUid, clientName: name, linkedAt: serverTimestamp() },
                     { merge: true }
                 );
 
-                // 4. Mark the code used
+                step = 'mark-code-used';
                 await setDoc(codeRef, {
                     used: true,
                     clientUid,
@@ -140,8 +141,11 @@ async function init() {
 
                 toast(`Welcome, ${name}!`);
             } catch (e) {
-                console.error(e);
-                toast(friendlyAuthError(e));
+                console.error(`Claim failed at step "${step}":`, e);
+                const msg = e?.code === 'permission-denied'
+                    ? `Permission denied at step: ${step}. Check Firestore rules.`
+                    : friendlyAuthError(e);
+                toast(msg);
             }
         };
     } catch (e) {
