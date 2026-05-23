@@ -823,25 +823,89 @@ button {
     background: #2a2a2a;
     border: 1px solid var(--line);
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 0.55rem 0.9rem;
     border-radius: 10px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.15s;
+    min-width: 200px;
 }
 
+#assignClient:focus { border-color: var(--accent-blue); }
+#assignClient option { background: #1e1e1e; padding: 0.5rem; }
+#assignClient option:disabled { color: var(--text-secondary); font-style: italic; }
 
-.canvas-item-controls {
-    display: flex;
-    gap: 10px;
-}
 
-.canvas-item-controls input {
+/* Program name input - prominent header style */
+#programName {
     flex: 1;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--line);
+    color: white;
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Cabinet Grotesk', sans-serif;
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+#programName:focus { border-bottom-color: var(--accent-orange); }
+#programName::placeholder { color: var(--text-secondary); opacity: 0.6; }
+
+/* Canvas item: labelled grid for inputs */
+.canvas-item-grid {
+    display: grid;
+    grid-template-columns: 70px 1fr 1fr 80px 70px;
+    gap: 0.6rem;
+    margin-top: 0.6rem;
+}
+
+.canvas-item-grid label,
+.cue-label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.canvas-item-grid label span,
+.cue-label span {
+    font-size: 0.65rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.canvas-item-grid input,
+.cue-label input {
     background: #2a2a2a;
     border: 1px solid var(--line);
     color: white;
-    padding: 0.4rem;
-    border-radius: 6px;
+    padding: 0.5rem;
+    border-radius: 8px;
     font-size: 0.85rem;
+    font-family: inherit;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.15s;
+}
+
+.canvas-item-grid input:focus,
+.cue-label input:focus { border-color: var(--accent-blue); }
+
+.cue-label {
+    margin-top: 0.6rem;
+}
+
+/* Responsive: stack the input grid on narrow viewports */
+@media (max-width: 600px) {
+    .canvas-item-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 /* ========== QUIZ ENGINE ========== */

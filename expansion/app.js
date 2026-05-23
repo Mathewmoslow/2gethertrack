@@ -988,14 +988,14 @@ function addExerciseToCanvas(id) {
             <button class="remove-btn">×</button>
         </div>
         ${curated?.description ? `<p class="canvas-item-desc">${curated.description}</p>` : ''}
-        <div class="canvas-item-controls">
-            <input type="number" class="in-sets" placeholder="Sets" min="1" value="${sets}">
-            <input type="text" class="in-reps" placeholder="Reps" value="${reps}">
-            <input type="text" class="in-weight" placeholder="Weight" value="${weight}">
-            <input type="text" class="in-rest" placeholder="Rest" value="${rest}">
-            <input type="text" class="in-rpe" placeholder="RPE" value="${rpe}" style="max-width:60px;">
+        <div class="canvas-item-grid">
+            <label><span>Sets</span><input type="number" class="in-sets" min="1" value="${sets}"></label>
+            <label><span>Reps</span><input type="text" class="in-reps" value="${reps}"></label>
+            <label><span>Weight</span><input type="text" class="in-weight" value="${weight}" placeholder="—"></label>
+            <label><span>Rest</span><input type="text" class="in-rest" value="${rest}"></label>
+            <label><span>RPE</span><input type="text" class="in-rpe" value="${rpe}" placeholder="—"></label>
         </div>
-        <input type="text" class="in-cues" placeholder="Cues / notes for client" value="${cues.replace(/"/g, '&quot;')}">
+        <label class="cue-label"><span>Coaching cue (optional)</span><input type="text" class="in-cues" placeholder="What should the client focus on?" value="${cues.replace(/"/g, '&quot;')}"></label>
     `;
     el.querySelector('.remove-btn').onclick = () => el.remove();
     const placeholder = dom.workoutCanvas.querySelector('.empty-canvas');
