@@ -26,7 +26,8 @@ const state = {
     aceBank: [],
     userProgress: {},
     isTravelMode: false,    // legacy flag, kept for back-compat
-    travelTier: 'full'      // 'full' | 'hotel' | 'room'
+    travelTier: 'full',     // 'full' | 'hotel' | 'room'
+    editingProgramId: null  // set when loading a program for edit
 };
 
 // ===== UI Elements =====
@@ -43,6 +44,7 @@ const dom = {
     ledgerContent: document.getElementById('ledger-content'),
     aceContent: document.getElementById('ace-content'),
     settingsContent: document.getElementById('settings-content'),
+    programsContent: document.getElementById('programs-content'),
     globalSearch: document.getElementById('globalSearch'),
     btnSignOut: document.getElementById('btnSignOut')
 };
@@ -325,7 +327,7 @@ function renderLedger() {
                 </div>
                 <div class="ledger-table-wrap">
                     <table class="ledger-table">
-                        <thead><tr><th>Name</th><th>Rate</th><th>Freq</th><th>Monthly</th><th>Client Link</th></tr></thead>
+                        <thead><tr><th>Name</th><th>Rate</th><th>Freq</th><th>Monthly</th><th>Client Link</th><th></th></tr></thead>
                         <tbody>
                             ${state.clients.map(c => `
                                 <tr data-roster-id="${c.id}">
@@ -339,6 +341,10 @@ function renderLedger() {
                                             : c.inviteCode
                                                 ? `<button class="btn btn-ghost btn-mini" data-action="show-code" data-code="${c.inviteCode}">Code: ${c.inviteCode}</button>`
                                                 : `<button class="btn btn-primary btn-mini" data-action="invite" data-roster-id="${c.id}" data-name="${c.name}">Invite</button>`}
+                                    </td>
+                                    <td style="text-align:right; white-space:nowrap;">
+                                        <button class="btn btn-ghost btn-mini" data-action="edit-client" data-id="${c.id}">Edit</button>
+                                        <button class="btn btn-ghost btn-mini btn-danger" data-action="delete-client" data-id="${c.id}">×</button>
                                     </td>
                                 </tr>
                             `).join('')}
@@ -397,6 +403,203 @@ function renderLedger() {
             }
         };
     });
+    dom.ledgerContent.querySelectorAll('[data-action="edit-client"]').forEach(btn => {
+        btn.onclick = () => showEditClientModal(btn.dataset.id);
+    });
+    dom.ledgerContent.querySelectorAll('[data-action="delete-client"]').forEach(btn => {
+        btn.onclick = () => deleteClient(btn.dataset.id);
+    });
+}
+
+function showEditClientModal(rosterId) {
+    const c = state.clients.find(x => x.id === rosterId);
+    if (!c) return;
+    let modal = document.getElementById('editClientModal');
+    if (modal) modal.remove();
+    modal = document.createElement('div');
+    modal.id = 'editClientModal';
+    modal.className = 'modal-backdrop';
+    modal.innerHTML = `
+        <div class="modal-card" style="text-align:left;">
+            <h3>Edit Client</h3>
+            <p class="modal-sub">${c.clientUid ? 'This client is linked. Changing the name will update their roster entry, not their auth account.' : 'Update the details for this roster entry.'}</p>
+            <div style="display:flex; flex-direction:column; gap:0.8rem; margin-bottom:1.5rem;">
+                <input type="text" id="editClientName" placeholder="Client name" class="form-input" value="${c.name || ''}" />
+                <div style="display:flex; gap:0.5rem;">
+                    <input type="number" id="editClientRate" placeholder="Rate ($/session)" class="form-input" min="0" value="${c.rate || ''}" />
+                    <input type="number" id="editClientFreq" placeholder="Sessions/wk" class="form-input" min="0" max="14" value="${c.frequency || ''}" />
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-ghost" id="cancelEditClient">Cancel</button>
+                <button class="btn btn-primary" id="saveEditClient">Save</button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+    document.getElementById('cancelEditClient').onclick = () => modal.remove();
+    modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
+    document.getElementById('saveEditClient').onclick = async () => {
+        const name = document.getElementById('editClientName').value.trim();
+        const rate = parseFloat(document.getElementById('editClientRate').value) || 0;
+        const frequency = parseInt(document.getElementById('editClientFreq').value, 10) || 0;
+        if (!name) { toast('Name required'); return; }
+        try {
+            await fb.setDoc(
+                fb.doc(db, 'users', state.user.uid, 'clients', rosterId),
+                { name, rate, frequency },
+                { merge: true }
+            );
+            toast(`Updated ${name}`);
+            modal.remove();
+        } catch (e) {
+            toast('Save failed: ' + e.message);
+        }
+    };
+}
+
+async function deleteClient(rosterId) {
+    const c = state.clients.find(x => x.id === rosterId);
+    if (!c) return;
+    const warn = c.clientUid
+        ? `Delete "${c.name}" from your roster? Their account will still exist but they'll no longer see assigned programs from you.`
+        : `Delete "${c.name}" from your roster?`;
+    if (!confirm(warn)) return;
+    try {
+        await fb.deleteDoc(fb.doc(db, 'users', state.user.uid, 'clients', rosterId));
+        toast(`Removed ${c.name}`);
+    } catch (e) {
+        toast('Delete failed: ' + e.message);
+    }
+}
+
+// ===== Programs Library =====
+function renderProgramsLibrary() {
+    if (!dom.programsContent) return;
+    if (state.programs.length === 0) {
+        dom.programsContent.innerHTML = `
+            <div class="card" style="text-align:center; padding:3rem;">
+                <h3 style="margin-bottom:0.5rem;">No saved programs yet</h3>
+                <p class="mini-caption">Build one in the Program Builder and Save — it will show up here for editing, duplicating, or re-assigning.</p>
+            </div>`;
+        return;
+    }
+
+    // Group by client (linked clients + unassigned bucket)
+    const byClient = {};
+    state.programs.forEach(p => {
+        const key = p.clientUid || 'unassigned';
+        const name = p.clientName || (p.clientUid ? 'Linked client' : 'Unassigned templates');
+        if (!byClient[key]) byClient[key] = { name, programs: [] };
+        byClient[key].programs.push(p);
+    });
+
+    const sections = Object.entries(byClient).map(([key, group]) => {
+        const cards = group.programs
+            .sort((a, b) => (b.updatedAt?.toMillis?.() || 0) - (a.updatedAt?.toMillis?.() || 0))
+            .map(p => {
+                const exCount = p.exercises?.length || 0;
+                const tier = p.travelMode && p.travelMode !== 'full' ? `<span class="program-tier-badge">${p.travelMode === 'room' ? '✈️ Room' : '🏨 Hotel'}</span>` : '';
+                const updated = p.updatedAt?.toDate ? p.updatedAt.toDate().toLocaleDateString() : '';
+                return `
+                    <div class="program-card" data-program-id="${p.id}">
+                        <div class="program-card-header">
+                            <strong>${p.name}</strong>
+                            ${tier}
+                        </div>
+                        <p class="mini-caption">${exCount} exercise${exCount === 1 ? '' : 's'}${updated ? ` • Updated ${updated}` : ''}</p>
+                        <div class="program-card-actions">
+                            <button class="btn btn-primary btn-mini" data-action="load" data-id="${p.id}">Edit</button>
+                            <button class="btn btn-ghost btn-mini" data-action="duplicate" data-id="${p.id}">Duplicate</button>
+                            <button class="btn btn-ghost btn-mini btn-danger" data-action="delete" data-id="${p.id}">Delete</button>
+                        </div>
+                    </div>`;
+            }).join('');
+        return `
+            <div class="program-group">
+                <h3 class="program-group-title">${group.name}</h3>
+                <div class="program-grid">${cards}</div>
+            </div>`;
+    }).join('');
+
+    dom.programsContent.innerHTML = sections;
+
+    dom.programsContent.querySelectorAll('[data-action="load"]').forEach(btn => {
+        btn.onclick = () => loadProgramIntoBuilder(btn.dataset.id);
+    });
+    dom.programsContent.querySelectorAll('[data-action="duplicate"]').forEach(btn => {
+        btn.onclick = () => duplicateProgram(btn.dataset.id);
+    });
+    dom.programsContent.querySelectorAll('[data-action="delete"]').forEach(btn => {
+        btn.onclick = () => deleteProgram(btn.dataset.id);
+    });
+}
+
+function loadProgramIntoBuilder(programId) {
+    const program = state.programs.find(p => p.id === programId);
+    if (!program) return;
+    state.editingProgramId = programId;
+    // Populate canvas
+    resetCanvas();
+    document.getElementById('programName').value = program.name || '';
+    (program.exercises || []).forEach(ex => {
+        // Find megaDB entry; if title matches, use full record; otherwise fabricate minimal one
+        const dbEntry = EXERCISE_DB.find(e => e.id === ex.exerciseId) || { id: ex.exerciseId, Title: ex.title, BodyPart: '', Equipment: '' };
+        addExerciseToCanvasWithValues(dbEntry, ex);
+    });
+    // Set assignment if possible
+    const rosterEntry = state.clients.find(c => c.clientUid === program.clientUid);
+    if (rosterEntry) document.getElementById('assignClient').value = rosterEntry.id;
+    // Switch to builder
+    switchView('builder');
+    toast(`Editing "${program.name}"`);
+}
+
+function addExerciseToCanvasWithValues(dbEntry, saved) {
+    addExerciseToCanvas(dbEntry.id);
+    // The newly-appended canvas item is the last child
+    const items = dom.workoutCanvas.querySelectorAll('.canvas-item');
+    const el = items[items.length - 1];
+    if (!el) return;
+    if (saved.sets) el.querySelector('.in-sets').value = saved.sets;
+    if (saved.reps) el.querySelector('.in-reps').value = saved.reps;
+    if (saved.weight) el.querySelector('.in-weight').value = saved.weight;
+    if (saved.rest) el.querySelector('.in-rest').value = saved.rest;
+    if (saved.rpe) el.querySelector('.in-rpe').value = saved.rpe;
+    if (saved.cues) el.querySelector('.in-cues').value = saved.cues;
+}
+
+async function duplicateProgram(programId) {
+    const program = state.programs.find(p => p.id === programId);
+    if (!program) return;
+    try {
+        await fb.addDoc(fb.collection(db, 'programs'), {
+            name: `${program.name} (copy)`,
+            trainerUid: state.user.uid,
+            rosterId: null,
+            clientUid: null,
+            clientName: null,
+            exercises: program.exercises || [],
+            travelMode: program.travelMode || 'full',
+            createdAt: fb.serverTimestamp(),
+            updatedAt: fb.serverTimestamp()
+        });
+        toast(`Duplicated as "${program.name} (copy)"`);
+    } catch (e) {
+        toast('Duplicate failed: ' + e.message);
+    }
+}
+
+async function deleteProgram(programId) {
+    const program = state.programs.find(p => p.id === programId);
+    if (!program) return;
+    if (!confirm(`Delete "${program.name}"? This cannot be undone.`)) return;
+    try {
+        await fb.deleteDoc(fb.doc(db, 'programs', programId));
+        toast(`Deleted "${program.name}"`);
+    } catch (e) {
+        toast('Delete failed: ' + e.message);
+    }
 }
 
 function renderSettings() {
@@ -961,12 +1164,13 @@ function switchView(viewId) {
     dom.navItems.forEach(item => item.classList.toggle('active', item.dataset.view === viewId));
     dom.views.forEach(view => view.classList.toggle('active', view.id === `view-${viewId}`));
 
-    const titles = { dash: 'Overview', ledger: 'Business Ledger', builder: 'Program Builder', ace: 'ACE Education', settings: 'Settings' };
+    const titles = { dash: 'Overview', ledger: 'Business Ledger', builder: 'Program Builder', programs: 'Programs Library', ace: 'ACE Education', settings: 'Settings' };
     dom.viewTitle.textContent = titles[viewId];
-    
+
     if (viewId === 'ledger') renderLedger();
     if (viewId === 'ace') renderAce();
     if (viewId === 'settings') renderSettings();
+    if (viewId === 'programs') renderProgramsLibrary();
 }
 
 function addExerciseToCanvas(id) {
@@ -1035,20 +1239,29 @@ async function saveProgram() {
     const rosterId = document.getElementById('assignClient').value || null;
     const rosterEntry = rosterId ? state.clients.find(c => c.id === rosterId) : null;
     const clientUid = rosterEntry?.clientUid || null;
+    const editingId = state.editingProgramId;
+
+    const payload = {
+        name,
+        trainerUid: state.user.uid,
+        rosterId,
+        clientUid,
+        clientName: rosterEntry?.name || null,
+        exercises,
+        travelMode: state.travelTier || (state.isTravelMode ? 'room' : 'full'),
+        updatedAt: fb.serverTimestamp()
+    };
 
     try {
-        await fb.addDoc(fb.collection(db, 'programs'), {
-            name,
-            trainerUid: state.user.uid,
-            rosterId,
-            clientUid,
-            clientName: rosterEntry?.name || null,
-            exercises,
-            travelMode: state.travelTier || (state.isTravelMode ? 'room' : 'full'),
-            createdAt: fb.serverTimestamp(),
-            updatedAt: fb.serverTimestamp()
-        });
-        toast(clientUid ? `Saved & assigned to ${rosterEntry.name}` : 'Saved as unassigned template');
+        if (editingId) {
+            await fb.setDoc(fb.doc(db, 'programs', editingId), payload, { merge: true });
+            toast(`Updated "${name}"`);
+        } else {
+            payload.createdAt = fb.serverTimestamp();
+            await fb.addDoc(fb.collection(db, 'programs'), payload);
+            toast(clientUid ? `Saved & assigned to ${rosterEntry.name}` : 'Saved as unassigned template');
+        }
+        state.editingProgramId = null;
         resetCanvas();
     } catch (e) {
         console.error(e);

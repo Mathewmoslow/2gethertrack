@@ -1040,6 +1040,78 @@ button {
     color: var(--accent-green);
 }
 
+/* ========== PROGRAMS LIBRARY ========== */
+.program-group {
+    margin-bottom: 2rem;
+}
+
+.program-group-title {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 0.8rem;
+}
+
+.program-card {
+    background: var(--card-bg);
+    border-radius: 14px;
+    padding: 1rem;
+    border: 1px solid var(--line);
+    transition: 0.15s;
+}
+
+.program-card:hover {
+    border-color: var(--accent-orange);
+    transform: translateY(-2px);
+}
+
+.program-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.program-card-header strong { font-size: 1rem; }
+
+.program-tier-badge {
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: rgba(77, 138, 255, 0.15);
+    color: var(--accent-blue);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.program-card-actions {
+    display: flex;
+    gap: 0.4rem;
+    margin-top: 0.9rem;
+}
+
+.program-card-actions .btn { padding: 0.35rem 0.7rem; font-size: 0.75rem; }
+
+.btn-danger {
+    color: var(--accent-red) !important;
+    border-color: rgba(244, 67, 54, 0.3) !important;
+}
+
+.btn-danger:hover {
+    background: rgba(244, 67, 54, 0.1) !important;
+}
+
 /* ========== SETTINGS VIEW ========== */
 .settings-grid {
     display: grid;
