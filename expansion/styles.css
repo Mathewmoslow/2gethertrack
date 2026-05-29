@@ -1,18 +1,29 @@
 :root {
-    --bg-dark: #121212;
-    --card-bg: #1e1e1e;
-    --sidebar-bg: #181818;
-    --text-primary: #ffffff;
-    --text-secondary: #b3b3b3;
-    --accent-blue: #4d8aff;
-    --accent-green: #4caf50;
-    --accent-orange: #ff9800;
-    --accent-red: #f44336;
-    --accent-purple: #9c27b0;
-    --line: rgba(255, 255, 255, 0.1);
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    --radius: 16px;
-    --sidebar-width: 80px;
+    /* Original 2getherFitness brand palette */
+    --orange:    #F9A350;
+    --dark:      #4C554F;
+    --cream:     #F9E9CF;
+    --cream-2:   #FDF5E3;
+    --sage:      #88A78B;
+    --sage-dark: #6B8B6E;
+    --coral:     #F4A693;
+    --coral-dk:  #E58A75;
+
+    /* Aliases used throughout the expansion code */
+    --bg-dark:        var(--cream-2);
+    --card-bg:        #ffffff;
+    --sidebar-bg:     #ffffff;
+    --text-primary:   var(--dark);
+    --text-secondary: rgba(76, 85, 79, 0.6);
+    --accent-blue:    var(--sage-dark);
+    --accent-green:   var(--sage);
+    --accent-orange:  var(--coral);
+    --accent-red:     var(--coral-dk);
+    --accent-purple:  var(--orange);
+    --line:           rgba(76, 85, 79, 0.12);
+    --shadow:         0 4px 20px rgba(76, 85, 79, 0.08);
+    --radius:         20px;
+    --sidebar-width:  80px;
 }
 
 * {
@@ -28,6 +39,14 @@ html, body {
     font-family: 'Outfit', sans-serif;
     color: var(--text-primary);
     overflow: hidden;
+}
+
+/* Splash logo (extracted from legacy app) */
+.splash-logo {
+    width: 120px;
+    height: auto;
+    margin: 0 auto 1.2rem;
+    display: block;
 }
 
 h1, h2, h3, h4 {
@@ -85,11 +104,11 @@ button {
 }
 
 .splash-actions input {
-    background: #2a2a2a;
+    background: var(--cream-2);
     border: 1px solid var(--line);
     padding: 1rem;
     border-radius: 12px;
-    color: white;
+    color: var(--dark);
     font-size: 1rem;
 }
 
@@ -104,8 +123,9 @@ button {
     font-weight: 700;
 }
 
-.btn-primary { background: var(--accent-orange); color: white; flex: 1; }
-.btn-ghost { background: transparent; color: white; border: 1px solid var(--line); flex: 1; }
+.btn-primary { background: var(--sage); color: white; flex: 1; }
+.btn-primary:hover { background: var(--sage-dark); }
+.btn-ghost { background: transparent; color: var(--dark); border: 1px solid var(--line); flex: 1; }
 .btn-link {
     background: none;
     border: none;
@@ -136,9 +156,9 @@ button {
 }
 
 .sidebar-logo {
-    width: 44px;
-    height: 44px;
-    background: var(--accent-orange);
+    width: 50px;
+    height: 50px;
+    background: white;
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -146,7 +166,15 @@ button {
     font-weight: 800;
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
 }
+.sidebar-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.logo-h { display: none; }
 
 .sidebar-nav {
     display: flex;
@@ -167,8 +195,8 @@ button {
 }
 
 .nav-item.active {
-    background: rgba(255, 152, 0, 0.1);
-    color: var(--accent-orange);
+    background: rgba(136, 167, 139, 0.15);
+    color: var(--sage-dark);
     opacity: 1;
 }
 
@@ -181,7 +209,7 @@ button {
     height: 40px;
     border-radius: 50%;
     border: 2px solid var(--line);
-    background: var(--accent-blue);
+    background: var(--sage);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -215,7 +243,7 @@ button {
 }
 
 .search-bar {
-    background: #1e1e1e;
+    background: var(--card-bg);
     border-radius: 12px;
     padding: 0.6rem 1rem;
     display: flex;
@@ -227,7 +255,7 @@ button {
 .search-bar input {
     background: none;
     border: none;
-    color: white;
+    color: var(--dark);
     font-size: 0.9rem;
     flex: 1;
     outline: none;
@@ -235,7 +263,7 @@ button {
 
 .btn-premium {
     background: var(--accent-blue);
-    color: white;
+    color: var(--dark);
     border-radius: 999px;
     padding: 0.5rem 1.2rem;
     font-weight: 600;
@@ -343,7 +371,7 @@ button {
 }
 
 .mini-bar {
-    background: #2a2a2a;
+    background: var(--cream-2);
     height: 6px;
     border-radius: 999px;
     margin-top: 1rem;
@@ -385,7 +413,7 @@ button {
 }
 
 .cal-day.cal-active {
-    background: rgba(255, 152, 0, 0.2);
+    background: rgba(244,166,147,0.25);
     color: var(--accent-orange);
     font-weight: 700;
 }
@@ -397,7 +425,7 @@ button {
 
 /* Log detail modal */
 .log-exercise {
-    background: #2a2a2a;
+    background: var(--cream-2);
     border-radius: 12px;
     padding: 1rem;
     margin-bottom: 0.8rem;
@@ -444,9 +472,9 @@ button {
 
 /* Form inputs for modals */
 .form-input {
-    background: #2a2a2a;
+    background: var(--cream-2);
     border: 1px solid var(--line);
-    color: white;
+    color: var(--dark);
     padding: 0.7rem;
     border-radius: 8px;
     font-family: inherit;
@@ -540,7 +568,7 @@ button {
 
 .chapter-pill:hover {
     transform: translateX(5px);
-    background: #252525;
+    background: rgba(76,85,79,0.04);
 }
 
 .chapter-info h4 { margin-bottom: 4px; }
@@ -575,7 +603,7 @@ button {
 
 .builder-canvas-card .drop-container.drag-over {
     border-color: var(--accent-orange);
-    background: rgba(255, 152, 0, 0.05);
+    background: rgba(244,166,147,0.08);
 }
 
 .empty-canvas {
@@ -598,7 +626,7 @@ button {
 
 .kbd {
     display: inline-block;
-    background: var(--accent-orange);
+    background: var(--sage);
     color: white;
     padding: 0 0.45rem;
     border-radius: 4px;
@@ -632,9 +660,9 @@ button {
 
 .builder-search {
     flex: 1;
-    background: #2a2a2a;
+    background: var(--cream-2);
     border: 1px solid var(--line);
-    color: white;
+    color: var(--dark);
     padding: 0.6rem 0.9rem;
     border-radius: 10px;
     font-size: 0.9rem;
@@ -671,8 +699,8 @@ button {
 .bp-chip:hover { color: var(--text-primary); }
 
 .bp-chip.active {
-    background: var(--accent-orange);
-    border-color: var(--accent-orange);
+    background: var(--sage);
+    border-color: var(--sage);
     color: white;
 }
 
@@ -689,7 +717,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #2a2a2a;
+    background: var(--cream-2);
     padding: 0.6rem 0.6rem 0.6rem 0.9rem;
     border-radius: 10px;
     cursor: grab;
@@ -697,12 +725,12 @@ button {
     transition: 0.15s;
 }
 
-.exercise-card:hover { background: #333; }
+.exercise-card:hover { background: rgba(76,85,79,0.08); }
 .exercise-card:active { cursor: grabbing; }
 
 .exercise-card.curated {
-    border-color: rgba(255, 152, 0, 0.4);
-    background: linear-gradient(90deg, rgba(255,152,0,0.08), #2a2a2a 60%);
+    border-color: rgba(244,166,147,0.5);
+    background: linear-gradient(90deg, rgba(244,166,147,0.18), var(--cream-2) 60%);
 }
 
 .ex-card-body {
@@ -713,7 +741,7 @@ button {
 
 .ex-add-btn {
     background: var(--accent-orange);
-    color: white;
+    color: var(--dark);
     width: 32px;
     height: 32px;
     border-radius: 8px;
@@ -732,7 +760,7 @@ button {
 .tier-picker {
     display: flex;
     gap: 4px;
-    background: #2a2a2a;
+    background: var(--cream-2);
     padding: 4px;
     border-radius: 10px;
     width: 100%;
@@ -754,7 +782,7 @@ button {
 .tier-btn:hover { color: var(--text-primary); }
 
 .tier-btn.active {
-    background: var(--accent-blue);
+    background: var(--sage-dark);
     color: white;
 }
 
@@ -770,7 +798,7 @@ button {
 }
 
 .curated-chip.active {
-    background: rgba(255, 152, 0, 0.15);
+    background: rgba(244,166,147,0.2);
     border-color: var(--accent-orange);
     color: var(--accent-orange);
 }
@@ -828,9 +856,9 @@ button {
 }
 
 #assignClient {
-    background: #2a2a2a;
+    background: var(--cream-2);
     border: 1px solid var(--line);
-    color: white;
+    color: var(--dark);
     padding: 0.55rem 0.9rem;
     border-radius: 10px;
     font-size: 0.85rem;
@@ -842,7 +870,7 @@ button {
 }
 
 #assignClient:focus { border-color: var(--accent-blue); }
-#assignClient option { background: #1e1e1e; padding: 0.5rem; }
+#assignClient option { background: var(--card-bg); padding: 0.5rem; }
 #assignClient option:disabled { color: var(--text-secondary); font-style: italic; }
 
 
@@ -852,7 +880,7 @@ button {
     background: transparent;
     border: none;
     border-bottom: 2px solid var(--line);
-    color: white;
+    color: var(--dark);
     padding: 0.5rem 0;
     font-size: 1.1rem;
     font-weight: 700;
@@ -890,9 +918,9 @@ button {
 
 .canvas-item-grid input,
 .cue-label input {
-    background: #2a2a2a;
+    background: var(--cream-2);
     border: 1px solid var(--line);
-    color: white;
+    color: var(--dark);
     padding: 0.5rem;
     border-radius: 8px;
     font-size: 0.85rem;
@@ -939,7 +967,7 @@ button {
 }
 
 .quiz-option {
-    background: #2a2a2a;
+    background: var(--cream-2);
     padding: 1.2rem;
     border-radius: 12px;
     text-align: left;
@@ -948,18 +976,18 @@ button {
 }
 
 .quiz-option:hover:not(:disabled) {
-    background: #333;
+    background: rgba(76,85,79,0.08);
     border-color: var(--line);
 }
 
 .quiz-option.correct {
-    background: rgba(76, 175, 80, 0.15);
+    background: rgba(136,167,139,0.2);
     border-color: var(--accent-green);
     color: var(--accent-green);
 }
 
 .quiz-option.wrong {
-    background: rgba(244, 67, 54, 0.15);
+    background: rgba(229,138,117,0.2);
     border-color: var(--accent-red);
     color: var(--accent-red);
 }
@@ -972,8 +1000,8 @@ button {
     line-height: 1.5;
 }
 
-#quizFeedback.correct { background: rgba(76, 175, 80, 0.1); color: var(--accent-green); }
-#quizFeedback.wrong { background: rgba(244, 67, 54, 0.1); color: var(--accent-red); }
+#quizFeedback.correct { background: rgba(136,167,139,0.15); color: var(--accent-green); }
+#quizFeedback.wrong { background: rgba(229,138,117,0.15); color: var(--accent-red); }
 
 .quiz-footer {
     display: flex;
@@ -1012,7 +1040,7 @@ button {
     font-size: 2.8rem;
     font-weight: 800;
     letter-spacing: 0.4rem;
-    background: #2a2a2a;
+    background: var(--cream-2);
     padding: 1.5rem;
     border-radius: 14px;
     margin-bottom: 1.5rem;
@@ -1036,7 +1064,7 @@ button {
 }
 
 .link-badge.linked {
-    background: rgba(76, 175, 80, 0.15);
+    background: rgba(136,167,139,0.2);
     color: var(--accent-green);
 }
 
@@ -1089,7 +1117,7 @@ button {
     font-size: 0.7rem;
     padding: 2px 8px;
     border-radius: 999px;
-    background: rgba(77, 138, 255, 0.15);
+    background: rgba(244,166,147,0.2);
     color: var(--accent-blue);
     font-weight: 700;
     white-space: nowrap;
@@ -1105,11 +1133,11 @@ button {
 
 .btn-danger {
     color: var(--accent-red) !important;
-    border-color: rgba(244, 67, 54, 0.3) !important;
+    border-color: rgba(229,138,117,0.4) !important;
 }
 
 .btn-danger:hover {
-    background: rgba(244, 67, 54, 0.1) !important;
+    background: rgba(229,138,117,0.15) !important;
 }
 
 /* ========== SETTINGS VIEW ========== */
@@ -1136,7 +1164,7 @@ button {
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%) translateY(100px);
-    background: #333;
+    background: rgba(76,85,79,0.08);
     padding: 0.8rem 1.5rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
