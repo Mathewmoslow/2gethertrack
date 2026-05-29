@@ -8,17 +8,16 @@ service cloud.firestore {
     }
 
     // Client claiming an invite writes their UID onto a roster entry.
-    // Happens AFTER createUserWithEmailAndPassword so auth is set by then.
+    // Allow if: signed in, no prior link (field missing OR explicitly null),
+    // and the new clientUid equals the auth uid.
     match /users/{trainerUid}/clients/{rosterId} {
       allow update: if request.auth != null
-                    && resource.data.clientUid == null
+                    && (!('clientUid' in resource.data) || resource.data.clientUid == null)
                     && request.resource.data.clientUid == request.auth.uid;
     }
 
-    // Invite codes (top-level).
-    // get is unauthenticated so signup flow can look up the code BEFORE
-    // creating the user account. list is denied (default), so codes can't
-    // be enumerated; attacker must already know the 6-char ID.
+    // Invite codes (top-level). get is public so signup can look up the code
+    // before the user account exists; list is denied by default.
     match /inviteCodes/{code} {
       allow get: if true;
       allow create: if request.auth.uid == request.resource.data.trainerUid;

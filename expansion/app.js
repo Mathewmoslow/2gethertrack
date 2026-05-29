@@ -68,7 +68,10 @@ async function init() {
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 state.user = user;
-                dom.trainerName.textContent = (user.displayName || user.email || 'Trainer').split(' ')[0];
+                const displayName = (user.displayName || user.email || 'Trainer').split(' ')[0];
+                dom.trainerName.textContent = displayName;
+                const avatar = document.getElementById('userAvatar');
+                if (avatar) avatar.textContent = displayName.charAt(0).toUpperCase();
                 dom.splash.classList.add('hide');
                 dom.app.classList.remove('hide');
                 

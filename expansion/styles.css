@@ -175,11 +175,19 @@ button {
 .nav-item svg { width: 24px; height: 24px; }
 .nav-spacer { flex: 1; }
 
-.sidebar-user img {
+.sidebar-user img,
+.avatar-circle {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     border: 2px solid var(--line);
+    background: var(--accent-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 800;
+    font-family: 'Cabinet Grotesk', sans-serif;
 }
 
 /* CONTENT AREA */
